@@ -1,0 +1,16 @@
+.all-people {
+  background: #fff;
+  min-height: calc(100vh);
+  padding-top: 2px;
+  .people-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .item-header {
+    width: 100%;
+    height: 100%;
+  }
+
+}

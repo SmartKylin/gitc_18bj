@@ -8,7 +8,7 @@ class Head extends React.Component{
         return(
             <header className='head'>
                 <Nav/>
-                <img src={bannerBg} alt=''/>
+                <img style={{marginTop:'50px'}} src={bannerBg} alt=''/>
             </header>
         )
     }

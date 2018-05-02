@@ -11,6 +11,9 @@ const paths = require('./paths');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 
 module.exports = {
+  externals:{
+    'BMap':'BMap'
+  },
   module: {
     strictExportPresence: true,
     rules: [
