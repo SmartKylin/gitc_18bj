@@ -8,23 +8,21 @@
     top:0;
     width:100%; 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items:center;
+    z-index:2;
     ul{
         padding:0;
         display:flex;
-        margin-right:115px;
         height:65px;
         line-height:65px;
         color:#333;
         font-size:14px;
         align-items:center;
     }
-    .logo{
-        margin:2px 0 0 107px;
-    }
     li{
         margin-right:20px;
+        cursor: pointer;
     }
 }
 .buttonBg{

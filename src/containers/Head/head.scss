@@ -6,3 +6,24 @@
 .head{
     width:100%;
 }
+.enlist{
+    width:190px;
+    color:#fff;
+    height:44px;
+    background-image: linear-gradient(90deg, #EC8E1B 0%, #F0441D 100%);
+    border-radius: 100px;
+    position:absolute;
+    left:25%;
+    bottom:26%;
+    cursor: pointer;
+    font-size:18px;
+}
+.banner{
+    position:relative;
+    margin-top:65px;
+    .banner_img{
+        img{
+            width:100%;
+        } 
+    }
+}
