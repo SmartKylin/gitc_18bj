@@ -15,14 +15,16 @@
     justify-content: space-around;
     margin: 20px auto;
     .rollingData_box_item{
+      width: 250px;
       .countUp{
-        font-size: 50px;
+        font-size: 40px;
       }
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      font-size: 20px;
+      font-size: 15px;
+      font-weight: 100;
     }
   }
   .rollingData_box_lower{
@@ -31,6 +33,7 @@
     width: 80%;
     margin: 20px auto;
     .rollingData_box_item{
+       width: 250px;
       .countUp{
         font-size: 40px;
       }
@@ -38,7 +41,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: 100;
     }
   }
 }
