@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-around;
     align-items:center;
-    z-index:2;
+    z-index:999;
     ul{
         padding:0;
         display:flex;
@@ -18,11 +18,15 @@
         line-height:65px;
         color:#333;
         font-size:14px;
-        align-items:center;
     }
     li{
         margin-right:20px;
         cursor: pointer;
+    }
+    .bg{
+        color:#F69348;
+        box-sizing:content-box;
+        border-bottom:2px solid #F69348; 
     }
 }
 .buttonBg{
@@ -35,4 +39,5 @@
     height:44px;
     line-height:44px;
     text-align:center;
+    margin-top:10px;
 }

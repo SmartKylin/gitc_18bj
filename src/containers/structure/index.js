@@ -1,25 +1,29 @@
 import React from 'react'
 import './structure.scss'
-import { datas } from '../../a.js'
+import { dat, datas } from '../../a.js'
 import $ from 'jquery'
 import Title from "../../components/Title/index";
 
 class structure extends React.Component{
-    onBoost = (ind) =>{
-    
-        let list = $('.lead_content').children()
-        list.eq(ind).fadeIn().addClass('on')
-    }
-    toggleShow(ind){
-
-    }
-    onMouseOver(ind){
-        let list = $('.lead_content').children()
+    toggleShow(ind,node){
+        let list = $(node).children()
         list.eq(ind).addClass('on')
     }
-    onMouseOut(ind){
-        let list = $('.lead_content').children()
+    toggleOut(ind,node){
+        let list = $(node).children()
         list.eq(ind).removeClass('on')
+    }
+    onMouseOver(ind,node){
+        this.toggleShow(ind,node)
+    }
+    onMouseOut(ind,node){
+        this.toggleOut(ind,node)
+    }
+    onMouseOvers(ind,node){
+        this.toggleShow(ind,node)
+    }
+    onMouseOuts(ind,node){
+        this.toggleOut(ind,node)
     }
     render(){
         return(
@@ -27,10 +31,23 @@ class structure extends React.Component{
               <Title  Title="会议结构" EnglishName="STRUCTURE"/>
                 <div className='tit_lead'>主会场</div>
                 <div className='stru_content'>
-                    <ul className='lead_content' onClick={this.onBoost.bind(this)}>
+                    <ul className='lead_content'>
                         {
-                            datas && datas.map((val, ind) => {
-                                return <li key={ind} onMouseOver={() => {this.onMouseOver(ind)}} onMouseOut={() => {this.onMouseOut(ind)}}>
+                            dat && dat.map((val, ind) => {
+                                return <li key={ind} onMouseOver={() => {this.onMouseOver(ind,'.lead_content')}} onMouseOut={() => {this.onMouseOut(ind,'.lead_content')}}>
+                                    <div className='lead_pic'><img src={val.img} alt=''/></div>
+                                    <p>
+                                        <span>{val.tit}</span>
+                                        <span>时代大厦</span>
+                                    </p>
+                                </li>
+                            })
+                        }
+                    </ul>
+                    <ul className='lead_contents'>
+                        {
+                            dat && dat.map((val, ind) => {
+                                return <li key={ind} onMouseOver={() => {this.onMouseOvers(ind,'.lead_contents')}} onMouseOut={() => {this.onMouseOuts(ind,'.lead_contents')}}>
                                     <div className='lead_pic'><img src={val.img} alt=''/></div>
                                     <p>
                                         <span>{val.tit}</span>
@@ -49,7 +66,7 @@ class structure extends React.Component{
                     <div className='tit_lead'>分会场</div>
                     <ul className='parallel_content'>
                         {
-                            datas && datas.map((val, ind) => {
+                             datas && datas.map((val, ind) => {
                                 return <li key={ind}>
                                     {
                                         ind % 2 == 0 ? <div>
