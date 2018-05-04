@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import './index.scss'
-import BMap from 'BMap'
-
+let BMap = window.BMap
 export default class extends Component {
   componentDidMount () {
     let map = new BMap.Map("container")

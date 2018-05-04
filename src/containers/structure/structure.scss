@@ -2,8 +2,145 @@
     font-size: 26px;
     color: #333333;
     line-height:37px;
+    margin:78px 0 95px 0;
 }
 .main_structure{
     width:100%;
     text-align:center;
+    font-size:14px;
+}
+.hotWord{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin:110px 0 160px 0;
+    h2{
+        font-size: 22px;
+        color: #0856A7;
+        width:774px;
+    }
+    p{
+        font-size: 16px;
+        color: #333333;
+        line-height: 24px;
+        width:777px;
+        text-align:left;
+        margin-top:30px;
+    }
+}
+.stru_parallel{
+    min-height:3203px;
+    position: relative;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-image:url('../../assets/img/stru_parallel.png');
+    .tit_lead{
+        padding-top:95px;
+    }
+    .par_pic{
+        width:100%;
+        height:3203px;
+        position: absolute;
+        left:0;
+        top:0;
+        img{
+            width:100%;
+        }
+    }
+}
+
+.parallel_content{
+    margin-top:142px;
+    li div{
+        display:flex;
+        justify-content:space-around;
+        margin-bottom:60px;
+        padding:0 3%;
+    }
+    .text{
+        display: flex;
+        flex-wrap:wrap;
+        width:30%;
+        height: 200px;
+        p{
+            text-align:left;
+            color:#333;
+        }
+        h3{
+            width:100%;
+            font-size: 22px;
+            color: #0856A7;
+            line-height: 36px;
+        }
+        &:nth-child(odd){
+            h3{
+                text-align:right;
+            }
+        }
+        &:nth-child(even){
+            h3{
+                text-align:left;
+            }
+        }
+    }
+    .pic{
+        width: 30%;
+        height: 200px;
+        img{
+            width:100%;
+            height:100%;
+            background:#ccc;
+        }
+    }
+}
+@mixin style {
+    display:flex;
+    flex-wrap:wrap;
+}
+.lead_content{
+    padding:0 9%;
+    justify-content:center;
+    @include style;
+    li{
+        width:200px;
+        height:300px;
+        background: #FFFFFF;
+        box-shadow: 0 0 9px 2px rgba(208,207,213,0.50);
+        margin:0 30px 45px 0;
+        cursor: pointer;
+        .lead_pic{
+            width:200px;
+            height:198px;
+            background:#ccc;
+            img{
+                width:100%
+            }
+        }
+        span{
+            font-size:14px;
+            padding:20px 0 15px 0;
+            display:block;
+            &:nth-child(2){
+                font-size:12px;
+                opacity: 0.5;
+                line-height: 12px;
+                padding:0 0 39px 0; 
+            }
+        }
+        p{
+            height:100px;
+        }
+        &:nth-child(4),&:nth-child(8){
+            margin-right:0;
+        }
+    }
+    .on{
+        background: #FFFFFF;
+        box-shadow: 0 0 15px 6px rgba(208,207,213,0.50);
+        li{
+            width:209px;
+            height:314px;
+        }
+    }
 }
