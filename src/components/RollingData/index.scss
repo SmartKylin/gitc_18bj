@@ -8,10 +8,12 @@
   color: #ffffff;
   display: flex;
   flex-direction:column;
-  justify-content: space-around;
+  justify-content: center;
   .rollingData_box_up{
+    width: 80%;
     display: flex;
     justify-content: space-around;
+    margin: 20px auto;
     .rollingData_box_item{
       .countUp{
         font-size: 50px;
@@ -26,6 +28,8 @@
   .rollingData_box_lower{
     display: flex;
     justify-content: space-around;
+    width: 80%;
+    margin: 20px auto;
     .rollingData_box_item{
       .countUp{
         font-size: 40px;

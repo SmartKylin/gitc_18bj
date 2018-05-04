@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './index.scss'
+import Title from "../Title/index";
 let BMap = window.BMap
 export default class extends Component {
   componentDidMount () {
@@ -23,6 +24,7 @@ export default class extends Component {
   render() {
     return (
         <div>
+          <Title Title="会议地址" EnglishName="LOCATION"/>
           <div className="map-page" id="container"/>
         </div>
 

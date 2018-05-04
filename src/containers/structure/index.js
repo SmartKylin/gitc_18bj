@@ -2,6 +2,7 @@ import React from 'react'
 import './structure.scss'
 import { datas } from '../../a.js'
 import $ from 'jquery'
+import Title from "../../components/Title/index";
 
 class structure extends React.Component{
     onBoost = (ind) =>{
@@ -23,10 +24,7 @@ class structure extends React.Component{
     render(){
         return(
             <div className='main_structure'>
-                <div className='view_tit'>
-                    <span>会议结构</span>
-                    <span>STRUCTURE</span>
-                </div>
+              <Title  Title="会议结构" EnglishName="STRUCTURE"/>
                 <div className='tit_lead'>主会场</div>
                 <div className='stru_content'>
                     <ul className='lead_content' onClick={this.onBoost.bind(this)}>

@@ -13,6 +13,7 @@ import bj5 from './images/2016.jpg'
 import bj6 from './images/2016-2.jpg'
 import bj7 from './images/2017sh.jpg'
 import bj8 from './images/2018-4.jpg'
+import Title from "../Title/index";
 
 
 const data = [
@@ -32,48 +33,68 @@ export default class Review extends React.Component{
     super(props)
   }
 
-
   render(){
     return <div className="reviewc_box">
-      <div ref='container'>
-        <div className="swiper-wrapper">
-          {
-            data.map( (v, ind) => {
-              return  <div className="swiper-slide" key={ind} style={{width:'80px',height:'300px'}}>
-                <a href={v.href} target="_blank"><img style={{width:'100%',height:'100%'}} src={v.src} alt=""/></a>
-              </div>
-            })
-          }
+      <Title Title="往期回顾" EnglishName="REVIEV"/>
+
+      <div className="certify" ref='certify' >
+        <div className="swiper-container" ref='container'>
+          <div className="swiper-wrapper">
+            {
+              data.map( (v,index) => {
+                return <div className="swiper-slide" key={index}>
+                    <a href={v.href}><img src={v.src} /></a>
+                </div>
+              })
+            }
+          </div>
         </div>
-        <div className="swiper-button-prev prev" ref="prev"></div>
-        <div className="swiper-button-next next" ref="next"></div>
+        <div className="swiper-pagination" ref='swiperPagination'></div>
       </div>
     </div>
   }
 
   componentDidMount() {
-    new Swiper(this.refs.container, {
-      navigation: {
-        nextEl: this.refs.next,
-        prevEl: this.refs.prev,
-      },
-      loop: true,
-      speed: 1000,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      spaceBetween: 10,
-      slidesPerView: 4,
-      effect: 'coverflow',
+    let certifySwiper = new Swiper(this.refs.container, {
+      watchSlidesProgress: true,
+      slidesPerView: 'auto',
       centeredSlides: true,
-      coverflow: {
-        rotate: 40,
-        stretch: 50,
-        depth: 100,
-        modifier: 1,
-        slideShadows : true
+      loop: true,
+      loopedSlides: 5,
+      autoplay: true,
+      pagination: {
+        el: this.refs.swiperPagination,
+        //clickable :true,
+      },
+      on: {
+        progress: function(progress) {
+          for (let i = 0; i < this.slides.length; i++) {
+            let slide = this.slides.eq(i);
+            let slideProgress = this.slides[i].progress;
+            let modify = 1;
+            if (Math.abs(slideProgress) > 1) {
+              modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+            }
+            let translate = slideProgress * modify * 260 + 'px';
+            let scale = 1 - Math.abs(slideProgress) / 5;
+            let zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+            slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+            slide.css('zIndex', zIndex);
+            slide.css('opacity', 1);
+            if (Math.abs(slideProgress) > 3) {
+              slide.css('opacity', 0);
+            }
+          }
+        },
+        setTransition: function(transition) {
+          for (let i = 0; i < this.slides.length; i++) {
+            let slide = this.slides.eq(i)
+            slide.transition(transition);
+          }
+
+        }
       }
+
     })
   }
 }

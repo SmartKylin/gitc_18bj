@@ -3,6 +3,7 @@ import GuestItem from '../../components/GuestItem'
 import './index.scss'
 import $ from 'jquery'
 import {getSpeecherList} from "../../services/home";
+import Title from "../../components/Title/index";
 
 const getPosByInd = ind => {
   switch (ind % 5 ) {
@@ -48,7 +49,7 @@ export default class SpeechGuest extends Component {
   render () {
     return (
       <div className={'speech--guest'}>
-        <div className='speech--title'>演讲嘉宾</div>
+        <Title Title="演讲嘉宾" EnglishName="PRESIDIUNM"/>
         <div className='speech--body'>
           {
             this.state.data.length && this.state.data.slice(0, 15).map((item, index) => (
@@ -76,7 +77,7 @@ export default class SpeechGuest extends Component {
           </div>
           :
           <div className="btn--more" onClick={this.catMore}>
-            <span>查看更多</span>
+            <span>更多嘉宾</span>
             <i className="iconfont icon-arow_down-copy"/>
           </div>
         }

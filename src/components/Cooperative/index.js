@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.scss'
+import Title from "../Title/index";
 const data = [
   {row:1,column:[
     {img:1},
@@ -82,6 +83,8 @@ export default class Cooperative extends React.Component{
 
   render(){
     return <div className="cooperative_box">
+      <Title Title="合作伙伴" EnglishName="PARTNERS"/>
+      <div style={{marginTop:'100px'}}></div>
       {
         data.map( (v, i) => {
           return <div className="cooperative_box_row" key={i}>

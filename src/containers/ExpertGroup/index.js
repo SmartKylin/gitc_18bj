@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import GuestItem from '../../components/GuestItem'
-import './index.scss'
 import $ from 'jquery'
 import {getPeopleList} from "../../services/home";
+import Title from "../../components/Title/index";
 
 export default class extends Component {
   constructor (props) {
@@ -38,7 +38,7 @@ export default class extends Component {
   render () {
     return (
       <div className='speech--guest'>
-        <div className='speech--title'>大会主席团</div>
+       <Title Title="特邀嘉宾" EnglishName="PRESIDIUNM" />
         <div className='speech--body'>
           {
             this.state.data.length && this.state.data.slice(0, 15).map((item, index) => (
@@ -66,7 +66,7 @@ export default class extends Component {
           </div>
           :
           <div className="btn--more" onClick={this.catMore}>
-            <span>查看更多</span>
+            <span>更多嘉宾</span>
             <i className="iconfont icon-arow_down-copy"/>
           </div>
         }

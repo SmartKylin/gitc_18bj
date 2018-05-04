@@ -21,11 +21,11 @@ export default class RollingData extends React.Component {
 
   render(){
     return <div className="rollingData_box">
-       <div className="rollingData_box_up">
+        <div className="rollingData_box_up">
          {
            data1.map( (v, ind) => {
              return <div className="rollingData_box_item" key={ind}>
-               <CountUp duration={10} start={0} end={v.end} separator="," className="countUp"/>
+               <CountUp duration={10} suffix="+" start={0} end={v.end} separator="," className="countUp"/>
                <div>{v.english}</div>
                <div>{v.name}</div>
              </div>
@@ -36,7 +36,7 @@ export default class RollingData extends React.Component {
           {
             data2.map( (v, ind) => {
               return <div className="rollingData_box_item" key={ind}>
-                <CountUp   duration={10} suffix={v.name === '展览场馆' ? '㎡' : ''} start={0} end={v.end} separator="," className="countUp"/>
+                <CountUp   duration={10} suffix={v.name === '展览场馆' ? '㎡' :  v.name === '会场' ?  '' :  '+'} start={0} end={v.end} separator="," className="countUp"/>
                 <div>{v.english}</div>
                 <div>{v.name}</div>
               </div>

@@ -5,6 +5,7 @@ import 'jquery'
 import "swiper/dist/css/swiper.min.css"
 import "swiper/dist/js/swiper.min.js"
 import Swiper from "swiper/dist/js/swiper.js"
+import Title from "../../components/Title/index";
 
 class lightMeet extends React.Component{
     constructor(props){
@@ -66,10 +67,7 @@ class lightMeet extends React.Component{
     render(){
         return(
             <div className='main_light'>
-                <div className='view_tit'>
-                    <span>大会亮点</span>
-                    <span>HIGHT LIGHTS</span>
-                </div>
+                <Title Title='大会亮点' EnglishName="HIGHT LIGHTS"/>
                 <div className="certify" ref='certify' >
                     <div className="swiper-container" ref='container'>
                         <div className="swiper-wrapper">
@@ -92,9 +90,6 @@ class lightMeet extends React.Component{
                     </div>
                     <div className="swiper-pagination"></div>
                 </div>
-                
-
-                
             </div>
         )
     }
