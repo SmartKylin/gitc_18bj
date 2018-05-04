@@ -17,15 +17,37 @@ export default class RollingData extends React.Component {
 
   constructor(props){
     super(props)
+    this.state = {
+      count:0
+    }
+  }
+
+  componentDidMount () {
+    this.timerID = setInterval(
+        () => this.tick(),
+        16000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick = () => {
+    let countA = this.state.count
+    this.setState({
+      count:countA + 1
+    })
   }
 
   render(){
+    let {count} = this.state
     return <div className="rollingData_box">
         <div className="rollingData_box_up">
          {
            data1.map( (v, ind) => {
              return <div className="rollingData_box_item" key={ind}>
-               <CountUp duration={10} suffix="+" start={0} end={v.end} separator="," className="countUp"/>
+               <CountUp key={count} duration={10} suffix="+" start={0} end={v.end} separator="," className="countUp"/>
                <div>{v.english}</div>
                <div>{v.name}</div>
              </div>
@@ -36,7 +58,7 @@ export default class RollingData extends React.Component {
           {
             data2.map( (v, ind) => {
               return <div className="rollingData_box_item" key={ind}>
-                <CountUp   duration={10} suffix={v.name === '展览场馆' ? '㎡' :  v.name === '会场' ?  '' :  '+'} start={0} end={v.end} separator="," className="countUp"/>
+                <CountUp key={count}  duration={10} suffix={v.name === '展览场馆' ? '㎡' :  v.name === '会场' ?  '' :  '+'} start={0} end={v.end} separator="," className="countUp"/>
                 <div>{v.english}</div>
                 <div>{v.name}</div>
               </div>
