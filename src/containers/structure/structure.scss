@@ -11,8 +11,9 @@
 }
 .hotWord{
     display:flex;
-    justify-content:center;
+    align-items:center;
     flex-wrap:wrap;
+    flex-direction:column;
     margin:110px 0 160px 0;
     h2{
         font-size: 22px;
@@ -96,12 +97,12 @@
 }
 @mixin style {
     display:flex;
-    flex-wrap:wrap;
+    // flex-wrap:wrap;
 }
-.lead_content{
+.lead_content, .lead_contents{
     padding:0 9%;
+    display:flex;
     justify-content:center;
-    @include style;
     li{
         width:200px;
         height:300px;
