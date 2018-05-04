@@ -1,111 +1,48 @@
 import React from 'react'
-import $ from 'jquery'
+import CountUp from 'react-countup';
+import './index.scss'
+const data1 = [
+  {end:820,name:'演讲嘉宾',english:'Speakers'},
+  {end:3230,name:'参会企业',english:'Companies'},
+  {end:72516,name:'与会者',english:'Participants'},
+  {end:300661364,name:'线上传播人次',english:'Communications'},
+]
+const data2 = [
+  {end:73,name:'会场',english:'Summit Forums '},
+  {end:319,name:'合作伙伴',english:'Sponsors'},
+  {end:487,name:'合作媒体',english:'Medias'},
+  {end:72994,name:'展览场馆',english:'Venue Area'},
+]
 export default class RollingData extends React.Component {
 
   constructor(props){
     super(props)
   }
 
-  componentDidMount(){
-    //this.startRun()
-  }
-
-   startRun = () => {
-     this.refs.counter1.countUp({
-      // delay: 10,
-      time: 2000
-    });
-     this.refs.counter2.countUp({
-      // delay: 10,
-      time: 3000
-    });
-     this.refs.counter3.countUp({
-      // delay: 10,
-      time: 3800
-    });
-     this.refs.counter4.countUp({
-      // delay: 10,
-      time: 6000
-    });
-     this.refs.counter5.countUp({
-      // delay: 10,
-      time: 800
-    });
-     this.refs.counter6.countUp({
-      // delay: 10,
-      time: 1200
-    });
-     this.refs.counter7.countUp({
-      // delay: 10,
-      time: 2200
-    });
-     this.refs.counter8.countUp({
-      // delay: 10,
-      time: 5000
-    });
-    let time = setTimeout(this.startRun, 13000);
-  }
-
   render(){
-    return <div className="s-promo-block-v2 js__parallax-window">
-      <div className="container g-padding-y-40--xs g-padding-y-100--md">
-        <div className="row">
-          <div className="col-md-2 col-xs-3  g-margin-b-0--lg">
-            <div className="">
-              <span ref="counter1"> 820</span>
-              <h4 className="">Speakers<br/>演讲嘉宾</h4>
-            </div>
-          </div>
-          <div className="">
-            <div className="">
-              <span ref="counter2">3,230</span>
-              <h4 className="">Companies<br/>参会企业</h4>
-            </div>
-          </div>
-          <div className="">
-            <div className="">
-              <span ref="counter3">72,516</span>
-              <h4 className="">Participants<br/>与会者</h4>
-            </div>
-          </div>
-          <div className="">
-            <div className="">
-              <span ref="counter4">300,661,364</span>
-              <h4 className="">Online Communications<br/>线上传播人次</h4>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-2 col-xs-4  g-margin-b-0--lg">
-            <div className="">
-              <span ref="counter5">73</span>
-              <h4 className="">Summit Forums <br/>会场</h4>
-            </div>
-          </div>
-          <div className="">
-            <div className="">
-              <span ref="counter6">319</span>
-              <h4 className="">Sponsors<br/>合作伙伴</h4>
-            </div>
-          </div>
-          <div className="col-md-3 col-xs-4  g-margin-b-0--sm">
-            <div className="">
-              <span ref="counter7"> 487</span>
-              <h4 className="">Medias<br/>合作媒体</h4>
-            </div>
-          </div>
-          <div className="">
-            <div className="">
-              <div className="">
-                <span ref="counter8">72,994</span>
-                <span className="g-font-size-40--xs g-color--white">m<sup>2</sup></span>
+    return <div className="rollingData_box">
+       <div className="rollingData_box_up">
+         {
+           data1.map( v => {
+             return <div className="rollingData_box_item">
+               <CountUp duration={10} start={0} end={v.end} separator="," className="countUp"/>
+               <div>{v.english}</div>
+               <div>{v.name}</div>
+             </div>
+           })
+         }
+       </div>
+        <div className="rollingData_box_lower">
+          {
+            data2.map( v => {
+              return <div className="rollingData_box_item">
+                <CountUp   duration={10} suffix={v.name === '展览场馆' ? '㎡' : ''} start={0} end={v.end} separator="," className="countUp"/>
+                <div>{v.english}</div>
+                <div>{v.name}</div>
               </div>
-
-              <h4 className="">Venue Area <br/> 展览场馆</h4>
-            </div>
-          </div>
+            })
+          }
         </div>
-      </div>
     </div>
   }
 }

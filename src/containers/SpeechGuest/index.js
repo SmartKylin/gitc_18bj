@@ -2,9 +2,19 @@ import React, {Component} from 'react'
 import GuestItem from '../../components/GuestItem'
 import './index.scss'
 import $ from 'jquery'
-import {getPeopleList} from "../../services/home";
+import {getSpeecherList} from "../../services/home";
 
-export default class extends Component {
+const getPosByInd = ind => {
+  switch (ind % 5 ) {
+    case 0:
+      return 'left';
+    case 4:
+      return 'right';
+    default:
+      return 'normal';
+  }
+}
+export default class SpeechGuest extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -27,7 +37,7 @@ export default class extends Component {
     $(document).scrollTop(this.top)
   }
   componentWillMount () {
-    getPeopleList(45)
+    getSpeecherList()
     .then(res => res && res.json())
     .then(data => {
       this.setState({
@@ -37,12 +47,12 @@ export default class extends Component {
   }
   render () {
     return (
-      <div className='speech--guest'>
-        <div className='speech--title'>大会主席团</div>
+      <div className={'speech--guest'}>
+        <div className='speech--title'>演讲嘉宾</div>
         <div className='speech--body'>
           {
             this.state.data.length && this.state.data.slice(0, 15).map((item, index) => (
-              <GuestItem key={index} speech={true} data={item}/>
+              <GuestItem key={index} speech={true} data={item} canPop={true} pos={getPosByInd(index)}/>
             ))
           }
         </div>
@@ -52,7 +62,7 @@ export default class extends Component {
           <div className='speech--more'>
             {
               this.state.data.length && this.state.data.slice(15).map((item, index) => (
-              <GuestItem key={index} speech={true} data={item}/>
+              <GuestItem key={index} speech={true} data={item} canPop={true} pos={getPosByInd(index)}/>
               ))
             }
           </div> : null

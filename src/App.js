@@ -7,6 +7,9 @@ import Map from './components/Map'
 import Footer from "./components/Footer/index";
 import ExpertGroup from "./containers/ExpertGroup/index";
 import RollingData from "./components/RollingData/index";
+import Review from "./components/Review/index";
+import Cooperative from "./components/Cooperative/index";
+import SpeechGuest from "./containers/SpeechGuest/index";
 class App extends Component {
   render() {
     return (
@@ -15,8 +18,11 @@ class App extends Component {
         <AboutMeet/>
         <LightMeet/>
         <Structure/>
-        <RollingData/>
         <ExpertGroup/>
+        <SpeechGuest/>
+        <Review/>
+        <RollingData/>
+        <Cooperative/>
         <Map/>
         <Footer/>
       </div>
