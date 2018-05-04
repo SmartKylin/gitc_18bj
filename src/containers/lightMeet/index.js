@@ -75,7 +75,7 @@ class lightMeet extends React.Component{
                         <div className="swiper-wrapper">
                             <div className="swiper-slide">
                             <img src="http://bj.thegitc.com/static/media/banner_01.b4e05dd5.png" />
-                            <p>非常难得又值钱的认证证书</p></div>
+                            <p>span 非常难得又值钱的认证证书</p></div>
                             <div className="swiper-slide">
                             <img src="http://bj.thegitc.com/static/media/banner_01.b4e05dd5.png" />
                             <p>深圳市优秀互联网企业认定证书</p></div>

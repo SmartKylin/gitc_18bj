@@ -1746,6 +1746,10 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
+countup.js@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/countup.js/-/countup.js-1.9.3.tgz#ce3e50cd7160441e478f07da31895edcc0f1c9dd"
+
 create-ecdh@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.1.tgz#44223dfed533193ba5ba54e0df5709b89acf1f82"
@@ -2163,7 +2167,7 @@ dom-urls@^1.1.0:
   dependencies:
     urijs "^1.16.1"
 
-dom7@^2.0.1:
+dom7@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.0.5.tgz#d99e1f416cacd627c6d3ed7b90be47c8f3c7b258"
   dependencies:
@@ -5822,6 +5826,12 @@ react-addons-pure-render-mixin@^15.6.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
+react-countup@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-3.0.3.tgz#e698a4e28964fe0322a925f52929e3b08db714fd"
+  dependencies:
+    countup.js "^1.9.3"
+
 react-dev-utils@^3.0.2, react-dev-utils@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-3.1.1.tgz#09ae7209a81384248db56547e718e65bd3b20eb5"
@@ -6875,11 +6885,12 @@ sw-toolbox@^3.4.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-swiper@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.0.5.tgz#b32a2fc9ccbcd86763633e186d482331a2b3cc7a"
+swiper@^4.0.5:
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.2.6.tgz#9ee50527e3de7a49e2e56a58f8f6fa94a0358bf5"
   dependencies:
-    dom7 "^2.0.1"
+    dom7 "^2.0.5"
+    ssr-window "^1.0.0"
 
 symbol-tree@^3.2.1:
   version "3.2.2"

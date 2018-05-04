@@ -48,9 +48,6 @@ class structure extends React.Component{
                     <p>AI是谷歌、微软等诸多互联网巨头重码押注的未来方向，而区块链将要重构全世界的信用和金融体系，AR/VR凭借其所提供的超凡的视听体验，即将成为下个时代的“MP4格式”，而新零售，则是马云、刘强东等电商大佬厮杀的战场，号称“新零售”之后再无“电商”。不仅如此，未来技术的主要基石大数据和平台架构、主要导向产业升级、核心应用互联网金融也都在即将举办的GITC2018·上海站。GITC主会场将尽揽行业顶级大咖，包容上述所有核心方向，结合宝贵的实践经验，助你拨开迷雾，乘风破浪。</p>
                 </div>
                 <div className='stru_parallel'>
-                    {/* <div className='par_pic'>
-                        <img src='../../assets/img/stru_parallel.png' alt=''/>
-                    </div> */}
                     <div className='tit_lead'>分会场</div>
                     <ul className='parallel_content'>
                         {

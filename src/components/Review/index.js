@@ -38,8 +38,8 @@ export default class Review extends React.Component{
       <div ref='container'>
         <div className="swiper-wrapper">
           {
-            data.map( v => {
-              return  <div className="swiper-slide" style={{width:'80px',height:'300px'}}>
+            data.map( (v, ind) => {
+              return  <div className="swiper-slide" key={ind} style={{width:'80px',height:'300px'}}>
                 <a href={v.href} target="_blank"><img style={{width:'100%',height:'100%'}} src={v.src} alt=""/></a>
               </div>
             })

@@ -84,9 +84,9 @@ export default class Cooperative extends React.Component{
     return <div className="cooperative_box">
       {
         data.map( (v, i) => {
-          return <div className="cooperative_box_row">
+          return <div className="cooperative_box_row" key={i}>
             {
-              v.column.map( j => <div className="cooperative_box_item">
+              v.column.map( (j, ind) => <div key={ind} className="cooperative_box_item">
                 {j.img}
               </div>)
             }

@@ -7,5 +7,5 @@ export function getListNews(id) {
 
 export function getListImgs(id, phone) {
   // let phonenew = phone ? phone : "13800138000"
-  return http.get(api.getListImgs + `${id}/list.json?token=de33c0eedd872976e691fc878a5e349c`)
+  return http.get(api.getImgList + `${id}/list.json?token=de33c0eedd872976e691fc878a5e349c`)
 }
