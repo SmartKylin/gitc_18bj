@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './index.scss'
-
 let BMap = window.BMap
 export default class extends Component {
   componentDidMount () {
