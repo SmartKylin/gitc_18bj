@@ -6,21 +6,23 @@
 .head{
     width:100%;
 }
-.enlist{
+.enlist a{
     width:190px;
     color:#fff;
     height:44px;
+    line-height:44px;
+    display:block;
     background-image: linear-gradient(90deg, #EC8E1B 0%, #F0441D 100%);
     border-radius: 100px;
     position:absolute;
-    left:25%;
-    bottom:26%;
+    left:26%;
+    bottom:36%;
     cursor: pointer;
     font-size:18px;
 }
 .banner{
     position:relative;
-    margin-top:65px;
+    margin-top:50px;
     .banner_img{
         img{
             width:100%;
