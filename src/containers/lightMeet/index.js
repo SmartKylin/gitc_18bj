@@ -40,8 +40,6 @@ class lightMeet extends React.Component{
             },
             on: {
               progress: function(progress) {
-                console.log(this.slides,"222")
-
                 for (let i = 0; i < this.slides.length; i++) {
                   let slide = this.slides.eq(i);
                   let slideProgress = this.slides[i].progress;
@@ -80,7 +78,6 @@ class lightMeet extends React.Component{
 
     render(){
         let { lightData } = this.state
-        console.log (lightData,'123')
         return(
             <div className='main_light'>
                 <div className='view_tit'>

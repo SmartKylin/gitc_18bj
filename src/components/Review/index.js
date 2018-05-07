@@ -39,7 +39,6 @@ export default class Review extends React.Component{
 
   componentWillMount(){
     getReview(74).then(res => res && res.json()).then(v => {
-      console.log(v,"74vvvv");
       this.setState({
         dataA:v.data
       })
@@ -49,7 +48,7 @@ export default class Review extends React.Component{
 
   render(){
     let {dataA } = this.state
-    console.log(dataA,"dataA");
+
     return <div className="reviewc_box">
       <Title Title="往期回顾" EnglishName="REVIEV"/>
 
