@@ -7,32 +7,18 @@ export default class Footer extends React.Component{
   render(){
     return <div className="footer_box">
       <ul>
-        <li>大会赞助展示展览咨询 :</li>
-        <li>合作单位和媒体合作查询 :</li>
-        <li>麒麟会申请会员咨询 :</li>
-        <li>招募志愿者 :</li>
+        <li>赞助大会&展览展示咨询 :</li>
+        <li>合作单位&合作媒体咨询 :</li>
+        <li>麒麟会会员申请咨询 :</li>
+        <li>票务咨询 :</li>
         <li>致电我们 :</li>
       </ul>
       <ul>
-        <li>www.123.com</li>
-        <li>www.435235245.com</li>
-        <li>asdadad.com</li>
-        <li>asdad.com</li>
-        <li>111111110</li>
-      </ul>
-      <ul>
-        <li>大会赞助展示展览咨询 :</li>
-        <li>合作单位和媒体合作查询 :</li>
-        <li>麒麟会申请会员咨询 :</li>
-        <li>招募志愿者 :</li>
-        <li>致电我们 :</li>
-      </ul>
-      <ul>
-        <li>www.123.com</li>
-        <li>www.435235245.com</li>
-        <li>asdadad.com</li>
-        <li>asdad.com</li>
-        <li>111111110</li>
+        <li>business@kylinclub.org</li>
+        <li>gitc@kylinclub.org</li>
+        <li>member@kylinclub.org</li>
+        <li>ticket@kylinclub.org</li>
+        <li>010-86466226</li>
       </ul>
     </div>
   }
