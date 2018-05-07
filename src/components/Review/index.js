@@ -3,6 +3,7 @@ import React from 'react'
 import './index.scss'
 import "swiper/dist/css/swiper.min.css"
 import "swiper/dist/js/swiper.min.js"
+import { getReview } from '../../services/home'
 import Swiper from "swiper/dist/js/swiper.js"
 
 import bj1 from './images/2017bj.png'
@@ -31,9 +32,24 @@ export const data = [
 export default class Review extends React.Component{
   constructor(props){
     super(props)
+    this.state = {
+      dataA:''
+    }
+  }
+
+  componentWillMount(){
+    getReview(74).then(res => res && res.json()).then(v => {
+      console.log(v,"74vvvv");
+      this.setState({
+        dataA:v.data
+      })
+
+    })
   }
 
   render(){
+    let {dataA } = this.state
+    console.log(dataA,"dataA");
     return <div className="reviewc_box">
       <Title Title="往期回顾" EnglishName="REVIEV"/>
 
@@ -48,7 +64,24 @@ export default class Review extends React.Component{
               })
             }
           </div>
+
+        {/*  <div className="swiper-wrapper">
+              <div className="swiper-slide" key={1}>
+                <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
+              </div>
+
+              <div className="swiper-slide" key={2}>
+              <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
+              </div>
+              <div className="swiper-slide" key={3}>
+                <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
+              </div>
+            <div className="swiper-slide" key={4}>
+              <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
+            </div>
+          </div>*/}
         </div>
+
         <div className="swiper-pagination" ref='swiperPagination'></div>
       </div>
     </div>

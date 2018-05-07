@@ -12,3 +12,8 @@ export function getSpeecherList() {
 export function getCooperative(Id) {
   return http.get(api.getImgList + Id + '/list.json?token=de33c0eedd872976e691fc878a5e349c')
 }
+
+//往期回顾 http://120.92.10.182:8000/api/gitc/img-79/list.json?token=de33c0eedd872976e691fc878a5e349c
+export function getReview (Id) {
+  return http.get(api.getImgList + Id + '/list.json?token=de33c0eedd872976e691fc878a5e349c')
+}
