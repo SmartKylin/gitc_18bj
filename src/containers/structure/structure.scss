@@ -59,10 +59,28 @@
         padding:0 10%;
     }
     li{
-        margin-bottom:123px;
         &:nth-child(1){
-            margin-bottom:121px;
+            margin-bottom:125px;
         }
+        &:nth-child(2){
+            margin-bottom:137px;
+        }
+        &:nth-child(3){
+            margin-bottom:145px;
+        }
+        &:nth-child(4){
+            margin-bottom:129px;
+        }
+        &:nth-child(5){
+            margin-bottom:124px;
+        }
+        &:nth-child(6){
+            margin-bottom:135px;
+        }
+        &:nth-child(7){
+            margin-bottom:128px;
+        }
+
     }
     .text{
         width:375px;
@@ -79,7 +97,6 @@
             color: #0856A7;
             line-height: 36px;
             margin-bottom:9px;
-            margin-top:2px;
         }
         &:nth-child(odd){
             h3{
