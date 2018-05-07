@@ -27,7 +27,7 @@ export default class extends Component {
     $(document).scrollTop(this.top)
   }
   componentWillMount () {
-    getPeopleList(45)
+    getPeopleList(77)
     .then(res => res && res.json())
     .then(data => {
       this.setState({

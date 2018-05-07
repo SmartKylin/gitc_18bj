@@ -85,7 +85,14 @@ export default class extends Component {
          </div>
        </div>
        <div style={{marginBottom: '10px', fontSize: '16px'}}>{data.name}</div>
-       <div>{data.company} {data.position}</div>
+       <div className="buju">
+         <div>
+           {data.company}
+         </div>
+         <div>
+           {data.position}
+         </div>
+       </div>
      </div>
     )
   }
