@@ -48,7 +48,7 @@ export default class SpeechGuest extends Component {
   }
   render () {
     return (
-      <div className={'speech--guest'}>
+      <div className={'speech--guest speech_host'}>
         <Title Title="演讲嘉宾" EnglishName="PRESIDIUNM"/>
         <div className='speech--body'>
           {
