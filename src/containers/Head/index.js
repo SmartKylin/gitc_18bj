@@ -18,7 +18,7 @@ class Head extends React.Component{
         })
     }
     enclistBtn(){
-        window.location.href = 'https://www.bagevent.com/event/1384111'
+        window.location.href = ''
     }
     render(){
         let { headData } = this.state
@@ -33,7 +33,7 @@ class Head extends React.Component{
                             })
                         }
                     </div>
-                    <button onClick={this.enclistBtn.bind(this)} className='enlist'>报名参会</button>
+                    <button className='enlist'><a href='https://www.bagevent.com/event/1384111' target="_blank">报名参会</a></button>
                 </div>
             </header>
         )

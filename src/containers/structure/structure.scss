@@ -53,34 +53,27 @@
 
 .parallel_content{
     padding-top:48px;
-    li div{
+    li>div{
         display:flex;
         justify-content:space-around;
         padding:0 10%;
     }
     li{
-        &:nth-child(1){
-            margin-bottom:125px;
-        }
-        &:nth-child(2){
-            margin-bottom:137px;
+        &:nth-child(1),&:nth-child(2){
+            margin-bottom:117px;
         }
         &:nth-child(3){
-            margin-bottom:145px;
+            margin-bottom:131px;
         }
         &:nth-child(4){
-            margin-bottom:129px;
+            margin-bottom:115px;
         }
-        &:nth-child(5){
-            margin-bottom:124px;
+        &:nth-child(5),&:nth-child(7){
+            margin-bottom:111px;
         }
         &:nth-child(6){
-            margin-bottom:135px;
+            margin-bottom:122px;
         }
-        &:nth-child(7){
-            margin-bottom:128px;
-        }
-
     }
     .text{
         width:375px;
@@ -90,6 +83,13 @@
         p{
             text-align:left;
             color:#333;
+            line-height:20px;
+            width:375px;
+            // display: -webkit-box;
+            // -webkit-box-orient: vertical;
+            // -webkit-line-clamp:7;
+            // overflow: hidden;
+            // text-overflow:ellipsis;
         }
         h3{
             width:100%;
