@@ -1,6 +1,8 @@
 import React from 'react'
 import './index.scss'
 import Title from "../Title/index";
+import { getCooperative } from '../../services/home'
+
 const data = [
   {row:1,column:[
     {img:1},
@@ -79,6 +81,12 @@ export default class Cooperative extends React.Component{
 
   constructor(props){
     super(props)
+  }
+
+  componentWillMount(){
+    getCooperative(81).then(res => res && res.json()).then(v => {
+
+    })
   }
 
   render(){
