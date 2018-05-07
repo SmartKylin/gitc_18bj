@@ -1,6 +1,6 @@
 .main_light{
     background-image: url('../../assets/img/banner5.png');
-    height:947px;
+    height:937px;
     width:100%;
     background-repeat: no-repeat;
     background-size:100% 100%;
@@ -32,14 +32,16 @@
 			padding:0 44px;
 			text-align:left;
 			position:absolute;
-			transform:translateY(200px);
+			// transform:translateY(60px);
+			// transform:translateY(200px);
 			animation:1s;
 			left:0;
 			background:#fff;
 			opacity:.9;
 			height:144px;
 			z-index:100;
-			display:none;
+			// display:none;
+			bottom:-60px;
 		}
 		img{
 			width:100%;
@@ -56,9 +58,14 @@
 		h2{
 			padding:24px 0 10px 0;
 		}
+		.fadeUp{
+			// transform:translateY(-148px);
+			animation: fadeInUp 2s linear forwards;
+			display:block;
+		}
 		.fadeDown{
-			transform:translateY(-148px);
-			animation:3s;
+			// transform:translateY(-148px);
+			animation: fadeInDown 2s linear forwards;
 			display:block;
 		}
 		.swiper-slide-active{
@@ -66,6 +73,9 @@
 				bottom:-53px;
 				display:block;
 			}
+		}
+		.hiddens{
+			display:none;
 		}
 	} 
 	.swiper-pagination {
@@ -85,3 +95,38 @@
 		background: #0A0B1F;
 	}
 }
+
+@keyframes fadeInUp {
+  from {
+    // opacity: 0;
+    transform: translate3d(0, 140px, 0);
+  }
+
+  to {
+    // opacity: 1;
+    transform: translate3d(0, 60px, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInDown {
+	from {
+	//   opacity: 0;
+	  -webkit-transform: translate3d(0, 60px, 0);
+	  transform: translate3d(0, 60px, 0);
+	}
+  
+	to {
+	//   opacity: 1;
+	  -webkit-transform: translate3d(0, 208px, 0);
+	  transform: translate3d(0, 208px, 0);
+	}
+  }
+  
+  .fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+  }

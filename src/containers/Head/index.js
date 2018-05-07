@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '../../components/Head/nav'
 import './head.scss'
-import bannerBg from '../../assets/img/bg.png';
 import {getListImgs} from '../../services/getListNews'
 
 

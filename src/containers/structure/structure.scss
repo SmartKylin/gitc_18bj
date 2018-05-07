@@ -52,17 +52,22 @@
 }
 
 .parallel_content{
-    padding-top:65px;
+    padding-top:48px;
     li div{
         display:flex;
         justify-content:space-around;
-        margin-bottom:60px;
-        padding:0 3%;
+        padding:0 5%;
+    }
+    li{
+        margin-bottom:126px;
+        &:nth-child(1){
+            margin-bottom:121px;
+        }
     }
     .text{
+        width:375px;
         display: flex;
         flex-wrap:wrap;
-        width:30%;
         height: 200px;
         p{
             text-align:left;
@@ -73,6 +78,8 @@
             font-size: 22px;
             color: #0856A7;
             line-height: 36px;
+            margin-bottom:9px;
+            margin-top:2px;
         }
         &:nth-child(odd){
             h3{
@@ -86,12 +93,10 @@
         }
     }
     .pic{
-        width: 30%;
-        height: 200px;
+        width:375px;
         img{
             width:100%;
             height:100%;
-            background:#ccc;
         }
     }
 }
@@ -113,7 +118,6 @@
         .lead_pic{
             width:200px;
             height:198px;
-            background:#ccc;
             img{
                 width:100%
             }

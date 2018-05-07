@@ -37,7 +37,7 @@ export default class extends Component {
   }
   render () {
     return (
-      <div className='speech--guest'>
+      <div className='speech--guest invite_host'>
        <Title Title="特邀嘉宾" EnglishName="PRESIDIUNM" />
         <div className='speech--body'>
           {

@@ -16,15 +16,15 @@ import bj8 from './images/2018-4.jpg'
 import Title from "../Title/index";
 
 
-const data = [
-  {href:'shhg.html',src:bj7},
-  {href:'http://bj.thegitc.com/news',src:bj1},
-  {href:'tokyoStation.html',src:bj8},
-  {href:'http://2016gitc.thegitc.com/summary/2013',src:bj2},
-  {href:'http://2016gitc.thegitc.com/summary/2014',src:bj3},
-  {href:'http://2016gitc.thegitc.com/summary/2015',src:bj4},
-  {href:'http://2016shanghai.thegitc.com/2016shanghai/index.html',src:bj6},
-  {href:'http://2016gitc.thegitc.com/summary/2016-bj',src:bj5},
+export const data = [
+  {href:'shhg.html',src:bj7,id:0},
+  {href:'http://bj.thegitc.com/news',src:bj1,id:1},
+  {href:'tokyoStation.html',src:bj8,id:2},
+  {href:'http://2016gitc.thegitc.com/summary/2013',src:bj2,id:3},
+  {href:'http://2016gitc.thegitc.com/summary/2014',src:bj3,id:4},
+  {href:'http://2016gitc.thegitc.com/summary/2015',src:bj4,id:5},
+  {href:'http://2016shanghai.thegitc.com/2016shanghai/index.html',src:bj6,id:6},
+  {href:'http://2016gitc.thegitc.com/summary/2016-bj',src:bj5,id:7},
 ]
 
 

@@ -1,10 +1,17 @@
 import React from 'react'
 import './structure.scss'
-import { dat, datas } from '../../a.js'
 import $ from 'jquery'
 import Title from "../../components/Title/index";
+import {getListImgs} from '../../services/getListNews'
 
 class structure extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            sessionsData: null,
+            mainData:null 
+        }
+    }
     toggleShow(ind,node){
         let list = $(node).children()
         list.eq(ind).addClass('on')
@@ -25,7 +32,16 @@ class structure extends React.Component{
     onMouseOuts(ind,node){
         this.toggleOut(ind,node)
     }
+    async componentWillMount () {
+        let sesData = await getListImgs(76).then(res => res.json())
+        let mainData = await getListImgs(75).then(res => res.json())
+        await this.setState({
+            sessionsData: sesData.data,
+            mainData: mainData.data
+        })
+    }
     render(){
+        let { sessionsData, mainData } = this.state
         return(
             <div className='main_structure'>
               <Title  Title="会议结构" EnglishName="STRUCTURE"/>
@@ -33,12 +49,12 @@ class structure extends React.Component{
                 <div className='stru_content'>
                     <ul className='lead_content'>
                         {
-                            dat && dat.map((val, ind) => {
+                            mainData && mainData.slice(0,4).map((val, ind) => {
                                 return <li key={ind} onMouseOver={() => {this.onMouseOver(ind,'.lead_content')}} onMouseOut={() => {this.onMouseOut(ind,'.lead_content')}}>
                                     <div className='lead_pic'><img src={val.img} alt=''/></div>
                                     <p>
-                                        <span>{val.tit}</span>
-                                        <span>时代大厦</span>
+                                        <span>{val.title}</span>
+                                        <span>{val.content}</span>
                                     </p>
                                 </li>
                             })
@@ -46,12 +62,12 @@ class structure extends React.Component{
                     </ul>
                     <ul className='lead_contents'>
                         {
-                            dat && dat.map((val, ind) => {
+                            mainData && mainData.slice(4).map((val, ind) => {
                                 return <li key={ind} onMouseOver={() => {this.onMouseOvers(ind,'.lead_contents')}} onMouseOut={() => {this.onMouseOuts(ind,'.lead_contents')}}>
                                     <div className='lead_pic'><img src={val.img} alt=''/></div>
                                     <p>
-                                        <span>{val.tit}</span>
-                                        <span>时代大厦</span>
+                                        <span>{val.title}</span>
+                                        <span>{val.content}</span>
                                     </p>
                                 </li>
                             })
@@ -66,15 +82,15 @@ class structure extends React.Component{
                     <div className='tit_lead'>分会场</div>
                     <ul className='parallel_content'>
                         {
-                             datas && datas.map((val, ind) => {
+                             sessionsData && sessionsData.map((val, ind) => {
                                 return <li key={ind}>
                                     {
-                                        ind % 2 == 0 ? <div>
-                                            <div className='text'><h3>{val.tit}</h3><p>{val.content}</p></div>
+                                        ind % 2 === 0 ? <div>
+                                            <div className='text'><h3>{val.title}</h3><p>{val.content}</p></div>
                                             <div className='pic'><img src={val.img} alt=''/></div>
                                         </div>: <div>
                                             <div className='pic'><img src={val.img} alt=''/></div>
-                                            <div className='text'><h3>{val.tit}</h3><p>{val.content}</p></div>
+                                            <div className='text'><h3>{val.title}</h3><p>{val.content}</p></div>
                                         </div>
                                     }
                                 </li>
