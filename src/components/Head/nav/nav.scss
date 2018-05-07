@@ -11,7 +11,6 @@
     justify-content: space-between;
     align-items:center;
     z-index:999;
-    min-width:1000px;
     ul{
         padding:0;
         display:flex;
@@ -35,9 +34,8 @@
     }
 }
 .buttonBg{
-    background-image: url('../../../assets/img/button.png');
-    background-size:100% 100%;
-    background-repeat:no-repeat;
+    background: #F69348;
+    border-radius: 100px;
     color:#fff;
     display:inline-block;
     width:104px;
@@ -45,4 +43,7 @@
     line-height:44px;
     text-align:center;
     margin-top:10px;
+}
+.changeBg{
+    background:#E87924;
 }

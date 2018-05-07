@@ -28,6 +28,12 @@ class Nav extends Component{
             that.onTurn('.invite_host')
         })
     }
+    onMouseOver(){
+        $('.buttonBg').addClass('changeBg')
+    }
+    onMouseOut(){
+        $('.buttonBg').removeClass('changeBg')
+    }
     render(){
         return(
             <div className='view_nav'>
@@ -41,7 +47,7 @@ class Nav extends Component{
                     <li>合作招募</li>
                     <li>参会指南</li>
                     <li>联系我们</li>
-                    <li onClick={this.enclistBtn.bind(this)} className='buttonBg'>立即报名</li>
+                    <li onClick={this.enclistBtn.bind(this)} className='buttonBg' onMouseOver={this.onMouseOver.bind(this)} onMouseOut={this.onMouseOut.bind(this)}>立即报名</li>
                 </ul>
             </div>
         )
