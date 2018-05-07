@@ -17,9 +17,9 @@ import Title from "../Title/index";
 
 
 export const data = [
-  {href:'shhg.html',src:bj7,id:0},
+  {href:'http://www.thegitc.com/shhg.html',src:bj7,id:0},
   {href:'http://bj.thegitc.com/news',src:bj1,id:1},
-  {href:'tokyoStation.html',src:bj8,id:2},
+  {href:'http://www.thegitc.com/tokyoStation.html',src:bj8,id:2},
   {href:'http://2016gitc.thegitc.com/summary/2013',src:bj2,id:3},
   {href:'http://2016gitc.thegitc.com/summary/2014',src:bj3,id:4},
   {href:'http://2016gitc.thegitc.com/summary/2015',src:bj4,id:5},
@@ -43,7 +43,7 @@ export default class Review extends React.Component{
             {
               data.map( (v,index) => {
                 return <div className="swiper-slide" key={index}>
-                    <a href={v.href}><img src={v.src} /></a>
+                    <a target="_open" href={v.href}><img src={v.src} /></a>
                 </div>
               })
             }
