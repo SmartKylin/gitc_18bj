@@ -1,7 +1,6 @@
 import React from 'react'
 import './index.scss'
 import { BackTop } from 'antd';
-import 'antd/dist/antd.css';
 import logo from './images/logo.png'
 
 export default class Footer extends React.Component{
@@ -39,7 +38,6 @@ export default class Footer extends React.Component{
       <div className="record">
           <div><img src={logo} alt=""/> </div><div>京CP备14035833号-1   京公网安备11010200322</div>
       </div>
-      <BackTop/>
     </div>
   }
 
