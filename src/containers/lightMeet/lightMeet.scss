@@ -8,7 +8,10 @@
     width:100%;
     text-align:center;
     padding-top:110px;
-    font-size:14px;
+		font-size:14px;
+		.view_tit{
+			margin-top:35px;
+		}
     .swiper-container{
         z-index:100;
     }
@@ -18,11 +21,11 @@
 		box-sizing:content-box;
 		.swiper-container {
 			padding-bottom: 60px;
-			margin-top:130px;
+			margin-top:88px;
 		}
 		.swiper-slide {
 			width:697px;
-			height:344px;
+			height:428px;
 			box-shadow:-3px -3px 3px 0px #ccc inset;
 			position: relative;
 			div{
@@ -35,7 +38,7 @@
 				animation:1s;
 				left:0;
 				background:#fff;
-				opacity:.9;
+				opacity:1;
 				height:144px;
 				z-index:100;
 				// display:none;
