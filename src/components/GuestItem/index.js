@@ -84,9 +84,9 @@ export default class extends Component {
            </div>
          </div>
        </div>
-       <div style={{marginBottom: '10px', fontSize: '16px'}}>{data.name}</div>
+       <div style={{marginBottom: '10px', fontSize: '16px',marginTop:'-10px'}}>{data.name}</div>
        <div className="buju">
-         <div>
+         <div style={{marginTop:'-10px'}}>
            {data.company}
          </div>
          <div>
