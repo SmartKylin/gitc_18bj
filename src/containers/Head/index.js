@@ -17,9 +17,6 @@ class Head extends React.Component{
             headData: headData.data
         })
     }
-    enclistBtn(){
-        window.location.href = ''
-    }
     render(){
         let { headData } = this.state
         return(
@@ -29,7 +26,7 @@ class Head extends React.Component{
                     <div className='banner_img'>
                         {
                             headData && headData.map((val, ind) => {
-                                return <img key='ind' alt='' src={val.img}/>
+                                return <img key={ind} alt='' src={val.img}/>
                             })
                         }
                     </div>
