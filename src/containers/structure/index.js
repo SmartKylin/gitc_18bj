@@ -84,6 +84,7 @@ class structure extends React.Component{
                         {
                              sessionsData && sessionsData.map((val, ind) => {
                                 return <li key={ind}>
+                                    <div className='circleDot'></div>
                                     {
                                         ind % 2 === 0 ? <div>
                                             <div className='text' style={{marginRight:'68px'}}><h3>{val.title}</h3><p>{val.content}</p></div>
