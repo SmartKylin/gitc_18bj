@@ -33,12 +33,14 @@
     min-height:3203px;
     height:3203px;
     position: relative;
-    background-size:cover;
+    background-size:100% 100%;
     background-repeat:no-repeat;
     background-position: center;
     background-image:url('../../assets/img/stru_parallel.png');
     .tit_lead{
         padding-top:95px;
+        margin:78px 0 0 0;
+
     }
     .par_pic{
         width:100%;
@@ -52,6 +54,8 @@
     }
 }
 
+
+
 .parallel_content{
     padding-top:48px;
     li>div{
@@ -59,8 +63,10 @@
         justify-content:center;
     }
     li{
+        position: relative;
         &:nth-child(1){
             margin-bottom:118px;
+            margin-top:140px;
         }
         &:nth-child(2){
             margin-bottom:123px;
@@ -76,6 +82,16 @@
         }
         &:nth-child(6){
             margin-bottom:122px;
+        }
+        .circleDot{
+            width:12px;
+            height:12px;
+            border-radius:50%;
+            background:#BEBEC4;
+            position: absolute;
+            left: 50%;
+            margin-left: -6px;
+            top: 12px;
         }
     }
     .text{
