@@ -1,6 +1,5 @@
 import React from 'react'
 import './index.scss'
-import { BackTop } from 'antd';
 import logo from './images/logo.png'
 
 export default class Footer extends React.Component{
