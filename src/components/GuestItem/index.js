@@ -84,12 +84,12 @@ export default class extends Component {
            </div>
          </div>
        </div>
-       <div style={{marginBottom: '10px', fontSize: '16px',marginTop:'-10px'}}>{data.name}</div>
+       <div style={{marginBottom: '15px', fontSize: '16px',marginTop:'-10px'}}>{data.name}</div>
        <div className="buju">
-         <div style={{marginTop:'-10px'}}>
+         <div style={{marginTop:'-10px',fontSize:'12px',fontWeight:'100'}}>
            {data.company}
          </div>
-         <div>
+         <div className="fon" style={{fontSize:'12px',fontWeight:'lighter',fontFamily:''}}>
            {data.position}
          </div>
        </div>
