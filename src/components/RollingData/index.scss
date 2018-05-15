@@ -9,6 +9,7 @@
   display: flex;
   flex-direction:column;
   justify-content: center;
+  overflow: hidden;
   .rollingData_box_up{
     width: 80%;
     display: flex;
@@ -43,6 +44,109 @@
       align-items: center;
       font-size: 15px;
       font-weight: 100;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .rollingData_box{
+    width: 100%;
+    height: 500px;
+    background-image: url("./images/bj.jpg");
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    overflow: hidden;
+    .rollingData_box_up{
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      margin: 20px auto;
+      .rollingData_box_item{
+        width: 250px;
+        .countUp{
+          font-size: 30px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 100;
+      }
+    }
+    .rollingData_box_lower{
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin: 20px auto;
+      .rollingData_box_item{
+        width: 250px;
+        .countUp{
+          font-size: 30px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 100;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 414px){
+  .rollingData_box{
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/bj.jpg");
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    overflow: hidden;
+    .rollingData_box_up{
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      margin: 20px auto;
+      .rollingData_box_item{
+        width: 250px;
+        .countUp{
+          font-size: 15px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 100;
+      }
+    }
+    .rollingData_box_lower{
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin: 20px auto;
+      .rollingData_box_item{
+        width: 250px;
+        .countUp{
+          font-size: 15px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 100;
+      }
     }
   }
 }

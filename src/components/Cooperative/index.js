@@ -93,7 +93,8 @@ export default class Cooperative extends React.Component{
     return <div className="cooperative_box">
       <Title Title="合作伙伴" EnglishName="PARTNERS"/>
       <div style={{marginTop:'100px'}}></div>
-      {
+      <img src="" alt=""/>
+    {/*  {
         data.map( (v, i) => {
           return <div className="cooperative_box_row" key={i}>
             {
@@ -103,7 +104,7 @@ export default class Cooperative extends React.Component{
             }
           </div>
         })
-      }
+      }*/}
     </div>
   }
 }

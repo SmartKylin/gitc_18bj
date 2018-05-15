@@ -1,4 +1,3 @@
-
 .pic--guest--item {
   width: 207px;
   display: flex;
@@ -75,10 +74,376 @@
     }
   }
 }
-
+.buju-name{
+  margin-bottom: 15px;
+  font-size:16px ;
+  margin-top:-10px;
+}
 .buju{
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: iconfont;
+}
+
+
+@media only screen and (max-width: 768px){
+  .pic--guest--item {
+    width: 192px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .guest--avatar--area {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+
+    .guest--avatar {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    .guest--detail--box {
+      position: absolute;
+      width: 315px;
+      background: #1b2d4c;
+      color: #ffffff;
+      top: 0;
+      left: -110px;
+      border-radius: 5px;
+      z-index: 10;
+      padding: 0 12px 18px 12px;
+    }
+
+    .small--avatar {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 4px solid #0d1427;
+      left: 50%;
+      margin-left: -35px;
+      top: -35px;
+    }
+
+    .speech--box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .addr--time {
+        width: 210px;
+        height: 10px;
+        line-height: 10px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 14px;
+      }
+    }
+    .topic--intro,
+    .guest--intro {
+      line-height: 10px;
+      margin-top: 14px;
+
+      > span {
+        font-weight: bold;
+      }
+    }
+  }
+  .buju-name{
+    margin-bottom: 15px;
+    font-size:14px ;
+    margin-top:-10px;
+  }
+
+  .buju{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: iconfont;
+  }
+}
+
+
+@media only screen and (max-width: 414px){
+  .pic--guest--item {
+    width: 103px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .guest--avatar--area {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+
+    .guest--avatar {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    .guest--detail--box {
+      position: absolute;
+      width: 315px;
+      background: #1b2d4c;
+      color: #ffffff;
+      top: 0;
+      left: -110px;
+      border-radius: 5px;
+      z-index: 10;
+      padding: 0 12px 18px 12px;
+    }
+
+    .small--avatar {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 4px solid #0d1427;
+      left: 50%;
+      margin-left: -35px;
+      top: -35px;
+    }
+
+    .speech--box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .addr--time {
+        width: 210px;
+        height: 10px;
+        line-height: 10px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 14px;
+      }
+    }
+    .topic--intro,
+    .guest--intro {
+      line-height: 10px;
+      margin-top: 14px;
+
+      > span {
+        font-weight: bold;
+      }
+    }
+  }
+  .buju-name{
+    margin-bottom: 15px;
+    font-size:14px ;
+    margin-top:-5px;
+  }
+
+  .buju{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: iconfont;
+  }
+}
+
+
+@media only screen and (max-width: 375px){
+  .pic--guest--item {
+    width: 92px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .guest--avatar--area {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    //background: url(../../../images/avatar-bg.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    .guest--avatar {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .guest--detail--box {
+      position: absolute;
+      width: 315px;
+      background: #1b2d4c;
+      color: #ffffff;
+      top: 0;
+      left: -110px;
+      border-radius: 5px;
+      z-index: 10;
+      padding: 0 12px 18px 12px;
+      //display: flex;
+      //flex-direction: column;
+      //align-items: center;
+    }
+
+    .small--avatar {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 4px solid #0d1427;
+      left: 50%;
+      margin-left: -35px;
+      top: -35px;
+    }
+
+    .speech--box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .addr--time {
+        width: 190px;
+        height: 10px;
+        line-height: 10px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 14px;
+      }
+    }
+    .topic--intro,
+    .guest--intro {
+      line-height: 10px;
+      margin-top: 14px;
+
+      > span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .buju-name{
+    margin-bottom: 15px;
+    font-size:13px ;
+    margin-top:-5px;
+  }
+  .buju{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: iconfont;
+  }
+}
+
+
+@media only screen and (max-width: 360px){
+  .pic--guest--item {
+    width: 89px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .guest--avatar--area {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    //background: url(../../../images/avatar-bg.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    .guest--avatar {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .guest--detail--box {
+      position: absolute;
+      width: 315px;
+      background: #1b2d4c;
+      color: #ffffff;
+      top: 0;
+      left: -110px;
+      border-radius: 5px;
+      z-index: 10;
+      padding: 0 12px 18px 12px;
+      //display: flex;
+      //flex-direction: column;
+      //align-items: center;
+    }
+
+    .small--avatar {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 4px solid #0d1427;
+      left: 50%;
+      margin-left: -35px;
+      top: -35px;
+    }
+
+    .speech--box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .addr--time {
+        width: 190px;
+        height: 10px;
+        line-height: 10px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 14px;
+      }
+    }
+    .topic--intro,
+    .guest--intro {
+      line-height: 10px;
+      margin-top: 14px;
+
+      > span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .buju-name{
+    margin-bottom: 15px;
+    font-size:13px ;
+    margin-top:-5px;
+  }
+  .buju{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: iconfont;
+  }
 }

@@ -17,12 +17,14 @@ class App extends Component {
         <Head/>
         <AboutMeet/>
         <LightMeet/>
-        <Structure/>
+        {/*宽度有问题*/}
+        {/*<Structure/>*/}
         {/*特邀嘉宾*/}
-        <ExpertGroup/>
+        {/*<ExpertGroup/>*/}
         {/*演讲嘉宾*/}
-        {/*<SpeechGuest/>*/}
+        <SpeechGuest/>
         <Review/>
+        {/*宽度有问题*/}
         <RollingData/>
         {/*合作伙伴*/}
         {/*<Cooperative/>*/}

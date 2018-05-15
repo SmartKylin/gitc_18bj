@@ -51,19 +51,21 @@ export default class SpeechGuest extends Component {
       <div className={'speech--guest speech_host'}>
         <Title Title="演讲嘉宾" EnglishName="PRESIDIUNM"/>
         <div className='speech--body'>
+          {/*<GuestItem key={index} speech={true} data={item} canPop={true} pos={getPosByInd(index)}/>*/}
           {
             this.state.data.length && this.state.data.slice(0, 15).map((item, index) => (
-              <GuestItem key={index} speech={true} data={item} canPop={true} pos={getPosByInd(index)}/>
+              <GuestItem key={index} speech={true} data={item}/>
             ))
           }
         </div>
+
        
         {
           this.state.hasMore ?
           <div className='speech--more'>
             {
               this.state.data.length && this.state.data.slice(15).map((item, index) => (
-              <GuestItem key={index} speech={true} data={item} canPop={true} pos={getPosByInd(index)}/>
+              <GuestItem key={index} speech={true} data={item}/>
               ))
             }
           </div> : null

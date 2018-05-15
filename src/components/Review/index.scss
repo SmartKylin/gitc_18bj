@@ -5,7 +5,7 @@
   max-height: 1000px;
   overflow: hidden;
   margin-top: 50px;
-  .certify {
+  .certifyA {
     position: relative;
     width: 1400px;
     margin: 0 auto;
@@ -50,4 +50,12 @@
       background: #0A0B1F;
     }
   }
+}
+
+
+@media only screen and (max-width: 414px){
+  .certifyA{
+    display: none;
+  }
+
 }

@@ -52,7 +52,7 @@ export default class Review extends React.Component{
     return <div className="reviewc_box">
       <Title Title="往期回顾" EnglishName="REVIEV"/>
 
-      <div className="certify" ref='certify' >
+      <div className="certifyA" ref='certify' >
         <div className="swiper-container" ref='container'>
           <div className="swiper-wrapper">
             {
@@ -63,31 +63,32 @@ export default class Review extends React.Component{
               })
             }
           </div>
-
-        {/*  <div className="swiper-wrapper">
-              <div className="swiper-slide" key={1}>
-                <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
-              </div>
-
-              <div className="swiper-slide" key={2}>
-              <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
-              </div>
-              <div className="swiper-slide" key={3}>
-                <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
-              </div>
-            <div className="swiper-slide" key={4}>
-              <a target="_open"><img src={'http://www.thegitc.com/static/sh2018/images/ad45a7dc-51b6-11e8-b321-fa163e6c852e.png'} /></a>
-            </div>
-          </div>*/}
         </div>
 
         <div className="swiper-pagination" ref='swiperPagination'></div>
       </div>
+
+      <div className="review-middle">
+        <div className="swiper-container" ref={ref => this.review =ref}>
+          <div className="swiper-wrapper">
+            {
+              data.map( (v,index) => {
+                return <div className="swiper-slide" key={index}>
+                  <a target="_open" href={v.href}><img style={{width:'100%',height:'100%'}} src={v.src} /></a>
+                </div>
+              })
+            }
+          </div>
+
+          <div className="swiper-pagination" ref='swiperPagination'></div>
+        </div>
+      </div>
+
     </div>
   }
 
   componentDidMount() {
-    let certifySwiper = new Swiper(this.refs.container, {
+    new Swiper(this.refs.container,   {
       watchSlidesProgress: true,
       slidesPerView: 'auto',
       centeredSlides: true,
@@ -127,6 +128,17 @@ export default class Review extends React.Component{
         }
       }
 
+    })
+    new Swiper(this.review, {
+      autoplay: {
+        stopOnLastSlide:true,
+        disableOnInteraction: false
+      },
+      loop: true,
+      loopedSlides: 5,
+      pagination: {
+        el: this.refs.swiperPagination,
+      },
     })
   }
 }
