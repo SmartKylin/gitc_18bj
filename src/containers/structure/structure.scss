@@ -2,7 +2,7 @@
     font-size: 26px;
     color: #333333;
     line-height:37px;
-    margin:78px 0 95px 0;
+    margin:22px 0 30px 0;
 }
 .main_structure{
     width:100%;
@@ -183,5 +183,109 @@
             width:209px;
             height:314px;
         }
+    }
+}
+
+@media screen and (max-width:768px){
+    .stru_parallel{
+        background:none;
+    }
+    .hotWord{
+        width:100%;
+        h2, p{
+            width:3.43rem;
+            text-align:justify;
+        }
+    }
+    .lead_content,.lead_contents{
+        li{
+            width: .82rem;
+            height:1.08rem;
+            margin-right:.05rem;
+            margin-bottom:.12rem;
+            display: flex;
+            flex-direction: column;
+            .lead_pic,p,img{
+                width: .82rem;
+                height:.54rem;
+            }
+            p{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-top:.15rem;   
+            }
+            span{
+                font-size:12px;
+                padding:.15rem 0 .05rem 0;
+                display:block;
+                &:nth-child(2){
+                    font-size:8px;
+                    opacity: 0.5;
+                    line-height: 12px;
+                }
+            }
+        }
+        
+    }
+    .parallel_content{
+        display: none;
+    }
+    .parallel_cont{
+        width:100%;
+        padding-top:48px;
+        .contet{
+            display:flex;
+            justify-content:center;
+        }
+        .text,.pic{
+            width:1.41rem;
+        }
+        .text{
+            display: flex;
+            flex-wrap:wrap;
+            height: 200px;
+            p{
+                text-align:justify;
+                color:#333;
+                line-height:20px;
+                width:375px;
+            }
+            
+            &:nth-child(odd){
+                h3{
+                    text-align:right;
+                }
+            }
+            &:nth-child(even){
+                h3{
+                    text-align:left;
+                }
+            }
+        }
+        .pic{
+            background: #fff;
+            .pics{
+                width:1.41rem;
+                height:.8rem;
+                img{
+                    width:100%;
+                }
+            }
+            h3{
+                width:100%;
+                height:.6rem;
+                box-shadow: 0 0 15px 6px rgba(208,207,213,0.50);
+                line-height:.6rem;
+                margin-bottom:9px;
+                font-size: .12rem;
+                color: #333333;
+            }
+        }
+    }
+}
+@media screen and (min-width:770px){
+    .parallel_cont{
+        display: none;
     }
 }

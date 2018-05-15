@@ -37,3 +37,10 @@
     flex-wrap:wrap;
     justify-content:center;
 }
+@media screen and (max-width:768px){
+    .describe{
+        width:3.43rem;
+        text-align:justify;
+        margin-top:42px;
+    }
+}

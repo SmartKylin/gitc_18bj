@@ -10,6 +10,8 @@ import pic2 from './img/pic2.png'
 import pic3 from './img/pic3.png'
 import pic4 from './img/pic4.png'
 import pic5 from './img/pic5.png'
+import Title from "../../components/Title/index";
+
 
 let datas =  [
     {"weight": 1, "img":pic1 ,"title": "技术风口", "url": "", "content": "GITC 2018·上海站主会场将邀请到互联网行业最具影响力的人物，共同探讨分享最前沿的互联网技术信息。内容将涉及AI、大数据、区块链、AR/VR、互联网金融、新零售、平台架构、产业升级等最新技术成果和未来发展趋势。让与会嘉宾全方位领略、感受世界领先技术。"},
@@ -80,10 +82,7 @@ class lightMeet extends React.Component{
         let { lightData } = this.state
         return(
             <div className='main_light'>
-                <div className='view_tit'>
-                    <span>大会亮点</span>
-                    <span>HIGHT LIGHTS</span>
-                </div>
+                <Title  Title="大会亮点" EnglishName="HIGHT LIGHTS"/>
                 <div className="certify" ref='certify' >
                     <div className="swiper-container" ref='Container'>
                         <div className="swiper-wrapper">
@@ -101,6 +100,12 @@ class lightMeet extends React.Component{
                         </div>
                     </div>
                     <div className="swiper-pagination" ref='swiperPagination'></div>
+                </div>
+                <div className='light-show'>
+                <div className='show1'><img src={pic1}/><p>邀请互联网行业最具影响力的人物，共同探讨分享前沿的技术信息</p></div>
+                <dl className='show2'><dt><img src={pic2}/><p>打造顶级商务平台，真正实现零距离交流</p></dt><dt><img src={pic3}/><p>聚焦互联网领域最新技术成果与最佳实践</p></dt></dl>
+                <dl className='show2 show3'><dt><img src={pic4}/><p>全方位互动，全新的参会体验</p></dt><dt><img src={pic5}/><p>体验创新产品，玩味前沿技术</p></dt></dl>
+
                 </div>
             </div>
         )

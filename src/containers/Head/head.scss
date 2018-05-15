@@ -29,3 +29,36 @@
         } 
     }
 }
+
+@media screen and (max-width:768px){
+    .banner{
+        margin-top:62px;
+        background-image: url('../../assets/img/bg@2x.png');
+        height:8.1rem;
+        background-size:100% 100%;
+        width:100%;
+        background-repeat:no-repeat;
+        background-position: center;
+    }
+    .banner_img{
+        img{
+            display:none;
+        } 
+    }
+    .enlist a{
+        width:104px;
+        bottom:38%;
+        left:35%;
+        font-size:14px;
+        background:#F69348;
+    }
+}
+@media screen and (max-width:414px){
+    .enlist a{
+        width:104px;
+        bottom:38%;
+        left:35%;
+        font-size:14px;
+        background:#F69348;
+    }
+}
