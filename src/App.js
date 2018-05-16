@@ -23,6 +23,7 @@ class App extends Component {
         {/*<ExpertGroup/>*/}
         {/*演讲嘉宾*/}
         <SpeechGuest/>
+        {/*动态数字*/}
         <Review/>
         {/*宽度有问题*/}
         <RollingData/>

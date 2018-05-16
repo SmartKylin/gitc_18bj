@@ -9,7 +9,8 @@ export default class extends Component {
     super(props)
     this.state = {
       hasMore: false,
-      data: []
+      data: [],
+      clientWidth:''
     }
   }
   // 产看更多
@@ -34,14 +35,24 @@ export default class extends Component {
         data: data && data.data
       })
     })
+    this.getClientWidth()
+  }
+
+  getClientWidth = () => {
+    let w = document.documentElement.clientWidth || document.body.clientWidth;
+    this.setState({
+      clientWidth:w
+    })
   }
   render () {
+    let {clientWidth} = this.state
+    let end = parseInt(clientWidth)> 1440 ? 15 : 16
     return (
       <div className='speech--guest invite_host'>
        <Title Title="特邀嘉宾" EnglishName="PRESIDIUNM" />
         <div className='speech--body'>
           {
-            this.state.data.length && this.state.data.slice(0, 15).map((item, index) => (
+            this.state.data.length && this.state.data.slice(0, end).map((item, index) => (
               <GuestItem key={index} speech={true} data={item}/>
             ))
           }
@@ -51,7 +62,7 @@ export default class extends Component {
           this.state.hasMore ?
           <div className='speech--more'>
             {
-              this.state.data.length && this.state.data.slice(15).map((item, index) => (
+              this.state.data.length && this.state.data.slice(end).map((item, index) => (
               <GuestItem key={index} speech={true} data={item}/>
               ))
             }

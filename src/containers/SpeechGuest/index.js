@@ -20,7 +20,8 @@ export default class SpeechGuest extends Component {
     super(props)
     this.state = {
       hasMore: false,
-      data: []
+      data: [],
+      clientWidth:''
     }
   }
   // 产看更多
@@ -45,15 +46,27 @@ export default class SpeechGuest extends Component {
         data: data && data.data
       })
     })
+    this.getClientWidth()
   }
+
+  getClientWidth = () => {
+    let w = document.documentElement.clientWidth || document.body.clientWidth;
+    this.setState({
+      clientWidth:w
+    })
+  }
+
   render () {
+    let {clientWidth} = this.state
+
+    let and = parseInt(clientWidth) > 1400 ? 15 : 16
     return (
       <div className={'speech--guest speech_host'}>
         <Title Title="演讲嘉宾" EnglishName="PRESIDIUNM"/>
         <div className='speech--body'>
           {/*<GuestItem key={index} speech={true} data={item} canPop={true} pos={getPosByInd(index)}/>*/}
           {
-            this.state.data.length && this.state.data.slice(0, 15).map((item, index) => (
+            this.state.data.length && this.state.data.slice(0, and).map((item, index) => (
               <GuestItem key={index} speech={true} data={item}/>
             ))
           }
@@ -64,7 +77,7 @@ export default class SpeechGuest extends Component {
           this.state.hasMore ?
           <div className='speech--more'>
             {
-              this.state.data.length && this.state.data.slice(15).map((item, index) => (
+              this.state.data.length && this.state.data.slice(and).map((item, index) => (
               <GuestItem key={index} speech={true} data={item}/>
               ))
             }
