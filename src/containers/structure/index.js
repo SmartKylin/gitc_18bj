@@ -98,6 +98,24 @@ class structure extends React.Component{
                             })
                         }
                     </ul>
+                    <ul className='parallel_cont'>
+                        {
+                             sessionsData && sessionsData.map((val, ind) => {
+                                return <li key={ind}>
+                                    <div className='circleDot'></div>
+                                    {
+                                        ind % 2 === 0 ?<div className='contet'>
+                                            <div className='pic' style={{marginRight:'68px'}}><div className='pics'><img src={val.img} alt=''/></div><h3>{val.title}</h3></div>
+                                            <div className='text' style={{marginLeft:'68px'}}><p>{val.content}</p></div>
+                                        </div> : <div className='contet'>
+                                            <div className='text' style={{marginRight:'68px'}}><p>{val.content}</p></div>
+                                            <div className='pic'  style={{marginLeft:'68px'}}><div className='pics'><img src={val.img} alt=''/></div><h3>{val.title}</h3></div>
+                                        </div>
+                                    }
+                                </li>
+                            })
+                        }
+                    </ul>
                 </div>
             </div>
         )

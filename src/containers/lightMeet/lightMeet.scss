@@ -9,7 +9,7 @@
     text-align:center;
     padding-top:110px;
 		font-size:14px;
-		.view_tit{
+		.Title_box{
 			margin-top:35px;
 		}
     .swiper-container{
@@ -98,39 +98,80 @@
 	}
 }
 
-
-
-@keyframes fadeInUp {
-  from {
-    // opacity: 0;
-    transform: translate3d(0, 140px, 0);
-  }
-
-  to {
-    // opacity: 1;
-    transform: translate3d(0, 60px, 0);
-  }
+@media screen and (max-width:768px){
+	.main_light{
+		background-image: url('../../assets/img/banner5 copy 3@2x.png');
+		height:5.19rem;
+		padding-top:25px;
+	}
+	.certify{
+		display:none;
+	}
+	.Title_box{
+		margin-bottom: 30px;
+	}
+	.light-show{
+		width:100%;
+		display:flex;
+		flex-wrap:wrap;
+		div{
+			width:100%;
+			display:flex;
+			margin:0 auto;
+		}
+		img{
+			width:100%;
+		}
+		.show1{
+			width:3.43rem;
+			height:1.7rem;
+			position: relative;
+			p{
+				bottom:0;
+			}
+		}
+		.show2{
+			width:100%;
+			display:flex;
+			justify-content:center;
+			margin-top:.2rem;
+			dt{
+				width: 1.64rem;
+				height:1.05rem;
+				position: relative;
+				&:first-child{
+					margin-right:.15rem;
+				}
+			}
+		}
+		.show3{
+			margin-top: -0.05rem;
+			position: relative;
+		}
+		p{
+			position: absolute;
+			width:92%;
+			box-sizing:content-box;
+			height:33px;
+			padding:0 4%;
+			opacity: 0.5;
+			background: #000000;
+			font-family: PingFangSC-Regular;
+			font-size: 10px;
+			color: #FFFFFF;
+			left:0;
+			bottom:.24rem;
+			display: flex;
+			align-items:center;
+			justify-content:flex-start;
+			word-wrap:break-word; 
+			text-align:left;
+		}
+	}
 }
 
-.fadeInUp {
-  animation-name: fadeInUp;
+@media screen and (min-width:770px){
+	.light-show{
+		display: none;
+	}
 }
-
-@keyframes fadeInDown {
-	from {
-	//   opacity: 0;
-	  -webkit-transform: translate3d(0, 60px, 0);
-	  transform: translate3d(0, 60px, 0);
-	}
-  
-	to {
-	//   opacity: 1;
-	  -webkit-transform: translate3d(0, 208px, 0);
-	  transform: translate3d(0, 208px, 0);
-	}
-  }
-  
-  .fadeInDown {
-	-webkit-animation-name: fadeInDown;
-	animation-name: fadeInDown;
-  }

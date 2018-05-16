@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import navImg from '../../../assets/img/nav.png';
+import navImg from '../../../assets/img/logo@2x.png';
+import changeImg from '../../../assets/img/change@2x.png';
 import './nav.scss'
 import $ from 'jquery'
 
@@ -26,15 +27,19 @@ class Nav extends Component{
     render(){
         return(
             <div className='view_nav'>
-                {/* <img className='logo' src={navImg} alt=''/> */}
                 <ul>
                     <li><a href="http://www.thegitc.com/index.html">首页</a></li>                  
                     <li><a href="http://www.thegitc.com/tokyoStation.html">GITC东京站</a></li>                  
                     <li><a href="#">GITC上海站</a></li>                  
                     <li><a href="http://www.kylinclub.org/" target="_blank">主办方</a></li>
                     <li><a href="http://www.thegitc.com/contact.html">加入我们</a></li>
-                    <li className='buttonBg'><a href="https://www.bagevent.com/event/1384111" target="_blank">立即报名</a></li>
+                    {/* <li className='buttonBg'><a href="https://www.bagevent.com/event/1384111" target="_blank">立即报名</a></li> */}
                 </ul>
+                <div className='view-head'>
+                    <img className='logo' src={navImg} alt=''/>
+                    <button className='buttonBg'><a href="https://www.bagevent.com/event/1384111" target="_blank">立即报名</a></button>
+                    <img src={changeImg} alt=''/>
+                </div>
             </div>
         )
     }
