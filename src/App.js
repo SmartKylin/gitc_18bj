@@ -18,7 +18,7 @@ class App extends Component {
         <AboutMeet/>
         <LightMeet/>
         {/*宽度有问题*/}
-        {/*<Structure/>*/}
+        <Structure/>
         {/*特邀嘉宾*/}
         {/*<ExpertGroup/>*/}
         {/*演讲嘉宾*/}

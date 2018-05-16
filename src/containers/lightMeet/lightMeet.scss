@@ -8,7 +8,7 @@
     width:100%;
     text-align:center;
     padding-top:110px;
-		font-size:14px;
+	font-size:14px;
 		.Title_box{
 			margin-top:35px;
 		}
@@ -101,9 +101,14 @@
 @media screen and (max-width:768px){
 	.main_light{
 		background-image: url('../../assets/img/banner5 copy 3@2x.png');
-		height:5.19rem;
+		height:4.72rem;
 		padding-top:25px;
+		.Title_box{
+			margin-top:20px;
+			margin-bottom:30px;
+		}
 	}
+	
 	.certify{
 		display:none;
 	}
@@ -121,6 +126,7 @@
 		}
 		img{
 			width:100%;
+			height:100%;
 		}
 		.show1{
 			width:3.43rem;
@@ -135,6 +141,7 @@
 			display:flex;
 			justify-content:center;
 			margin-top:.2rem;
+			margin-bottom:25px;
 			dt{
 				width: 1.64rem;
 				height:1.05rem;
@@ -145,7 +152,7 @@
 			}
 		}
 		.show3{
-			margin-top: -0.05rem;
+			margin-top: 15px;
 			position: relative;
 		}
 		p{
@@ -160,7 +167,7 @@
 			font-size: 10px;
 			color: #FFFFFF;
 			left:0;
-			bottom:.24rem;
+			bottom:0;
 			display: flex;
 			align-items:center;
 			justify-content:flex-start;
@@ -173,5 +180,28 @@
 @media screen and (min-width:770px){
 	.light-show{
 		display: none;
+	}
+}
+@media screen and (max-width:441px){
+	.main_light{
+		height:559px;
+	}
+	.show2{
+		dt{
+			width: 164px;
+			height:105px;
+			position: relative;
+			&:first-child{
+				margin-right:.15rem;
+			}
+		}
+	}
+	.light-show .show3{
+		margin-top:-5px;
+	}
+}
+@media screen and (max-width:375px){
+	.main_light{
+		height:515px;
 	}
 }

@@ -20,3 +20,8 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 .pr{position: relative;}
 .pa{position: absolute;}
 .pf{position: fixed;}
+@media screen and (max-width:768px){
+    body{
+        font-family: PingFangSC-Regular;
+    }
+}
