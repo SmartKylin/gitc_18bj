@@ -187,16 +187,15 @@
 
 @media screen and (max-width:768px){
     .main_structure{
-        height:3280px;
+        height:4880px;
     }
     .tit_lead{
-        font-size: 15px;
+        font-size: .15rem;
         margin:22px 0 30px 0;
     }
     .stru_parallel{
         background:none; 
-        height:0;
-        min-height:0;
+        height:3600px;
         .tit_lead{
             padding-top: 0;
             margin:0;
@@ -209,13 +208,13 @@
         margin-bottom:53px;
         margin-top:20px;
         h2{
-            font-size: 14px;
+            font-size: .14rem;
             color:#333;
         }
         p{
-            font-size: 12px;
+            font-size: .12rem;
             color: #666666;
-            line-height: 20px;
+            line-height: .2rem;
             margin-top:10px;
         }
         h2, p{
@@ -246,11 +245,11 @@
                 padding-top:15px;   
             }
             span{
-                font-size:12px;
+                font-size:.12rem;
                 padding:15px 0 5px 0;
                 display:block;
                 &:nth-child(2){
-                    font-size:8px;
+                    font-size:.08rem;
                     opacity: 0.5;
                     line-height: 12px;
                 }
@@ -263,11 +262,12 @@
     }
 
     .parallel_cont{
+        // display: none;
         width:100%;
         background-image:url('../../assets/img/Group 2@2x.png');
-        height:1969px;
+        height:3506px;
         background-position:center;
-        background-size:8px 1969px;
+        background-size:8px 4192px;
         background-repeat:no-repeat;
         img{
             width:100%;
@@ -298,8 +298,8 @@
         .text{        
             text-align:justify;
             color:#333;
-            line-height:14px;
-            font-size:10px;
+            line-height:.14rem;
+            font-size:.1rem;
             // display: box;
             // -webkit-box-orient: vertical;
             // overflow: hidden;
@@ -319,7 +319,7 @@
                 box-shadow: 0 0 15px 6px rgba(208,207,213,0.50);
                 line-height:.6rem;
                 margin-bottom:9px;
-                font-size:12px;
+                font-size:.12rem;
                 color: #333333;
             }
         }
