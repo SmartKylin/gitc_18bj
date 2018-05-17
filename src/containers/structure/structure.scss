@@ -361,6 +361,19 @@
         
     }
 }
+@media screen and (max-width:375px){
+    .main_structure {
+        height: 3106px;
+    }
+    .stru_parallel {
+        min-height:2369px;
+        height: 2369px;
+    }
+    .parallel_cont{
+        height:2295px;
+        background-size: 8px 3607px;
+    }
+}
 @media screen and (min-width:770px){
     .parallel_cont{
         display: none;
