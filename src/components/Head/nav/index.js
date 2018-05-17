@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import navImg from '../../../assets/img/logo@2x.png';
 import changeImg from '../../../assets/img/change@2x.png';
-import closePic from '../../../assets/img/close_icon.png'
 import './nav.scss'
 import $ from 'jquery'
 
@@ -60,7 +59,7 @@ class Nav extends Component{
                 </div>
                 {
                     flag ? <div className='navPage'>
-                    <img onClick={() =>{this.onClose()}} src={closePic}/>
+                    <div className='closePic' onClick={() =>{this.onClose()}}>×</div>
                     <div className='nav_list'>
                         <a href="http://www.thegitc.com/index.html">首页</a>                  
                         <a href="http://www.thegitc.com/tokyoStation.html">GITC东京站</a>                  
