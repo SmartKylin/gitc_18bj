@@ -38,7 +38,7 @@
         background-size:100% 100%;
         width:100%;
         background-repeat:no-repeat;
-        background-position: center;
+        background-position: 0 -50px;
     }
     .banner_img{
         img{
@@ -47,16 +47,29 @@
     }
     .enlist a{
         width:104px;
-        bottom:38%;
+        bottom:33%;
         left:35%;
         font-size:14px;
         background:#F69348;
     }
 }
 @media screen and (max-width:414px){
+    .banner{
+       position: relative;
+        div:nth-child(1){
+            width: 142px;
+            height: 25px;
+            img{
+                position: absolute;
+                right: 5px;
+                top: 50px;
+            }
+        }
+
+    }
     .enlist a{
         width:104px;
-        bottom:38%;
+        bottom:40%;
         left:35%;
         font-size:14px;
         background:#F69348;

@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../../components/Head/nav'
+import navImg from '../../assets/img/logo@2x.png';
 import './head.scss'
 import {getListImgs} from '../../services/getListNews'
 
@@ -23,6 +24,9 @@ class Head extends React.Component{
             <header className='head'>
                 <Nav/>
                 <div className='banner'>
+                    <div>
+                        <img src={navImg}/>
+                    </div>
                     <div className='banner_img'>
                         {
                             headData && headData.map((val, ind) => {
