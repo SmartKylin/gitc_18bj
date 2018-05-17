@@ -101,6 +101,7 @@
 }
 @media only screen and (max-width: 414px){
   .rollingData_box{
+    display: none;
     width: 100%;
     height: 100%;
     background-image: url("./images/bj.jpg");
@@ -108,7 +109,6 @@
     background-repeat:no-repeat;
     background-size: 100% 100%;
     color: #ffffff;
-    display: flex;
     flex-direction:column;
     justify-content: center;
     overflow: hidden;
