@@ -89,7 +89,7 @@ export default class extends Component {
          <div style={{marginTop:'-10px',fontSize:'12px',fontWeight:'100'}}>
            {data.company}
          </div>
-         <div className="fon" style={{fontSize:'12px',fontWeight:'lighter',fontFamily:''}}>
+         <div className="fon" style={{fontSize:'10px',fontWeight:'lighter',fontFamily:''}}>
            {data.position}
          </div>
        </div>

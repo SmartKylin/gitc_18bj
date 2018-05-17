@@ -40,7 +40,24 @@
     .describe{
         width:3.43rem;
         text-align:justify;
-        margin-top:0;
+        margin-top: 0;
+        font-size: .12rem;
+        color: #333333;
+        line-height: .22rem;
+    }
+}
+
+@media screen and (max-width:414px){
+    .main{
+        margin-top: -156px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .describe{
+        width:3.43rem;
+        text-align:justify;
+        margin-top: 0;
         font-size: .12rem;
         color: #333333;
         line-height: .22rem;

@@ -264,7 +264,7 @@
     .parallel_cont{
         // display: none;
         width:100%;
-        background-image:url('../../assets/img/Group 2@2x.png');
+        background-image:url('../../assets/img/Group2@2x.png');
         height:3506px;
         background-position:center;
         background-size:8px 4192px;
@@ -327,13 +327,13 @@
 }
 @media screen and (max-width:414px){
     .main_structure {
-        height: 3295px;
+        height: 3170px;
     }
     .stru_parallel {
         height: 2369px;
     }
     .parallel_cont{
-        height:2418px;
+        height:2275px;
         background-size: 8px 2418px;
         .text,.pic{
             width:141px;
@@ -363,15 +363,15 @@
 }
 @media screen and (max-width:375px){
     .main_structure {
-        height: 3106px;
+        height: 2790px;
     }
     .stru_parallel {
         min-height:2369px;
         height: 2369px;
     }
     .parallel_cont{
-        height:2295px;
-        background-size: 8px 2295px;
+        height:1960px;
+        background-size: 8px 1960px;
     }
 }
 @media screen and (min-width:770px){

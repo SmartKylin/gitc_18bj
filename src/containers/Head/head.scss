@@ -33,12 +33,12 @@
 @media screen and (max-width:768px){
     .banner{
         margin-top:62px;
-        background-image: url('../../assets/img/bg@2x.png');
+        background-image: url('../../assets/img/Group@2x.png');
         height:8.1rem;
         background-size:100% 100%;
         width:100%;
         background-repeat:no-repeat;
-        background-position: 0 -50px;
+        background-position: 0 -150px;
     }
     .banner_img{
         img{
@@ -62,14 +62,14 @@
             img{
                 position: absolute;
                 right: 5px;
-                top: 50px;
+                top: 10px;
             }
         }
 
     }
     .enlist a{
         width:104px;
-        bottom:40%;
+        bottom:45%;
         left:35%;
         font-size:14px;
         background:#F69348;
