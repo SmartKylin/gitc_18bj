@@ -28,6 +28,16 @@
             width:100%;
         } 
     }
+    div:nth-child(1){
+        display: none;
+        width: 142px;
+        height: 25px;
+        img{
+            position: absolute;
+            right: 5px;
+            top: 10px;
+        }
+    }
 }
 
 @media screen and (max-width:768px){
@@ -57,6 +67,7 @@
     .banner{
        position: relative;
         div:nth-child(1){
+            display: block;
             width: 142px;
             height: 25px;
             img{
@@ -65,7 +76,6 @@
                 top: 10px;
             }
         }
-
     }
     .enlist a{
         width:104px;

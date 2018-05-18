@@ -50,11 +50,17 @@
       background: #0A0B1F;
     }
   }
+  .review-middle{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px){
   .certifyA{
     display: none;
+  }
+  review-middle{
+    display: block;
   }
 }
 
@@ -113,6 +119,7 @@
       }
     }
     .review-middle{
+      display: block;
       width: 100%;
     }
   }
