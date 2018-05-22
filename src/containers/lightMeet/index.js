@@ -82,7 +82,7 @@ class lightMeet extends React.Component{
         let { lightData } = this.state
         return(
             <div className='main_light'>
-                <Title  Title="大会亮点" EnglishName="HIGHT LIGHTS"/>
+                <Title  Title="大会亮点" EnglishName="HIGH LIGHTS"/>
                 <div className="certify" ref='certify' >
                     <div className="swiper-container" ref='Container'>
                         <div className="swiper-wrapper">

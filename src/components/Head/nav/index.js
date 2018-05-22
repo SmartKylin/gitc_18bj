@@ -47,7 +47,7 @@ class Nav extends Component{
                 <ul className='nav_top'>
                     <li><a href="http://www.thegitc.com/index.html">首页</a></li>                  
                     <li><a href="http://www.thegitc.com/tokyoStation.html">GITC东京站</a></li>                  
-                    <li><a href="#">GITC上海站</a></li>                  
+                    <li><a href="#">GITC上海站</a></li>
                     <li><a href="http://www.kylinclub.org/" target="_blank">主办方</a></li>
                     <li><a href="http://www.thegitc.com/contact.html">加入我们</a></li>
                     {/* <li className='buttonBg'><a href="https://www.bagevent.com/event/1384111" target="_blank">立即报名</a></li> */}
@@ -63,7 +63,7 @@ class Nav extends Component{
                     <div className='nav_list'>
                         <a href="http://www.thegitc.com/index.html">首页</a>                  
                         <a href="http://www.thegitc.com/tokyoStation.html">GITC东京站</a>                  
-                        <a href="#">GITC上海站</a>                  
+                        <a href="#"  onClick={() =>{this.onClose()}}>GITC上海站</a>
                         <a href="http://www.kylinclub.org/" target="_blank">主办方</a>
                         <a href="http://www.thegitc.com/contact.html">加入我们</a>
                         {/* <li className='buttonBg'><a href="https://www.bagevent.com/event/1384111" target="_blank">立即报名</a></li> */}
