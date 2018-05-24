@@ -37,7 +37,6 @@ export default class extends Component {
     })
     this.getClientWidth()
   }
-
   getClientWidth = () => {
     let w = document.documentElement.clientWidth || document.body.clientWidth;
     this.setState({
@@ -46,10 +45,12 @@ export default class extends Component {
   }
   render () {
     let {clientWidth} = this.state
-    let end = parseInt(clientWidth)> 1440 ? 15 : 16
+
+    let end = parseInt(clientWidth) > 1430 ? 15 : 16
+
     return (
       <div className='speech--guest invite_host'>
-       <Title Title="特邀嘉宾" EnglishName="PRESIDIUNM" />
+       <Title Title="特邀嘉宾" EnglishName="GUEST OF HONOR" />
         <div className='speech--body'>
           {
             this.state.data.length && this.state.data.slice(0, end).map((item, index) => (
@@ -57,7 +58,6 @@ export default class extends Component {
             ))
           }
         </div>
-       
         {
           this.state.hasMore ?
           <div className='speech--more'>
@@ -68,7 +68,6 @@ export default class extends Component {
             }
           </div> : null
         }
-        
         {
           this.state.hasMore ?
           <div className="btn--more" onClick={this.collapse}>

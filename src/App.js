@@ -20,9 +20,9 @@ class App extends Component {
         {/*宽度有问题*/}
         <Structure/>
         {/*特邀嘉宾*/}
-        {/*<ExpertGroup/>*/}
+        <ExpertGroup/>
         {/*演讲嘉宾*/}
-        <SpeechGuest/>
+        {/*<SpeechGuest/>*/}
         {/*动态数字*/}
         <Review/>
         {/*宽度有问题*/}
