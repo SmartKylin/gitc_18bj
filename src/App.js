@@ -10,15 +10,33 @@ import RollingData from "./components/RollingData/index";
 import Review from "./components/Review/index";
 import Cooperative from "./components/Cooperative/index";
 import SpeechGuest from "./containers/SpeechGuest/index";
+import Agenda from "./components/Agenda/index";
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      width:1200
+    }
+  }
+
+  componentDidMount(){
+    let width = document.body.clientWidth
+    this.setState({
+      width
+    })
+  }
+
   render() {
+    let {width} = this.state
     return (
       <div className="App">
         <Head/>
         <AboutMeet/>
         <LightMeet/>
-        {/*宽度有问题*/}
+        {/*分会场*/}
         <Structure/>
+        {/*大会议程*/}
+        {width > 900 ? <Agenda/> : null}
         {/*特邀嘉宾*/}
         <ExpertGroup/>
         {/*演讲嘉宾*/}

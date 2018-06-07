@@ -1,0 +1,327 @@
+.agenda-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .agenda-box-time{
+    margin-top: 106px;
+    width: 621px;
+    height: 60px;
+    border-radius: 60px;
+    background-image:linear-gradient(-45deg, #3791CE 0%, #36A1DA 35%, #B36EAD 66%, #EE4F75 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .mobile-background{
+      position: absolute;
+      top:8px;
+      left:14px;
+      background:linear-gradient(-45deg, #3791CE 0%, #36A1DA 35%, #B36EAD 66%, #EE4F75 100%) !important;
+      transition: left ease-in-out .3s;
+    }
+    div{
+      z-index: 100;
+      font-family: PingFangSC-Regular;
+      width: 200px;
+      height: 44px;
+      border-radius: 44px;
+      cursor:pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color:#0856A7;;
+      span:nth-child(1){
+        font-size: 14px;
+      }
+      span:nth-child(2){
+        font-size: 12px;
+      }
+    }
+  }
+
+  .agenda-box-time::after{
+    position: absolute;
+    width: 200px;
+    height: 44px;
+    border-radius: 44px;
+    top:10px;
+    left: 20px;
+    background:linear-gradient(-45deg, #3791CE 0%, #36A1DA 35%, #B36EAD 66%, #EE4F75 100%) !important;
+    color: #FFF!important;
+    border: none !important;
+  }
+
+  .agenda-box-time::before{
+    position: absolute;
+    width:619px;
+    height:58px;
+    border-radius:60px;
+    background:#fff;
+    content: '';
+    left: 1px;
+    top: 1px;
+  }
+  .agenda-background-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin-top: 60px;
+    width: 890px;
+    height: 79px;
+    background: url("./images/bj.png") no-repeat;
+    background-size: 100% 100%;
+    color: #FFF;
+    font-family: PingFangSC-Medium;
+    i{
+      display: inline-block;
+      width: 17px;
+      height: 15px;
+      background: url("./images/dizhi.svg") no-repeat;
+      background-size: 15px 15px;
+    }
+    span:nth-child(1){
+      font-size: 18px;
+    }
+    span:nth-child(2){
+      margin-top: 5px;
+      font-size: 16px;
+    }
+  }
+  .agenda-body{
+    width: 890px;
+    display: flex;
+    position: relative;
+    .agenda-body-left{
+      position: absolute;
+      top: 151px;
+      width: 24%;
+      display: flex;
+      flex-direction: column;
+      font-family: PingFangSC-Regular;
+      .leftbut{
+        position: relative;
+        width: 200px;
+        height: 44px;
+        border-radius:44px;
+        cursor: pointer;
+        background-image:linear-gradient(-45deg, #3791CE 0%, #36A1DA 35%, #B36EAD 66%, #EE4F75 100%);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:after{
+          position: absolute;
+          content: '';
+          width:198px;
+          height:42px;
+          border-radius:44px;
+          background: #FFF;
+          left: 1px;
+          top: 1px;
+        }
+        span{
+          z-index: 100;
+          font-size: 12px;
+          color: #0856A7;
+          position: absolute;
+          text-align: center;
+        }
+      }
+
+
+    }
+    .agenda-body-right{
+      width: 76%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      padding-top: 144px;
+      margin-left: 24%;
+      position: relative;
+      .agenda-body-right-item-top{
+        position: absolute;
+        left:137px;
+        top: 54px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        .data-top{
+          width: 77px;
+          height: 17px;
+          line-height: 17px;
+          text-align: center;
+          font-size: 12px;
+          color: #999999;
+          margin-right: 24px;
+        }
+        .line-top{
+          position: relative;
+          width: 1px;
+          height: 45px;
+          margin-top: 45px;
+          background:#EBFAFF;
+          margin-right: 69px;
+          .circle-top{
+            position:absolute;
+            top: -4px;
+            left: -3.5px;
+            width:9px;
+            height: 9px;
+            background: #00B0EC;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #B2E7F9;
+          }
+        }
+        .test-top{
+          font-size: 14px;
+        }
+      }
+      .agenda-body-right-item{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        .data{
+          width: 77px;
+          height: 17px;
+          line-height: 17px;
+          text-align: center;
+          font-size: 12px;
+          color: #999999;
+          margin-right: 24px;
+        }
+        .line{
+          position: relative;
+          width: 1px;
+          height: 90px;
+          background:#EBFAFF;
+          margin-right: 69px;
+          .circle{
+            position:absolute;
+            top: 40px;
+            left: -4.5px;
+            width:9px;
+            height: 9px;
+            background: #00B0EC;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #B2E7F9;
+          }
+        }
+        .character{
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: #666;
+          margin-right: 30px;
+          img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+        .introduction{
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          justify-content: space-around;
+          height: 60px;
+          margin-right: 30px;
+          width: 252px;
+          span:nth-child(1){
+            font-size: 14px;
+            color: #333333;
+            line-height: 14px;
+          }
+          span:nth-child(2){
+            font-size: 12px;
+            color: #999999;
+            line-height: 12px;
+          }
+          span:nth-child(3){
+            font-size: 12px;
+            color: #999999;
+            line-height: 12px;
+          }
+        }
+        .ppt{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 62px;
+          width: 38px;
+          cursor:pointer;
+          span{
+            background: url("./images/but.svg") no-repeat;
+            background-size: 14px 14px;
+            background-position: right;
+            font-size: 14px;
+            color: #333333;
+            line-height: 22px;
+          }
+        }
+      }
+      .agenda-body-right-item:last-child{
+        .line{
+          position: relative;
+          width: 1px;
+          height: 45px;
+          background:#EBFAFF;
+          margin-right: 69px;
+          margin-top:-45px;
+          .circle{
+            position:absolute;
+            top: 40px;
+            left: -4.5px;
+            width:9px;
+            height: 9px;
+            background: #00B0EC;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #B2E7F9;
+          }
+        }
+        margin-bottom: 0;
+      }
+    }
+  }
+  .agenda-but{
+    margin: 0 auto;
+    width: 200px;
+    height: 44px;
+    border-radius: 44px;
+    background-image:linear-gradient(-45deg, #3791CE 0%, #36A1DA 35%, #B36EAD 66%, #EE4F75 100%);
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 44px;
+    margin-top: 60px;
+    cursor:pointer;
+    text-align: center;
+    padding-left: 20px;
+    .agenda-but-icon{
+      background: url("./images/baisebut.svg") no-repeat;
+      background-size: 18px 18px;
+      background-position: 27px;
+    }
+  }
+
+  .active{
+    color: #FFF!important;
+    border: none !important;
+  }
+
+
+  .activeA{
+    width: 200px;
+    height: 44px;
+    border-radius: 44px;
+    background:linear-gradient(-45deg, #3791CE 0%, #36A1DA 35%, #B36EAD 66%, #EE4F75 100%) !important;
+    color: #FFF!important;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
