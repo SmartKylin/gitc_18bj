@@ -5,7 +5,7 @@
  */
 
 // const prefix = window.__CONFIG__.apiPath
-const prefix = 'http://120.92.10.182:8000'
+const prefix = 'http://api.thegitc.com'
 export default (config => {
   return Object.keys(config).reduce((copy, name) => {
     copy[name] = `${prefix}${config[name]}`
