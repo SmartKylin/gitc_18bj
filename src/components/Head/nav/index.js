@@ -7,11 +7,11 @@ import $ from 'jquery'
 
 const headerData = [
   { title: '首页', url: 'http://www.thegitc.com/index.html' },
-  { title: 'GITC北京站' },
-  { title: '大会嘉宾' },
-  { title: '大会会刊', url: '#meeting-structure' },
-  { title: '资料下载' },
-  { title: '酒店信息', url: '#meeting-cooperation' },
+  { title: 'GITC北京站', url:'#'},
+  { title: '大会嘉宾', url: '#' },
+  { title: '大会会刊', url: '#' },
+  { title: '资料下载', url: '#' },
+  { title: '酒店信息', url: '#' },
   { title: '关于主办方', url: 'http://www.kylinclub.org/' },
   { title: '加入我们', url: 'http://www.thegitc.com/index.html' }
 ];
