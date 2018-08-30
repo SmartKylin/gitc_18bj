@@ -16,5 +16,5 @@ export default (config => {
   'peopleList':'/api/gitc/person-',
   // 获取图片类接口
   'getImgList': '/api/gitc/img-',
-  
+  'getArticleList': '/api/gitc/article-'
 })

@@ -1,0 +1,126 @@
+.speech--guest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 80px;
+
+  .speech--body {
+    margin-top: 31px;
+  }
+  .speech--body,
+  .speech--more {
+    //overflow: hidden;
+    width: 1035px;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: center;
+  }
+
+  .btn--more {
+    color: #fff;
+    width: 341px;
+    display: flex;
+    position: relative;
+    
+
+    &:hover {
+      .icon-more {
+        left: 46px;
+      }
+
+      .icon-jiabing {
+        right: 45px;
+      }
+    }
+
+    .btn {
+      transition: all .3s ease-out;
+      height: 49px;
+      cursor: pointer;
+      position: absolute;
+
+
+    }
+    .icon-more {
+      z-index: 10;
+      left: 0;
+      width: 152px;
+
+      background: url(../../assets/images2/ic_gengduo.png) no-repeat center;
+    }
+
+    .icon-jiabing {
+      right: 0;
+      width: 171px;
+      background: url(../../assets/images2/ic_jiabin.png) no-repeat center;
+    }
+  }
+}
+
+//@media only screen and (max-width: 768px){
+//  .speech--guest {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    overflow: hidden;
+//    padding-bottom: 10px;
+//    .speech--body,
+//    .speech--more{
+//      width: 100%;
+//      display: flex;
+//      flex-wrap: wrap;
+//    }
+//
+//    .btn--more {
+//      width: 140px;
+//      height: 37px;
+//      background: #f69348;
+//      border-radius: 19.5px;
+//      line-height: 37px;
+//      text-align: center;
+//      font-size: 13px;
+//      cursor: pointer;
+//      user-select: none;
+//      color: #fff;
+//      > span {
+//        margin-right: 7px;
+//      }
+//
+//    }
+//  }
+//}
+
+//
+//@media only screen and (max-width: 414px){
+//  .speech--guest {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    overflow: hidden;
+//    padding-bottom: 10px;
+//    .speech--body,
+//    .speech--more{
+//      width: 100%;
+//      display: flex;
+//      flex-wrap: wrap;
+//    }
+//
+//    .btn--more {
+//      width: 140px;
+//      height: 37px;
+//      background: #f69348;
+//      border-radius: 19.5px;
+//      line-height: 37px;
+//      text-align: center;
+//      font-size: 13px;
+//      cursor: pointer;
+//      user-select: none;
+//      color: #fff;
+//      > span {
+//        margin-right: 7px;
+//      }
+//
+//    }
+//  }
+//}

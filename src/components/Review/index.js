@@ -3,8 +3,9 @@ import React from 'react'
 import './index.scss'
 import "swiper/dist/css/swiper.min.css"
 import "swiper/dist/js/swiper.min.js"
-import { getReview } from '../../services/home'
+// import { getReview } from '../../services/home'
 import Swiper from "swiper/dist/js/swiper.js"
+import reviewLogo from '../../assets/images2/review_logo.png'
 
 import bj1 from './images/2017bj.png'
 import bj2 from './images/2013.jpg'
@@ -14,131 +15,97 @@ import bj5 from './images/2016.jpg'
 import bj6 from './images/2016-2.jpg'
 import bj7 from './images/2017sh.jpg'
 import bj8 from './images/2018-4.jpg'
-import Title from "../Title/index";
+// import Title from "../Title/index";
 
 
 export const data = [
-  {href:'http://www.thegitc.com/shhg.html',src:bj7,id:0},
-  {href:'http://bj.thegitc.com/news',src:bj1,id:1},
-  {href:'http://www.thegitc.com/tokyoStation.html',src:bj8,id:2},
-  {href:'http://2016gitc.thegitc.com/summary/2013',src:bj2,id:3},
-  {href:'http://2016gitc.thegitc.com/summary/2014',src:bj3,id:4},
-  {href:'http://2016gitc.thegitc.com/summary/2015',src:bj4,id:5},
-  {href:'http://2016shanghai.thegitc.com/2016shanghai/index.html',src:bj6,id:6},
-  {href:'http://2016gitc.thegitc.com/summary/2016-bj',src:bj5,id:7},
+  {href: 'http://www.thegitc.com/shhg.html', src: bj7, id: 0},
+  {href: 'http://bj.thegitc.com/news', src: bj1, id: 1},
+  {href: 'http://www.thegitc.com/tokyoStation.html', src: bj8, id: 2},
+  {href: 'http://2016gitc.thegitc.com/summary/2013', src: bj2, id: 3},
+  {href: 'http://2016gitc.thegitc.com/summary/2014', src: bj3, id: 4},
+  {href: 'http://2016gitc.thegitc.com/summary/2015', src: bj4, id: 5},
+  {href: 'http://2016shanghai.thegitc.com/2016shanghai/index.html', src: bj6, id: 6},
+  {href: 'http://2016gitc.thegitc.com/summary/2016-bj', src: bj5, id: 7},
 ]
 
 
-export default class Review extends React.Component{
-  constructor(props){
+export default class Review extends React.Component {
+  constructor(props) {
     super(props)
     this.state = {
-      dataA:''
+      dataA: ''
     }
   }
-
-  componentWillMount(){
-    getReview(74).then(res => res && res.json()).then(v => {
-      this.setState({
-        dataA:v.data
-      })
-
-    })
-  }
-
-  render(){
-    let {dataA } = this.state
-
+  
+  // componentWillMount(){
+  //   getReview(74).then(res => res && res.json()).then(v => {
+  //     this.setState({
+  //       dataA:v.data
+  //     })
+  
+  //   })
+  // }
+  
+  render() {
+    // let {dataA } = this.state
+    
     return <div className="reviewc_box">
-      <Title Title="往期回顾" EnglishName="REVIEV"/>
-
-      <div className="certifyA" ref='certify' >
+      <div className="meeting-review-logo" id='meeting-review'>
+        <img src={reviewLogo} alt=""/>
+      </div>
+      
+      <div className="certifyA" ref='certify'>
         <div className="swiper-container" ref='container'>
           <div className="swiper-wrapper">
             {
-              data.map( (v,index) => {
+              data.map((v, index) => {
                 return <div className="swiper-slide" key={index}>
-                    <a target="_open" href={v.href}><img src={v.src} /></a>
+                  <a target="_open" href={v.href}><img src={v.src}/></a>
                 </div>
               })
             }
           </div>
         </div>
-
-        <div className="swiper-pagination" ref='swiperPagination'></div>
+        
+        <div className="swiper-pagination" ref='swiperPagination'/>
       </div>
-
-      <div className="review-middle">
-        <div className="swiper-container" ref={ref => this.review =ref}>
-          <div className="swiper-wrapper">
-            {
-              data.map( (v,index) => {
-                return <div className="swiper-slide" key={index}>
-                  <a target="_open" href={v.href}><img style={{width:'100%',height:'100%'}} src={v.src} /></a>
-                </div>
-              })
-            }
-          </div>
-
-          <div className="swiper-pagination" ref='swiperPagination'></div>
-        </div>
-      </div>
-
+    
+    
     </div>
   }
-
+  
   componentDidMount() {
-    new Swiper(this.refs.container,   {
-      watchSlidesProgress: true,
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      loop: true,
-      loopedSlides: 5,
-      autoplay: true,
-      pagination: {
-        el: this.refs.swiperPagination,
-        //clickable :true,
-      },
-      on: {
-        progress: function(progress) {
-          for (let i = 0; i < this.slides.length; i++) {
-            let slide = this.slides.eq(i);
-            let slideProgress = this.slides[i].progress;
-            let modify = 1;
-            if (Math.abs(slideProgress) > 1) {
-              modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
-            }
-            let translate = slideProgress * modify * 260 + 'px';
-            let scale = 1 - Math.abs(slideProgress) / 5;
-            let zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-            slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-            slide.css('zIndex', zIndex);
-            slide.css('opacity', 1);
-            if (Math.abs(slideProgress) > 3) {
-              slide.css('opacity', 0);
-            }
-          }
-        },
-        setTransition: function(transition) {
-          for (let i = 0; i < this.slides.length; i++) {
-            let slide = this.slides.eq(i)
-            slide.transition(transition);
-          }
-
-        }
-      }
-
-    })
-    new Swiper(this.review, {
+    new Swiper(this.refs.container, {
       autoplay: {
-        stopOnLastSlide:true,
+        stopOnLastSlide: true,
         disableOnInteraction: false
       },
+      speed: 1000,
+      // autoplay: 4000,
       loop: true,
-      loopedSlides: 5,
-      pagination: {
-        el: this.refs.swiperPagination,
+      spaceBetween: 10,
+      
+      effect: 'coverflow',
+      slidesPerView: 3,
+      // centeredSlides: true,
+      coverflowEffect: {
+        // rotate: 45,
+        // stretch: 10,
+        // depth: 60,
+        // modifier: 2,
+        // slideShadows: true
+  
+        rotate: 40,
+        stretch: 50,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true
       },
+      
+      // pagination: {
+      //   el: this.refs.swiperPagination,
+      // },
     })
   }
 }

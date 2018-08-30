@@ -4,6 +4,7 @@ import http from '../fetch'
 export function getPeopleList(pageId) {
   return http.get(api.peopleList + pageId + `/list.json?token=de33c0eedd872976e691fc878a5e349c&phone=13800138000&order_by=ename`)
 }
+
 export function getSpeecherList() {
   return http.get('http://api.thegitc.com/api/gitc/person-78/list.json?token=de33c0eedd872976e691fc878a5e349c&phone=13800138000')
 }

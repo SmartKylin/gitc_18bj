@@ -1,18 +1,18 @@
 import React, {Component} from 'react'
 import GuestItem from '../../components/GuestItem'
 import $ from 'jquery'
-import {getPeopleList} from "../../services/home";
-import Title from "../../components/Title/index";
+import Title from "../../components/MeetingTitle";
+import './index.scss'
 
 export default class extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       hasMore: false,
-      data: [],
-      clientWidth:''
+      clientWidth: ''
     }
   }
+  
   // 产看更多
   catMore = () => {
     this.top = $(document).scrollTop();
@@ -27,60 +27,51 @@ export default class extends Component {
     })
     $(document).scrollTop(this.top)
   }
-  componentWillMount () {
-    getPeopleList(77)
-    .then(res => res && res.json())
-    .then(data => {
-      this.setState({
-        data: data && data.data
-      })
-    })
-    this.getClientWidth()
-  }
+  
+  
   getClientWidth = () => {
-    let w = document.documentElement.clientWidth || document.body.clientWidth;
+    const w = document.documentElement.clientWidth || document.body.clientWidth;
     this.setState({
-      clientWidth:w
+      clientWidth: w
     })
   }
-  render () {
-    let {clientWidth} = this.state
-
-    let end = parseInt(clientWidth) > 1430 ? 15 : 16
-
+  
+  render() {
+    const {clientWidth, hasMore} = this.state
+    const {peopleList, title, subTitle} = this.props
+    
+    const end = parseInt(clientWidth) > 1430 ? 15 : 16
+    
+    const finalList = hasMore ? peopleList : peopleList.slice(0, end)
+    
     return (
-      <div className='speech--guest invite_host'>
-       <Title Title="特邀嘉宾" EnglishName="GUEST OF HONOR" />
-        <div className='speech--body'>
-          {
-            this.state.data.length && this.state.data.slice(0, end).map((item, index) => (
-              <GuestItem key={index} speech={true} data={item}/>
-            ))
-          }
-        </div>
+    <div className='speech--guest invite_host'>
+      <Title title={title} englishName={subTitle}/>
+      <div className='speech--body'>
         {
-          this.state.hasMore ?
-          <div className='speech--more'>
-            {
-              this.state.data.length && this.state.data.slice(end).map((item, index) => (
-              <GuestItem key={index} speech={true} data={item}/>
-              ))
-            }
-          </div> : null
-        }
-        {
-          this.state.hasMore ?
-          <div className="btn--more" onClick={this.collapse}>
-            <span>收起</span>
-            <i className="iconfont icon-arow_up"/>
-          </div>
-          :
-          <div className="btn--more" onClick={this.catMore}>
-            <span>更多嘉宾</span>
-            <i className="iconfont icon-arow_down-copy"/>
-          </div>
+          (finalList || []).map((item, index) => (
+          <GuestItem key={index} speech={true} data={item}/>
+          ))
         }
       </div>
+      
+      {
+        hasMore ?
+        (
+        <div className="btn--more collapse-btn" onClick={this.collapse}>
+          <span>收起</span>
+          <i className="iconfont icon-arow_up"/>
+        </div>
+        )
+        :
+        (
+        <div className="btn--more" onClick={this.catMore}>
+          <div className="icon-more btn"/>
+          <div className="icon-jiabing btn"/>
+        </div>
+        )
+      }
+    </div>
     )
   }
 }

@@ -1,5 +1,6 @@
 .pic--guest--item {
   width: 207px;
+  color: #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,8 +22,8 @@
 
   .guest--avatar {
     display: inline-block;
-    width: 140px;
-    height: 140px;
+    width: 131px;
+    height: 131px;
     border-radius: 50%;
   }
   .guest--detail--box {
@@ -89,6 +90,7 @@
 
 @media only screen and (max-width: 768px){
   .pic--guest--item {
+    color: #fff;
     width: 192px;
     display: flex;
     align-items: center;
@@ -179,6 +181,7 @@
 @media only screen and (max-width: 414px){
   .pic--guest--item {
     width: 103px;
+    color: #fff;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -274,6 +277,7 @@
 @media only screen and (max-width: 375px){
   .pic--guest--item {
     width: 92px;
+    color: #fff;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -366,6 +370,7 @@
 @media only screen and (max-width: 360px){
   .pic--guest--item {
     width: 89px;
+    color: #fff;
     display: flex;
     align-items: center;
     flex-direction: column;

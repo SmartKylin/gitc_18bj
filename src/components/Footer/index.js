@@ -1,6 +1,11 @@
 import React from 'react'
 import './index.scss'
-import logo from './images/logo.png'
+import logo from '../../assets/images2/gitc_logo.png'
+
+import facebookImg from './images/ic_facebook.png'
+import googleImg from './images/ic_google.png';
+import twitterImg from './images/ic_twitter.png';
+import youTubeImg from './images/ic_youtube.png'
 
 export default class Footer extends React.Component{
   constructor(props){
@@ -8,7 +13,7 @@ export default class Footer extends React.Component{
   }
 
   render(){
-    return <div className="footer_box">
+    return <div className="footer_box" id='contact-us'>
       <div className="footer_box_A">
         <div className="footer_box_left">
           <ul className="ul-1">
@@ -27,12 +32,19 @@ export default class Footer extends React.Component{
           </ul>
         </div>
         <div className="footer_box_right">
-            <div>
+            {/*<div>
               GITC
             </div>
             <div>
               GITC全球互联网技术大会始终走在互联网技术交流分享的最前端，是目前国内规模最大、资源最成熟的技术峰会，同时也是中国互联网一年一度的行业盛事。
-            </div>
+            </div>*/}
+            
+            <ul className="ul-3">
+              <li><img src={facebookImg}/></li>
+              <li><img src={twitterImg}/></li>
+              <li><img src={googleImg}/></li>
+              <li><img src={youTubeImg}/></li>
+            </ul>
         </div>
       </div>
       <div className="record">

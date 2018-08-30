@@ -1,0 +1,44 @@
+.meeting-block {
+  width: 970px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  .meeting-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .meeting-list-item {
+      position: relative;
+      width: 449px;
+      height: 324px;
+      padding: 100px 37px 47px 37px;
+      color: #fff;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 16px 0;
+      &:last-child {
+        .item-summary {
+          display: none;
+        }
+      } //img {
+      //  position: absolute;
+      //  display: block;
+      //
+      //}
+      .item-title {
+        font-size: 22px;
+        text-align: center;
+      }
+      .item-summary {
+        margin-top: 15px;
+        text-align: justify; //width: 375px;high-light-item
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+  }
+}

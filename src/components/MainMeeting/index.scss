@@ -1,0 +1,65 @@
+.main-meeting-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.main-meeting-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  //justify-content: center;
+  align-items: center;
+  width: 960px;
+  .main-meeting-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .main-meeting-item {
+      margin: 60px 80px;
+      color: #fff;
+      width: 70px;
+      height: 100px;
+      text-align: center;
+      font-size: 16px;
+      .item-title {
+        margin-top: 12px;
+      }
+      img {
+        display: block;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .main-meeting-intro {
+    width: 879px;
+    height: 337px;
+    background: url(../../assets/images2/bg_主会场简介.png) no-repeat center;
+    background-size: cover;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding: 96px 186px;
+    margin-bottom: 80px;
+    
+    color: #333333;
+    .title {
+      width: 164px;
+      font-size: 24px;
+      margin: 30px 0;
+    }
+    .intro-content {
+      width: 508px;
+      font-size: 16px;
+      color: #333333;
+      font-weight: 100;
+      text-align: justify;
+      line-height: 24px;
+    }
+  }
+}

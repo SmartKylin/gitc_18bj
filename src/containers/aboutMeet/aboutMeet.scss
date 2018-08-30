@@ -1,65 +1,115 @@
-.view_tit{
-    background-image:url('../../assets/img/titbg.png');
-    background-repeat:no-repeat;
-    background-size:355px 58px;
-    background-position:center;
-    width:100%;
-    height:58px;
-    text-align:center;
-    color:#333;
-    margin-top:120px;
-    text-align:center;
-    span{
-        font-size:24px;
-        display:block;
-        line-height:33px;
-        &:first-child{
-            padding-top:5px;
-        }
-        &:nth-child(2){
-            font-size:14px;
-            line-height: 20px;
-        }
-    }
-}
 
-.describe{
-    width:700px;
-    font-size: 16px;
-    color: #333333;
-    line-height: 30px;
-    margin-top:51px;
-    text-align: center;
-}
-.main{
+.main {
+
+  .banner-wrapper {
+    width: 100%;
     display: flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-@media screen and (max-width:768px){
-    .describe{
-        width:3.43rem;
-        text-align:justify;
-        margin-top: 0;
-        font-size: .12rem;
-        color: #333333;
-        line-height: .22rem;
+    justify-content: center;
+
+
+    .banner {
+      display: block;
+      width: 1440px;
     }
+  }
+
+  .meeting-intro-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 213px;
+    position: relative;
+    .intro-logo {
+      top: 50px;
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 237px;
+      height: 300px;
+    }
+
+    .describe {
+      //position: absolute;
+      width: 960px;
+      height: 210px;
+      font-size: 14px;
+      color: #FFFFFF;
+      text-align: justify;
+      line-height: 30px;
+      margin-top: 40px;
+      //margin-bottom: 239px;
+      font-weight: 100;
+    }
+  }
+
+
+
+  .structure-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+
+
+  .main-bg-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: url(../../assets/images2/bg_wangge@2x.png) repeat center #0033AA fixed;
+    //background-size: cover;
+
+    //height: calc(100vh);
+    position: relative;
+  }
+
+  .ant-back-top {
+    bottom: 100px;
+  }
+  .ant-back-top-inner {
+    background: url(../../assets/images2/ic_zhiding.png) no-repeat center;
+    background-size: cover;
+    position: fixed;
+    cursor: pointer;
+    right: 12%;
+    bottom: 50px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    //background-color: #1088e9;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+  }
 }
 
-@media screen and (max-width:414px){
-    .main{
-        margin-top: -156px;
-        display: flex;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-    .describe{
-        width:3.43rem;
-        text-align:justify;
-        margin-top: 0;
-        font-size: .12rem;
-        color: #333333;
-        line-height: .22rem;
-    }
-}
+//@media screen and (max-width:768px){
+//    .describe{
+//        width:3.43rem;
+//        text-align:justify;
+//        margin-top: 0;
+//        font-size: .12rem;
+//        color: #333333;
+//        line-height: .22rem;
+//    }
+//}
+//
+//@media screen and (max-width:414px){
+//    .main{
+//        margin-top: -156px;
+//        display: flex;
+//        flex-wrap:wrap;
+//        justify-content:center;
+//    }
+//    .describe{
+//        width:3.43rem;
+//        text-align:justify;
+//        margin-top: 0;
+//        font-size: .12rem;
+//        color: #333333;
+//        line-height: .22rem;
+//    }
+//}

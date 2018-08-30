@@ -1,0 +1,70 @@
+.introduce-header {
+  position: relative;
+  background: url(../../assets/images2/bg_gitc2018.png) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  height: 400px;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    background: rgba(0, 0, 0, .05);
+
+    .title-english {
+      font-family: PingFangSC-Semibold;
+      font-size: 36px;
+      color: #FFFFFF;
+      letter-spacing: 27.04px;
+      text-align: justify;
+      margin-bottom: 27px;
+    }
+
+    .title-name {
+      font-family: PingFangSC-Semibold;
+      font-size: 20px;
+      color: #FFFFFF;
+      letter-spacing: 8.66px;
+      text-align: justify;
+      font-weight: 100;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    //height: 400px;
+  }
+}
+
+//@media screen and (max-width: 768px) {
+//  .Title_box {
+//    background-image: url('../../assets/img/titbg@2x.png');
+//    height: .25rem;
+//    background-size: 1.55rem .25rem;
+//    line-height: .25rem;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//    margin-bottom: 20px;
+//    margin-top: 60px;
+//    margin-left: -5px;
+//    span {
+//      // text-indent:15px;
+//      font-size: .14rem;
+//      line-height: .2rem;
+//      padding: 0;
+//      padding-left: .15rem;
+//      &:nth-child(2) {
+//        font-size: .1rem;
+//        line-height: .14rem;
+//      }
+//    }
+//  }
+//}
