@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.44aa587c.css",
   "main.css.map": "static/css/main.44aa587c.css.map",
-  "main.js": "static/js/main.7a684b45.js",
-  "main.js.map": "static/js/main.7a684b45.js.map",
+  "main.js": "static/js/main.abc90d96.js",
+  "main.js.map": "static/js/main.abc90d96.js.map",
   "static/media/2013.jpg": "static/media/2013.970681e9.jpg",
   "static/media/2014.jpg": "static/media/2014.78a27a84.jpg",
   "static/media/2015.jpg": "static/media/2015.1ca942bd.jpg",
@@ -11,11 +11,10 @@
   "static/media/2017bj.png": "static/media/2017bj.46c38d19.png",
   "static/media/2017sh.jpg": "static/media/2017sh.0643e545.jpg",
   "static/media/2018-4.jpg": "static/media/2018-4.041b4aa3.jpg",
+  "static/media/bg.png": "static/media/bg.82fc62b5.png",
+  "static/media/bg_wangge.png": "static/media/bg_wangge.950f63d6.png",
+  "static/media/bg_wangge@2x.png": "static/media/bg_wangge@2x.6dfe01e7.png",
+  "static/media/bj.jpg": "static/media/bj.654c39dc.jpg",
   "static/media/default-avatar.jpg": "static/media/default-avatar.d6fedfe8.jpg",
-  "static/media/logo@2x.png": "static/media/logo@2x.d0aa651b.png",
-  "static/media/pic1.png": "static/media/pic1.cced22ff.png",
-  "static/media/pic2.png": "static/media/pic2.acb9b2cc.png",
-  "static/media/pic3.png": "static/media/pic3.e692e4fb.png",
-  "static/media/pic4.png": "static/media/pic4.0a83707b.png",
-  "static/media/pic5.png": "static/media/pic5.34d24b55.png"
+  "static/media/大会简介.png": "static/media/大会简介.7c897983.png"
 }
