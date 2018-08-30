@@ -2,7 +2,7 @@ import React from 'react'
 import exist from 'exist.js'
 // import Title from "../../components/IntroTitle";
 import {getListImgs} from '../../services/getListNews'
-import {getPeopleList} from "../../services/home";
+// import {getPeopleList} from "../../services/home";
 import {getArticles} from "../../services/getArticles";
 import HighLights from '../../components/HighLights'
 import MainMeeting from '../../components/MainMeeting'
@@ -90,15 +90,15 @@ export default class aboutMeet extends React.Component {
       })
     })
   
-    getPeopleList(77)
-    .then(res => res && res.json())
-    .then(data => {
-      const expertGroup = exist.get(data, 'data')
-      // console.log(expertGroup, '特邀嘉宾国');
-      this.setState({
-        expertGroup,
-      })
-    })
+    // getPeopleList(77)
+    // .then(res => res && res.json())
+    // .then(data => {
+    //   const expertGroup = exist.get(data, 'data')
+    //   // console.log(expertGroup, '特邀嘉宾国');
+    //   this.setState({
+    //     expertGroup,
+    //   })
+    // })
   }
   
   render() {
@@ -140,7 +140,7 @@ export default class aboutMeet extends React.Component {
           data={mainMeeting}
         />
         
-        <SpecialMeetings list={specialMeetings}/>
+        {/* <SpecialMeetings list={specialMeetings}/> */}
         {/*<SpecialMeetings list={otherMeetings}/>*/}
         
         <OtherMeetings list={otherMeetings}/>
