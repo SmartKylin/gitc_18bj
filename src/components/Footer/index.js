@@ -7,12 +7,34 @@ import googleImg from './images/ic_google.png';
 import twitterImg from './images/ic_twitter.png';
 import youTubeImg from './images/ic_youtube.png'
 
-export default class Footer extends React.Component{
-  constructor(props){
+const footerLinks = [
+  {
+    title: '首页',
+    url: 'http://www.thegitc.com/index.html'
+  },{
+    title: '东京站',
+    url: 'http://www.thegitc.com//tokyoStation.html'
+  },{
+    title: '台湾站',
+    url: '#'
+  },{
+    title: '北京站',
+    url: '#'
+  },{
+    title: '关于主办方',
+    url: 'http://www.kylinclub.org'
+  },{
+    title: '联系我们',
+    url: 'http://www.thegitc.com/contact.html'
+  },
+]
+
+export default class Footer extends React.Component {
+  constructor(props) {
     super(props)
   }
-
-  render(){
+  
+  render() {
     return <div className="footer_box" id='contact-us'>
       <div className="footer_box_A">
         <div className="footer_box_left">
@@ -30,29 +52,50 @@ export default class Footer extends React.Component{
             <li>ticket@kylinclub.org</li>
             <li>010-86466226</li>
           </ul>
+          {/*<div>
+            GITC
+          </div>
+          <div>
+            GITC全球互联网技术大会始终走在互联网技术交流分享的最前端，是目前国内规模最大、资源最成熟的技术峰会，同时也是中国互联网一年一度的行业盛事。
+          </div>*/}
+          
         </div>
         <div className="footer_box_right">
-            {/*<div>
-              GITC
-            </div>
-            <div>
-              GITC全球互联网技术大会始终走在互联网技术交流分享的最前端，是目前国内规模最大、资源最成熟的技术峰会，同时也是中国互联网一年一度的行业盛事。
-            </div>*/}
-            
-            <ul className="ul-3">
-              <li><img src={facebookImg}/></li>
-              <li><img src={twitterImg}/></li>
-              <li><img src={googleImg}/></li>
-              <li><img src={youTubeImg}/></li>
-            </ul>
+          <ul className="ul-3">
+            <li><img src={facebookImg}/><span>facebook</span></li>
+            <li><img src={twitterImg}/><span>twitter</span></li>
+            <li><img src={googleImg}/><span>google</span></li>
+            <li><img src={youTubeImg}/><span>YouTube</span></li>
+          </ul>
         </div>
+        
+        <div className='footer-link'>
+          <ul>
+            {
+              footerLinks.map(item => (
+                <li><a href={item.url} target={'_blank'}>{item.title}</a></li>
+              ))
+            }
+          </ul>
+        </div>
+  
+        <div className='footer-intro-gitc'>
+          <div className='footer-intro-title'>
+            GITC
+          </div>
+          <div>
+            GITC全球互联网技术大会始终走在互联网技术交流分享的最前端，是目前国内规模最大、资源最成熟的技术峰会，同时也是中国互联网一年一度的行业盛事。
+          </div>
+        </div>
+        
       </div>
       <div className="record">
         <div className="footer_box_right-box">
-          <div><img src={logo} alt=""/> </div><div><span>京CP备14035833号-1</span>   <span>京公网安备11010200322</span></div>
+          <div><img src={logo} alt=""/></div>
+          <div><span>京CP备14035833号-1</span> <span>京公网安备11010200322</span></div>
         </div>
       </div>
     </div>
   }
-
+  
 }
