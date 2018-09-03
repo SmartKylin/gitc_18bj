@@ -1,7 +1,7 @@
 import React from 'react'
 import exist from 'exist.js'
 // import Title from "../../components/IntroTitle";
-import {getListImgs} from '../../services/getListNews'
+import {getListImgs, getImgs} from '../../services/getListNews'
 // import {getPeopleList} from "../../services/home";
 import {getArticles} from "../../services/getArticles";
 import HighLights from '../../components/HighLights'
@@ -39,6 +39,7 @@ export default class aboutMeet extends React.Component {
       otherMeetings: null,
       expertGroup: [],
       expertShowAll: false,
+      // reviewData: [],
     }
   }
   
@@ -73,6 +74,14 @@ export default class aboutMeet extends React.Component {
         mainMeeting: data,
       })
     })
+    
+    // getImgs(6).then(res => res.json()).then(data => {
+    //   const reviewData = exist.get(data, 'data')
+    //
+    //   this.setState({
+    //     reviewData
+    //   })
+    // })
     
     getArticles(86).then(res => res.json()).then((data) => {
       const specialMeetings = exist.get(data, 'data')

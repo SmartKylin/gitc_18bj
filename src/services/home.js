@@ -14,7 +14,7 @@ export function getCooperative(Id) {
 }
 
 export function getReview (Id) {
-  return http.get(api.getImgList + Id + '/list.json?token=de33c0eedd872976e691fc878a5e349c')
+  return http.get(api.getImgList + Id + '/list.json?token=61f93e2c862efe7c8614bbe066c846c4')
 }
 
 export function getDate1() {
