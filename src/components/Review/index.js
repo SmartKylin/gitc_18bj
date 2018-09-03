@@ -73,7 +73,7 @@ export default class Review extends React.Component {
       this.setState({
         reviewData
       })
-    
+      this.initialSwiper()
     })
   }
   
@@ -113,6 +113,6 @@ export default class Review extends React.Component {
   
   componentDidMount() {
     this.fetch()
-    this.initialSwiper()
+    // this.initialSwiper()
   }
 }
