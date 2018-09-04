@@ -15,8 +15,8 @@ const footerLinks = [
     title: '东京站',
     url: 'http://www.thegitc.com//tokyoStation.html'
   },{
-    title: '台湾站',
-    url: '#'
+    title: '上海站',
+    url: 'http://www.thegitc.com//shhg.html'
   },{
     title: '北京站',
     url: '#'
