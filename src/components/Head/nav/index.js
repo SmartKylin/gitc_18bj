@@ -4,6 +4,7 @@ import headerLogo from '../../../assets/images2/bg_logo.png'
 // import changeImg from '../../../assets/img/change@2x.png';
 import './nav.scss'
 import $ from 'jquery'
+import {signUrl} from "../../../configs";
 
 const headerData = [
   { title: '首页', url: 'http://www.thegitc.com/index.html' },
@@ -67,7 +68,7 @@ class Nav extends Component {
             <li><a href={item.url || ''}>{item.title}</a></li>
           ))
         }
-        <li className='buttonBg'><a href="https://www.huodongjia.com/event-472628287.html" target="_blank" className='signup'>立即报名</a></li>
+        <li className='buttonBg'><a href={signUrl} target="_blank" className='signup'>立即报名</a></li>
       </ul>
     </div>
     )

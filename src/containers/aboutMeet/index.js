@@ -25,6 +25,7 @@ import Footer from "../../components/Footer";
 
 
 import './aboutMeet.scss'
+import {signUrl} from "../../configs";
 
 
 export default class aboutMeet extends React.Component {
@@ -124,7 +125,7 @@ export default class aboutMeet extends React.Component {
       <div className="main-bg-wrapper">
         <div className="banner-wrapper">
           {
-            bannerImg && bannerImg.map((val, ind) => (<a href="https://www.huodongjia.com/event-472628287.html" target="_blank"><img key={ind} alt='' src={val.img} className='banner'/></a>))
+            bannerImg && bannerImg.map((val, ind) => (<a href={signUrl} target="_blank"><img key={ind} alt='' src={val.img} className='banner'/></a>))
           }
         </div>
         
