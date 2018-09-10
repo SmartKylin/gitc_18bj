@@ -15,6 +15,7 @@
   width: 960px;
   .main-meeting-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
     .main-meeting-item {
@@ -46,7 +47,7 @@
     align-items: center;
     // padding: 96px 186px;
     margin-bottom: 80px;
-    
+
     color: #333333;
     .title {
       width: 164px;
