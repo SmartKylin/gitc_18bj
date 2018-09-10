@@ -29,13 +29,15 @@ export default class extends Component {
        <div className={'guest--avatar--area'} >
          <div
           className={'guest--avatar'}
-          style={{background:`url(${data.pic || defaultAvatar})`,backgroundSize:"cover"}}
+          // style={{background:`url(${data.pic || defaultAvatar})`,backgroundSize:"cover"}}
           onMouseEnter={
             this.props.canPop
             ? () => {this.setState({guestBoxVisible: true})}
             : null
           }
-         />
+         >
+           <img src={data.pic || defaultAvatar} alt=""/>
+         </div>
          <div className="guest--detail--box"
               style={{
                 visibility: this.state.guestBoxVisible ? 'visible' : 'hidden',

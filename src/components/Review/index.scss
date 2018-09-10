@@ -19,12 +19,36 @@
     position: relative;
     margin-top: 100px;
 
+    .swiper-button-prev {
+      background: url(../../assets/images2/swiper_button_prev.png) no-repeat 0;
+      //background-position: 0;
+      width: 35px;
+      top: 250px;
+      left: -60px;
+
+    }
+
+    .swiper-button-next {
+      background: url(../../assets/images2/swiper_button_prev.png) no-repeat -40px;
+      //background-position: -40px;
+      width: 35px;
+      top: 250px;
+      right: -60px;
+    }
+
     .swiper-container {
       padding-bottom: 200px;
       padding-top: 80px;
+      position: relative;
 
       .swiper-wrapper {
         perspective: 1000px;
+      }
+
+      a.swiper-btn {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
       }
     }
 

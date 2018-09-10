@@ -57,9 +57,17 @@ export default class Review extends React.Component {
               })
             }
           </div>
+  
+         {/* <a href="javascript:void(0);"
+             className="js__swiper-btn--next swiper-btn" ref={'next'}/>
+          <a href="jaguest--avatar--areavascript:void(0);"
+             className="js__swiper-btn--prev swiper-btn" ref={'prev'}/>*/}
         </div>
+  
+        <div className="swiper-button-prev"/>
+        <div className="swiper-button-next"/>
         
-        <div className="swiper-pagination" ref='swiperPagination'/>
+        {/*<div className="swiper-pagination" ref='swiperPagination'/>*/}
       </div>
     
     
@@ -83,6 +91,12 @@ export default class Review extends React.Component {
         stopOnLastSlide: true,
         disableOnInteraction: false
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // nextButton: this.refs.next,
+      // prevButton: this.refs.prev,
       speed: 1000,
       // autoplay: 4000,
       loop: true,
