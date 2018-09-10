@@ -1,12 +1,13 @@
 import React from 'react'
 import exist from 'exist.js'
 // import Title from "../../components/IntroTitle";
-import {getListImgs, getImgs} from '../../services/getListNews'
+import {getListImgs} from '../../services/getListNews'
 // import {getPeopleList} from "../../services/home";
 import {getArticles} from "../../services/getArticles";
 import HighLights from '../../components/HighLights'
 import MainMeeting from '../../components/MainMeeting'
 import {SpecialMeetings, OtherMeetings} from '../../components/SpecialMeeting'
+import {getPeopleList} from "../../services/home";
 import Review from '../../components/Review/index';
 import introImg from '../../assets/images2/大会简介.png'
 import introLogo from '../../assets/images2/bg_dahuijianjie.png'
@@ -39,6 +40,8 @@ export default class aboutMeet extends React.Component {
       specialMeetings: null,
       otherMeetings: null,
       expertGroup: [],
+      presidentGroup: [],
+      speechers: [],
       expertShowAll: false,
       // reviewData: [],
     }
@@ -100,15 +103,35 @@ export default class aboutMeet extends React.Component {
       })
     })
   
-    // getPeopleList(77)
-    // .then(res => res && res.json())
-    // .then(data => {
-    //   const expertGroup = exist.get(data, 'data')
-    //   // console.log(expertGroup, '特邀嘉宾国');
-    //   this.setState({
-    //     expertGroup,
-    //   })
-    // })
+    //presidentGroup
+    getPeopleList(88)
+    .then(res => res && res.json())
+    .then(data => {
+      const presidentGroup = exist.get(data, 'data')
+      // console.log(expertGroup, '特邀嘉宾国');
+      this.setState({
+        presidentGroup,
+      })
+    })
+  
+    getPeopleList(89)
+    .then(res => res && res.json())
+    .then(data => {
+      const expertGroup = exist.get(data, 'data')
+      this.setState({
+        expertGroup,
+      })
+    })
+    
+    // speechers
+    getPeopleList(90)
+    .then(res => res && res.json())
+    .then(data => {
+      const speechers = exist.get(data, 'data')
+      this.setState({
+        speechers,
+      })
+    })
   }
   
   render() {
@@ -116,7 +139,9 @@ export default class aboutMeet extends React.Component {
       bannerImg,
       aboutData, highLights, mainMeeting, specialMeetings,
       otherMeetings,
-      expertGroup
+      expertGroup,
+      presidentGroup,
+      speechers
     } = this.state
     return (
     <div className='main'>
@@ -156,16 +181,27 @@ export default class aboutMeet extends React.Component {
         <OtherMeetings list={otherMeetings}/>
   
   
-        {/*特邀嘉宾*/}
+        {/*专家顾问团*/}
+        {
+          presidentGroup && presidentGroup.length ?
+          <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'}/>
+          : null
+        }
+  
+        {/*专家顾问团*/}
         {
           expertGroup && expertGroup.length ?
           <ExpertGroup peopleList={expertGroup} title={'专家顾问团'} subTitle={'PRESIDIUNM'}/>
           : null
         }
-        
+  
         {/*演讲嘉宾*/}
-        {/*<SpeechGuest/>*/}
-        
+        {
+          speechers && speechers.length ?
+          <ExpertGroup peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
+          : null
+        }
+  
         {/* 往期回顾 */}
         <Review/>
         

@@ -22,7 +22,7 @@
     width: 341px;
     display: flex;
     position: relative;
-    
+    justify-content: center;
 
     &:hover {
       .icon-more {
@@ -32,6 +32,16 @@
       .icon-jiabing {
         right: 45px;
       }
+    }
+
+    .collapse--btn {
+      background: url(../../assets/images2/icon_shouqi.png) no-repeat center;
+      width: 152px;
+      height: 49px;
+      line-height: 49px;
+      text-align: center;
+      padding-left: 35px;
+      cursor: pointer;
     }
 
     .btn {

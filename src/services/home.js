@@ -2,7 +2,7 @@ import api from '../api'
 import http from '../fetch'
 
 export function getPeopleList(pageId) {
-  return http.get(api.peopleList + pageId + `/list.json?token=de33c0eedd872976e691fc878a5e349c&phone=13800138000&order_by=ename`)
+  return http.get(api.peopleList + pageId + `/list.json?token=9d349496a7dab8f131c620a806e9ec6d&phone=13800138000&order_by=ename`)
 }
 
 export function getSpeecherList() {

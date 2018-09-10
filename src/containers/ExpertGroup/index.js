@@ -58,9 +58,9 @@ export default class extends Component {
       {
         hasMore ?
         (
-        <div className="btn--more collapse-btn" onClick={this.collapse}>
-          <span>收起</span>
-          <i className="iconfont icon-arow_up"/>
+        <div className="btn--more" onClick={this.collapse}>
+          <div className='collapse--btn'>收起</div>
+          {/*<i className="iconfont icon-arow_up"/>*/}
         </div>
         )
         :
