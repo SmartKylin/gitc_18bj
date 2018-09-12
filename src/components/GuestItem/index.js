@@ -1,15 +1,17 @@
 import React, {Component} from 'react'
 import './index.scss'
 import defaultAvatar from './images/default-avatar.jpg'
+import avatarWrapper from '../../assets/images2/bg_touxiang.png'
 
 const detailGetLeft = (pos) => {
-  let ref = -221;
-  let offset = 150;
+  let ref = 170;
+  // let offset = 150;
   switch (pos) {
     case 'left':
-      return ref + offset;
+      // return ref + offset;
+      return -240;
     case 'right':
-      return ref - offset;
+      return ref;
     default:
       return ref;
   }
@@ -36,9 +38,23 @@ export default class extends Component {
             : null
           }
          >
+           <img src={avatarWrapper} alt="" className='avatar--wrapper'/>
            <img src={data.pic || defaultAvatar} alt=""/>
          </div>
-         <div className="guest--detail--box"
+         
+         <div
+          className="guest--detail"
+          style={{
+            left: detailGetLeft(this.props.pos)
+          }}
+         >
+           <div className='guest--detail--top'>
+             <div className='detail--name'>{data.name}</div>
+             <div className='detail--com'>{data.company}{data.position}</div>
+           </div>
+           <div className="guest--detail--bottom">{data.summary}</div>
+         </div>
+        {/* <div className="guest--detail--box"
               style={{
                 visibility: this.state.guestBoxVisible ? 'visible' : 'hidden',
                 left: detailGetLeft(this.props.pos)
@@ -50,7 +66,6 @@ export default class extends Component {
                 null
               }
           >
-           <img className="small--avatar" src={data.pic|| defaultAvatar}/>
            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
              <div style={{marginTop: '44px', fontSize: '16px'}}>{data.name}</div>
              <div style={{fontSize: '12px', marginTop: '8px'}}>{data.company} {data.position}</div>
@@ -84,7 +99,7 @@ export default class extends Component {
              <span>个人简介：</span>
              {data.summary}
            </div>
-         </div>
+         </div>*/}
        </div>
        <div className="buju-name">{data.name}</div>
        <div className="buju">

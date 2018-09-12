@@ -9,6 +9,10 @@
 }
 
 .guest--avatar--area {
+
+  //width: 429px;
+  //background: url(../../assets/images2/bg_jiabinjieshao@1x.png) no-repeat center;
+
   width: 188px;
   height: 188px;
   border-radius: 50%;
@@ -18,18 +22,151 @@
   align-items: center;
   position: relative;
   cursor: pointer;
+  transition: width .4s linear;
+  &:hover {
+    //width: 429px;
+    //position: absolute;
+    //background: url(../../assets/images2/bg_jiabinjieshao@1x.png) no-repeat center;
+    //background-size: cover;
+
+    .guest--detail {
+      display: block;
+      width: 230px;
+      height: 190px;
+      background: url(../../assets/images2/bg_jiabinjieshao@1x.png) no-repeat;
+
+      .guest--detail--top {
+        padding: 13px 0;
+        width: 230px;
+        //margin-bottom: 10px;
+      }
+
+      .guest--detail--bottom {
+        font-size: 12px;
+        color: #FFFFFF;
+        text-align: justify;
+        line-height: 24px;
+
+        width: 210px;
+        height: 100px;
+        overflow-y: scroll;
+      }
+
+      .detail--com {
+        width: 210px;
+        height: 16px;
+
+        font-size: 12px;
+        color: #FFFFFF;
+        //text-align: justify;
+        //line-height: 14px;
+
+        display: block;
+      }
+
+      .detail--name {
+        margin-bottom: 10px;
+        width: 210px;
+        //margin-right: 10px;
+        font-size: 20px;
+        height: 20px;
+        color: #FFFFFF;
+        //text-align: justify;
+        line-height: 20px;
+
+        display: block;
+      }
+
+
+    }
+  }
+
+  .guest--detail {
+    width: 0;
+    padding: 0 10px;
+
+    transition: all .4s linear;
+    //display: none;
+    //height: 0;
+    //background-size: cover;
+    position: absolute;
+
+    //left: -200px;
+    z-index: 100;
+    top: 0px;
+    //overflow: hidden;
+
+    .guest--detail--top {
+      padding: 13px 0;
+      //display: flex;
+      //width: 0;
+      //height: 0;
+    }
+
+    .guest--detail--bottom {
+      font-size: 12px;
+      color: #FFFFFF;
+      text-align: justify;
+      line-height: 24px;
+
+      width: 0px;
+      height: 0px;
+      overflow-y: scroll;
+    }
+
+    .detail--com {
+      width: 0;
+      height: 0;
+      //font-size: 14px;
+      color: #FFFFFF;
+      //text-align: justify;
+      //line-height: 14px;
+      display: none;
+    }
+
+    .detail--name {
+      width: 0;
+      height: 0;
+      display: none;
+
+      margin-right: 5px;
+      font-size: 20px;
+      color: #FFFFFF;
+      //text-align: justify;
+      //line-height: 20px;
+    }
+
+  }
 
   .guest--avatar {
-
+    position: relative;
     //display: inline-block;
     width: 149px;
     height: 149px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../../assets/images2/bg_touxiang.png) no-repeat center;
-    background-size: cover;
+    //background: url(../../assets/images2/bg_touxiang.png) no-repeat center;
+    //background-size: cover;
+
+    &:hover {
+      img.avatar--wrapper {
+        transform: rotate(180deg);
+      }
+    }
+
+    img.avatar--wrapper {
+      position: absolute;
+      z-index: 10;
+      width: 149px;
+      height: 149px;
+      transition: all .4s linear;
+
+    }
+
     img {
+      position: absolute;
+      z-index: 11;
       width: 131px;
       height: 131px;
       display: flex;

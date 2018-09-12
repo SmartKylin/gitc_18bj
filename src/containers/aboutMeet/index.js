@@ -24,7 +24,6 @@ import {BackTop} from 'antd'
 import Footer from "../../components/Footer";
 
 
-
 import './aboutMeet.scss'
 import {signUrl} from "../../configs";
 
@@ -48,7 +47,7 @@ export default class aboutMeet extends React.Component {
   }
   
   componentDidMount() {
-  
+    
     getListImgs(82).then(res => res.json()).then((data) => {
       const bannerImg = exist.get(data, 'data')
       this.setState({
@@ -102,7 +101,7 @@ export default class aboutMeet extends React.Component {
         otherMeetings,
       })
     })
-  
+    
     //presidentGroup
     getPeopleList(88)
     .then(res => res && res.json())
@@ -113,7 +112,7 @@ export default class aboutMeet extends React.Component {
         presidentGroup,
       })
     })
-  
+    
     getPeopleList(89)
     .then(res => res && res.json())
     .then(data => {
@@ -145,12 +144,13 @@ export default class aboutMeet extends React.Component {
     } = this.state
     return (
     <div className='main'>
-  
+      
       {/*大会简介*/}
       <div className="main-bg-wrapper">
         <div className="banner-wrapper">
           {
-            bannerImg && bannerImg.map((val, ind) => (<a href={signUrl} target="_blank"><img key={ind} alt='' src={val.img} className='banner'/></a>))
+            bannerImg && bannerImg.map((val, ind) => (
+            <a href={signUrl} target="_blank"><img key={ind} alt='' src={val.img} className='banner'/></a>))
           }
         </div>
         
@@ -172,36 +172,36 @@ export default class aboutMeet extends React.Component {
         {/*大会结构*/}
         {/*主会场*/}
         <MainMeeting
-          data={mainMeeting}
+        data={mainMeeting}
         />
         
         {/* <SpecialMeetings list={specialMeetings}/> */}
         {/*<SpecialMeetings list={otherMeetings}/>*/}
         
         <OtherMeetings list={otherMeetings}/>
-  
-  
+        
+        
         {/*专家顾问团*/}
         {
           presidentGroup && presidentGroup.length ?
-          <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'}/>
+          <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'} canPop={true}/>
           : null
         }
-  
+        
         {/*专家顾问团*/}
         {
           expertGroup && expertGroup.length ?
           <ExpertGroup peopleList={expertGroup} title={'专家顾问团'} subTitle={'PRESIDIUNM'}/>
           : null
         }
-  
+        
         {/*演讲嘉宾*/}
         {
           speechers && speechers.length ?
           <ExpertGroup peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
           : null
         }
-  
+        
         {/* 往期回顾 */}
         <Review/>
         
