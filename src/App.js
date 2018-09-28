@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import Head from './containers/Head'
 import AboutMeet from './containers/aboutMeet'
 
+import RouterMap from './router'
 import './app.scss'
 class App extends Component {
   constructor(props){
@@ -22,8 +24,7 @@ class App extends Component {
     // let {width} = this.state
     return (
       <div className="App">
-        <Head/>
-        <AboutMeet/>
+          <RouterMap/>
       </div>
     );
   }
