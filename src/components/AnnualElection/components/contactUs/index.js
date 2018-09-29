@@ -7,7 +7,7 @@ import share3 from '../../assets/img/share3.png'
 import share4 from '../../assets/img/share4.png'
 import NativeShare from 'nativeshare'
 const title='GITC年度竞选'
-const url='http://127.0.0.1:3000/annual'
+const url='http://bj.thegitc.com/annual'
 class ContactUs extends Component {
     constructor(props){
         super(props)
