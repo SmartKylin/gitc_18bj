@@ -7,7 +7,7 @@ import {
 import Wrapper from 'components/Wrapper'
 import createBrowserHistory from 'history/createBrowserHistory'
 import AboutMeet from '../containers/aboutMeet'
-import NewHome from '../components/test'
+import AnnualElection from '../components/AnnualElection'
 let history = createBrowserHistory();
 
 const RouterMap = class extends Component {
@@ -19,7 +19,7 @@ const RouterMap = class extends Component {
             <Router history={history}>
                 <Wrapper openPop={this.props.openPop} history={history} setLoginCb={this.props.setLoginCb}>
                     <Route exact path="/" component={AboutMeet}/>
-                    <Route path="/home" component={NewHome}></Route>
+                    <Route path="/annual" component={AnnualElection}></Route>
 
                 </Wrapper>
             </Router>
