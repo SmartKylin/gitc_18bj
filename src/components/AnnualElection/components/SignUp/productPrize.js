@@ -131,8 +131,8 @@ class PrizePage1 extends Component {
                         上线时间
                     </td>
                     <td colspan="3">
-                      <Input placeholder='如2018-08-01'  value={marke_time} onChange={e => 
-                     this.setState({emarke_time: e})}/></td>
+                      <Input placeholder='如：2018-08-01'  value={marke_time} onChange={e => 
+                     this.setState({marke_time: e.target.value})}/></td>
                   </tr>
                   <tr>
                       <td colspan="2" style={{textAlign: 'center'}}>

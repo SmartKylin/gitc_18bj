@@ -37,7 +37,7 @@ class Awards extends Component {
     super(props)
     this.state = {
         visible: false,
-        types: ''
+        types: '',
     }
   
   }
@@ -50,8 +50,9 @@ class Awards extends Component {
   onControlFlag = (v) => {
     v ? message.success('填写成功') : ''
     this.setState({
-      visible: v
+      visible: v,
     })
+    v ? '' : alert('申请成功')
   }
   render() {
       const {visible, types} = this.state
@@ -92,7 +93,6 @@ class Awards extends Component {
         </ul>
 
         <div className='modal' style={{display: visible ? 'block' : 'none'}}>
-            
             <div className='signUpDrog'>
                 <div className='closeIcon'>
                     <span className='anticon' style={{cursor: 'pointer'}} onClick={() => this.setState({visible: false})} type="close" theme="outlined">×</span>

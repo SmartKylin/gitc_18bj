@@ -77,7 +77,7 @@ class PrizePage1 extends Component {
     .then(res => {
       if(res && res.status){
         this.props.onControlFlag(false)
-        message.success(res.message)
+        // message.success(res.message)
       } else {
         this.setState({
           msgNotices: res.message
