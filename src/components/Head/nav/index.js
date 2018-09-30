@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom'
 
 const headerData = [
-  { title: '首页', url: 'http://www.thegitc.com/index.html' },
+  { title: '首页', url: 'http://home.thegitc.com/index.html' },
   { title: 'GITC北京站', url: '/' },
   { title: '大会嘉宾', url: '/' },
   { title: '年度竞选', url: 'annual' },
@@ -20,7 +20,7 @@ const headerData = [
   { title: '资料下载', url: '/' },
   { title: '酒店信息', url: '/' },
   { title: '关于主办方', url: 'http://www.kylinclub.org/' },
-  { title: '加入我们', url: 'http://www.thegitc.com/contact.html' }
+  { title: '加入我们', url: 'http://home.thegitc.com/contact.html' }
 ];
 
 class Nav extends Component {

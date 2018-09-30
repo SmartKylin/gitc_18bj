@@ -10,13 +10,13 @@ import youTubeImg from './images/ic_youtube.png'
 const footerLinks = [
   {
     title: '首页',
-    url: 'http://www.thegitc.com/index.html'
+    url: 'http://home.thegitc.com/index.html'
   },{
     title: '东京站',
-    url: 'http://www.thegitc.com//tokyoStation.html'
+    url: 'http://home.thegitc.com//tokyoStation.html'
   },{
     title: '上海站',
-    url: 'http://www.thegitc.com//shhg.html'
+    url: 'http://home.thegitc.com//shhg.html'
   },{
     title: '北京站',
     url: '#'
@@ -25,7 +25,7 @@ const footerLinks = [
     url: 'http://www.kylinclub.org'
   },{
     title: '联系我们',
-    url: 'http://www.thegitc.com/contact.html'
+    url: 'http://home.thegitc.com/contact.html'
   },
 ]
 
