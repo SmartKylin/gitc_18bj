@@ -77,7 +77,6 @@ export default class Review extends React.Component {
   fetch = () => {
     getImgs(6).then(res => res.json()).then(v => {
       const reviewData = v && v.data
-      // console.log(reviewData, 'fjdksaf');
       this.setState({
         reviewData
       })
