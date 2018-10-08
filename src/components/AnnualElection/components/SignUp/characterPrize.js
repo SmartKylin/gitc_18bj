@@ -245,7 +245,7 @@ class PrizePage1 extends Component {
             </tr>
             <tr>
               <td colspan="2">
-                  2018年度工作成果
+                  2018年度<br/>工作成果
               </td>
               <td colspan="3"><TextArea rows={4} style={{maxHeight: 95, minHeight: 95, }} 
               value={special_contribution}  onChange={e => this.setState({special_contribution: e.target.value})}
@@ -253,7 +253,7 @@ class PrizePage1 extends Component {
             </tr>
             <tr>
               <td colspan="2">
-                  2018年度个人贡献
+                  2018年度<br/>个人贡献
               </td>
               <td colspan="3"><TextArea rows={4} style={{maxHeight: 95, minHeight: 95, }} 
               value={influence}  onChange={e => this.setState({influence: e.target.value})}
