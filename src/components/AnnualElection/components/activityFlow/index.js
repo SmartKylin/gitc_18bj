@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import flowPic from '../../assets/img/flow.png'
-import TitlePic from '../../assets/img/title1.png'
+import flowPic from '../../assets/img/flow.jpg'
+import TitlePic from '../../assets/img/title2.jpg'
 
 class ActivityFlow extends Component {
   render() {
