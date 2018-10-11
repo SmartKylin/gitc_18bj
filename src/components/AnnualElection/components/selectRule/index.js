@@ -25,7 +25,9 @@ class selectRule extends Component {
                 <a href='http://huodong.zhaojifang.com/app/./index.php?i=3&c=entry&rid=42&op=originurl&do=index&m=silence_vote'><img src={comBtn}/></a>
             </li>
         </ul>
-        <img src={secTit} style={{ marginRight: -550, marginTop: 15, width: 239}}/>
+        <div className='titHead'>
+            互联网年度新锐力量奖项由数据领域，运维领域，人工智能领域,网络安全领域,架构领域组成。
+        </div>
       </div>
     );
   }

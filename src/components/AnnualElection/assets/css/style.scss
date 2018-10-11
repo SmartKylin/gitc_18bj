@@ -31,19 +31,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: #000;
-        padding-bottom: 90px;
+        background: #060503;
+        padding-bottom: 277px;
         .titHead{
             width: 930px;
             position: absolute;
-            bottom: 20px;
+            bottom: 32px;
             // right: 17px;
+            font-size: 14px;
             display: flex;
             justify-content: flex-end;
-            padding-right: 105px;
-            img{
-                width: 250px!important;
-            }
+            padding-right: 67px;
+            color: #fff;
+            text-align: right;
             
         }
         img:nth-child(1){
@@ -55,6 +55,7 @@
             position: absolute;
             width: 340px;
             bottom: 428px;
+            margin-bottom: 30px;
         }
         ul{
             width: 880px;
@@ -116,7 +117,7 @@
         p{
             font-size: 16px;
         }
-        background: #000;
+        background: #060503;
         // background-image: url(../img/main.png);
         // background-repeat: no-repeat;
         // background-position: center;
@@ -226,7 +227,7 @@
             }
             ul{
                 display: flex;
-                width: 930px;
+                width: 900px;
                 justify-content: center;
                 align-items: center;
                 background: url(../img/y.png) no-repeat;
@@ -275,6 +276,16 @@
                         }   
                     }
                 }
+            }
+            .titHead{
+                width: 930px;
+                // right: 17px;
+                display: flex;
+                justify-content: flex-end;
+                color: #fff;
+                text-align: right;
+                margin-top: 10px;
+                
             }
         }
         .Awards{
