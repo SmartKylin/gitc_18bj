@@ -229,8 +229,10 @@
                 width: 930px;
                 justify-content: center;
                 align-items: center;
-                // background: url(../img/y.png) no-repeat;
-                margin-bottom: 60px;
+                background: url(../img/y.png) no-repeat;
+                background-size: 100% 100%;
+                padding: 27px 15px 91px 15px;
+                height: 257px;
                 li{
                     width: 290px;
                     position: relative;
