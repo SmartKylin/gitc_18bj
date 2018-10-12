@@ -4,7 +4,6 @@ import product1 from '../../assets/img/product1.png'
 import person1 from '../../assets/img/person1.png'
 import company1 from '../../assets/img/company1.png'
 import comBtn from '../../assets/img/common.png'
-import secTit from '../../assets/img/secTit.jpg'
 
 class selectRule extends Component {
   render() {

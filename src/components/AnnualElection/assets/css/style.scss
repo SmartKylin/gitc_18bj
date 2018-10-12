@@ -185,33 +185,6 @@
         }
         .selectRule{
             @include styles;
-            .titleType{
-                display: flex;
-                width: 950px;
-                margin-bottom: 22px;
-                font-weight: 600;
-                justify-content: center;
-                span{
-                    display: inline-block;
-                    // width: 30%;
-                    line-height: 47px;
-                    text-align: center;
-                    width: 270px;
-                    height: 47px;
-                    background-size: 100% 100%;
-                    font-size: 16px;
-                    background-image: url(../img/tit1.png);
-                    &:nth-child(2){
-                        background-image: url(../img/tit2.png);
-                    }  
-                    &:nth-child(3){
-                        background-image: url(../img/tit3.png);
-                    } 
-                    &:nth-child(4){
-                        background-image: url(../img/tit4.png);
-                    }   
-                }
-            }
             .detailType{
                 width: 1100px;
                 padding: 15px;
@@ -427,7 +400,7 @@
                     align-items: center;
                     justify-content: space-between;
                     border-right:8px solid;
-                    border-image:url(../img/line.png);
+                    // border-image:url(../img/line.png);
                     p{
                         &:first-child{
                             margin-bottom: 20px;
