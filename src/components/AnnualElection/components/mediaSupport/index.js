@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import flowPic from '../../assets/img/flow.png'
-import TitlePic from '../../assets/img/title5.png'
+import TitlePic from '../../assets/img/title5.jpg'
 
 class MediaSupport extends Component {
   constructor(props){

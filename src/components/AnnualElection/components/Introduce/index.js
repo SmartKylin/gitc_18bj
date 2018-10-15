@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import flowPic from '../../assets/img/flow.png'
-import TitlePic from '../../assets/img/title2.png'
-import activity from '../../assets/img/activity.png'
+import TitlePic from '../../assets/img/title1.jpg'
+import activity from '../../assets/img/activity.jpg'
+import rules33 from '../../assets/img/rules33.png'
 
 const data = [
     'GITC颁奖盛典作为互联网技术领域最具权威性和代表性的颁奖盛会，旨在对过去一年中表现杰出的互联网企业、做出突出贡献的技术领袖以及独具匠心的互联网产品进行表彰。',
@@ -20,8 +20,8 @@ class Introduce extends Component {
             <dd>{
               data.map((v, i) => 
                   <p key={i}>{v}</p>
-              )
-          }</dd>
+              )}
+          </dd>
           </dl>
         </div>
       </div>
