@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TitlePic from '../../assets/img/title7.jpg'
-import prizaTable from '../../assets/img/prizaTable.jpg'
+import prizaTable from '../../assets/img/prizaTable.png'
 import prize12 from '../../assets/img/prize12.jpg'
 
 class Nomiee extends Component {
