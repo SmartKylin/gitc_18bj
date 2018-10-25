@@ -32,7 +32,7 @@
         flex-direction: column;
         align-items: center;
         background: #060503;
-        padding-bottom: 277px;
+        // padding-bottom: 277px;
         .titHead{
             width: 930px;
             position: absolute;
@@ -44,6 +44,7 @@
             padding-right: 67px;
             color: #fff;
             text-align: right;
+            font-family:”微软雅黑”;
             
         }
         img:nth-child(1){
@@ -170,6 +171,7 @@
                         margin-top: 35px;
                         p{
                             line-height: 32px;
+                            font-family:”微软雅黑”;
 
                         }
                     }
@@ -258,7 +260,7 @@
                 color: #fff;
                 text-align: right;
                 margin-top: 10px;
-                
+                font-family:”微软雅黑”;
             }
         }
         .Awards{
@@ -340,6 +342,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    font-family:”微软雅黑”;
                     p{
                         text-indent: 36px;
                         text-align: justify;
@@ -363,6 +366,7 @@
             p{
                 @include lines;            
                 width: 865px;
+                font-family:”微软雅黑”;
             }
             .artTit{
                 background: url(../img/choose.png) no-repeat;
@@ -379,6 +383,9 @@
                     width: 100%;
                 }
             }
+            p{
+                font-family:”微软雅黑”;
+            }
         }
         .ContactUs{
             @include styles;
@@ -387,6 +394,7 @@
                 @include lines;
                 color: #fff;
                 margin-top: 25px;
+                font-family:”微软雅黑”;
             }
             ul{
                 display: flex;
