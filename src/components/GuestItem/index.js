@@ -53,6 +53,10 @@ export default class extends Component {
              <div className='detail--com'>{data.company}{data.position}</div>
            </div>
            <div className="guest--detail--bottom">{data.summary}</div>
+           <div className='guest--detail--top'>
+             <div className='detail--com'>{data.stheme? `主题 :  ${data.stheme}`: ''}</div>
+           </div>
+           <div className="guest--detail--bottom">{data.sintroduce ? data.sintroduce: '' }</div>
          </div>
         {/* <div className="guest--detail--box"
               style={{
