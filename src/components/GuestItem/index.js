@@ -25,7 +25,8 @@ export default class extends Component {
   }
 
   render () {
-    let {data, speech} = this.props;
+    let {data, speech,stheme} = this.props;
+    console.log(stheme,'sthemestheme');
     return (
      <div className={'pic--guest--item'}>
        <div className={'guest--avatar--area'} >
@@ -53,10 +54,10 @@ export default class extends Component {
              <div className='detail--com'>{data.company}{data.position}</div>
            </div>
            <div className="guest--detail--bottom">{data.summary}</div>
-           <div className='guest--detail--top'>
+           <div className='guest--detail--top' style={{display: stheme ? 'block' : 'none'}}>
              <div className='detail--com'>{data.stheme? `主题 :  ${data.stheme}`: ''}</div>
            </div>
-           <div className="guest--detail--bottom">{data.sintroduce ? data.sintroduce: '' }</div>
+           <div className="guest--detail--bottom" style={{display:stheme ? 'block' : 'none'}}>{data.sintroduce ? data.sintroduce: '' }</div>
          </div>
         {/* <div className="guest--detail--box"
               style={{

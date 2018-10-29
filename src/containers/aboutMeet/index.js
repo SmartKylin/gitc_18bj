@@ -200,7 +200,7 @@ export default class aboutMeet extends React.Component {
         {/*演讲嘉宾*/}
         {
           speechers && speechers.length ?
-          <ExpertGroup peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
+          <ExpertGroup stheme={true}  peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
           : null
         }
         
