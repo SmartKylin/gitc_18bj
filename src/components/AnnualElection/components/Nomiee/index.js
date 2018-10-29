@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TitlePic from '../../assets/img/title5.jpg'
 import nomiee_btn from '../../assets/img/nomiee_btn.jpg'
-import nomiee_tit from '../../assets/img/nomiee_tit.jpg'
 
 const tit = '在评选报名&提名阶段，任何人都可以提名自己认为符合评选条件的企业、个人和产品参加评选，并成为该“选手”的提名人。成为提名人不仅可以招募提名助手和提名队员，并且可以与“选手”共享礼物分成。除此之外，评选所得收益将全部用于公益活动。'
 

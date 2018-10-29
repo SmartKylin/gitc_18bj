@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import headerPic from '../../assets/img/header.jpg'
+import headerPic from '../../assets/img/header.png'
 import product from '../../assets/img/product.png'
 import person from '../../assets/img/person.png'
 import company from '../../assets/img/company.png'
 import TitlePic from '../../assets/img/headTIT.png'
-import hedaTit from '../../assets/img/hedaTit.png'
 import comBtn1 from '../../assets/img/comBtn1.png'
 import comBtn2 from '../../assets/img/comBtn2.png'
 import comBtn3 from '../../assets/img/comBtn3.png'

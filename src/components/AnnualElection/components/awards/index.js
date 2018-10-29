@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TitlePic from '../../assets/img/title4.jpg'
-import condition from '../../assets/img/condition.png'
 import {Modal, Button, Icon, message} from 'antd'
 import ProPage from '../SignUp/productPrize'
 import ChaPage from '../SignUp/characterPrize'
