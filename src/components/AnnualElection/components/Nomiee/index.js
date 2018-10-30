@@ -17,9 +17,9 @@ class Nomiee extends Component {
             <p className='artTit'>
                 {tit}
             </p>
-            <a target="_blank" 
+            {/* <a target="_blank" 
             href='https://mp.weixin.qq.com/s/sfsBj4rub2H9LUCIeN-Erw'>
-            <img className='nom_btn'  style={{display: 'flex', width: 330, height: 66}} src={nomiee_btn}/></a>
+            <img className='nom_btn'  style={{display: 'flex', width: 330, height: 66}} src={nomiee_btn}/></a> */}
         </div>
     );
   }
