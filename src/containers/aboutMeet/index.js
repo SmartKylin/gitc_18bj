@@ -107,7 +107,7 @@ export default class aboutMeet extends React.Component {
     .then(res => res && res.json())
     .then(data => {
       const presidentGroup = exist.get(data, 'data')
-      // console.log(expertGroup, '特邀嘉宾国');
+       console.log(presidentGroup, '大会主席团');
       this.setState({
         presidentGroup,
       })
@@ -117,6 +117,7 @@ export default class aboutMeet extends React.Component {
     .then(res => res && res.json())
     .then(data => {
       const expertGroup = exist.get(data, 'data')
+      console.log(expertGroup,'专家顾问团')
       this.setState({
         expertGroup,
       })
@@ -127,6 +128,7 @@ export default class aboutMeet extends React.Component {
     .then(res => res && res.json())
     .then(data => {
       const speechers = exist.get(data, 'data')
+      console.log(speechers,'演讲嘉宾')
       this.setState({
         speechers,
       })
@@ -181,7 +183,7 @@ export default class aboutMeet extends React.Component {
         <OtherMeetings list={otherMeetings}/>
         
         
-        {/*专家顾问团*/}
+        {/*大会主席团*/}
         {
           presidentGroup && presidentGroup.length ?
           <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'} canPop={true}/>
@@ -198,7 +200,7 @@ export default class aboutMeet extends React.Component {
         {/*演讲嘉宾*/}
         {
           speechers && speechers.length ?
-          <ExpertGroup peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
+          <ExpertGroup stheme={true}  peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
           : null
         }
         

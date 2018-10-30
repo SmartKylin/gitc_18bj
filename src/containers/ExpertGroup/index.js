@@ -38,7 +38,7 @@ export default class extends Component {
   
   render() {
     const {clientWidth, hasMore} = this.state
-    const {peopleList, title, subTitle} = this.props
+    const {peopleList, title, subTitle,stheme} = this.props
     
     const end = parseInt(clientWidth) > 1430 ? 15 : 16
     
@@ -50,7 +50,7 @@ export default class extends Component {
       <div className='speech--body'>
         {
           (finalList || []).map((item, index) => (
-          <GuestItem key={index} speech={true} data={item} canPop={this.props.canPop} pos={ index % 5 === 4 ? 'left' : 'right'}/>
+          <GuestItem stheme={stheme} key={index} speech={true} data={item} canPop={this.props.canPop} pos={ index % 5 === 4 ? 'left' : 'right'}/>
           ))
         }
       </div>
