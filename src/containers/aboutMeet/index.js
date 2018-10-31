@@ -26,7 +26,7 @@ import Footer from "../../components/Footer";
 
 import './aboutMeet.scss'
 import {signUrl} from "../../configs";
-
+import ConferenceAgenda from "../../components/ConferenceAgenda";
 
 export default class aboutMeet extends React.Component {
   constructor(props) {
@@ -45,16 +45,16 @@ export default class aboutMeet extends React.Component {
       // reviewData: [],
     }
   }
-  
+
   componentDidMount() {
-    
+
     getListImgs(82).then(res => res.json()).then((data) => {
       const bannerImg = exist.get(data, 'data')
       this.setState({
         bannerImg,
       })
     })
-    
+
     getListImgs(83).then(res => res.json()).then((data) => {
       const aboutData = exist.get(data, 'data[0]')
       // console.log(aboutData, 'fdjskajf');
@@ -62,14 +62,14 @@ export default class aboutMeet extends React.Component {
         aboutData,
       })
     })
-    
+
     getListImgs(84).then(res => res.json()).then((data) => {
       const highLights = exist.get(data, 'data')
       this.setState({
         highLights,
       })
     })
-    
+
     getListImgs(85).then(res => res.json()).then((data) => {
       // const mainMeeting = exist.get(data, 'data')
       // console.log(data, 'fdjskajf');
@@ -77,7 +77,7 @@ export default class aboutMeet extends React.Component {
         mainMeeting: data,
       })
     })
-    
+
     // getImgs(6).then(res => res.json()).then(data => {
     //   const reviewData = exist.get(data, 'data')
     //
@@ -85,7 +85,7 @@ export default class aboutMeet extends React.Component {
     //     reviewData
     //   })
     // })
-    
+
     getArticles(86).then(res => res.json()).then((data) => {
       const specialMeetings = exist.get(data, 'data')
       // console.log(specialMeetings, 'specialMeetings');
@@ -93,7 +93,7 @@ export default class aboutMeet extends React.Component {
         specialMeetings,
       })
     })
-    
+
     getArticles(87).then(res => res.json()).then((data) => {
       const otherMeetings = exist.get(data, 'data')
       // console.log(otherMeetings, 'otherMeetings');
@@ -101,40 +101,40 @@ export default class aboutMeet extends React.Component {
         otherMeetings,
       })
     })
-    
+
     //presidentGroup
     getPeopleList(88)
     .then(res => res && res.json())
     .then(data => {
       const presidentGroup = exist.get(data, 'data')
-       console.log(presidentGroup, '大会主席团');
+       //console.log(presidentGroup, '大会主席团');
       this.setState({
         presidentGroup,
       })
     })
-    
+
     getPeopleList(89)
     .then(res => res && res.json())
     .then(data => {
       const expertGroup = exist.get(data, 'data')
-      console.log(expertGroup,'专家顾问团')
+      //console.log(expertGroup,'专家顾问团')
       this.setState({
         expertGroup,
       })
     })
-    
+
     // speechers
     getPeopleList(90)
     .then(res => res && res.json())
     .then(data => {
       const speechers = exist.get(data, 'data')
-      console.log(speechers,'演讲嘉宾')
+      //console.log(speechers,'演讲嘉宾')
       this.setState({
         speechers,
       })
     })
   }
-  
+
   render() {
     const {
       bannerImg,
@@ -146,7 +146,7 @@ export default class aboutMeet extends React.Component {
     } = this.state
     return (
     <div className='main'>
-      
+
       {/*大会简介*/}
       <div className="main-bg-wrapper">
         <div className="banner-wrapper">
@@ -155,7 +155,7 @@ export default class aboutMeet extends React.Component {
             <a href={signUrl} target="_blank"><img key={ind} alt='' src={val.img} className='banner'/></a>))
           }
         </div>
-        
+
         <div className="meeting-intro-block">
           <img className={'intro-logo'} src={introLogo} alt=""/>
           <div>
@@ -165,59 +165,61 @@ export default class aboutMeet extends React.Component {
             </div>
           </div>
         </div>
-        
-        
+
+
         {/*大会亮点*/}
-        
+
         <HighLights list={highLights}/>
-        
+
         {/*大会结构*/}
         {/*主会场*/}
         <MainMeeting
         data={mainMeeting}
         />
-        
         {/* <SpecialMeetings list={specialMeetings}/> */}
         {/*<SpecialMeetings list={otherMeetings}/>*/}
-        
+
         <OtherMeetings list={otherMeetings}/>
-        
-        
+
+        {/*会议结构*/}
+        <ConferenceAgenda/>
+
+
         {/*大会主席团*/}
         {
           presidentGroup && presidentGroup.length ?
           <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'} canPop={true}/>
           : null
         }
-        
+
         {/*专家顾问团*/}
         {
           expertGroup && expertGroup.length ?
           <ExpertGroup peopleList={expertGroup} title={'专家顾问团'} subTitle={'PRESIDIUNM'}/>
           : null
         }
-        
+
         {/*演讲嘉宾*/}
         {
           speechers && speechers.length ?
           <ExpertGroup stheme={true}  peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
           : null
         }
-        
+
         {/* 往期回顾 */}
         <Review/>
-        
-        
+
+
         {/*动态数字*/}
         <RollingData/>
-        
+
         {/*合作伙伴*/}
         {/*<Cooperative/>*/}
-        
+
         <Map/>
-        
+
         <Footer/>
-        
+
         <BackTop>
           <div className="ant-back-top-inner"/>
         </BackTop>
