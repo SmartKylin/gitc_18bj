@@ -5,7 +5,7 @@ import './index.scss'
 import meetingStructureLogo from "../../assets/images2/bg_dahuiyicheng.png";
 import Title from "../MeetingTitle";
 
-const dateAry = ['11月23日', '11月24日']
+const dateAry = ['11月22日', '11月23日']
 
 const decorateAry = (ary) => {
   let arr = []
@@ -107,11 +107,13 @@ export default class ConferenceAgenda extends React.Component {
 
           <div className='conference-agenda-box-body-right'>
             <MainMeeting data={bannerAry}/>
-            <div className='piliangxiazai-box'>
+           {/*
+           //这个还需要写一下,弹出一个二维码就可以,可以根据2017年北京站,GitHub地址react-pc
+           <div className='piliangxiazai-box'>
               <div className='xiazai'>
                 批量下载PPT
               </div>
-            </div>
+            </div>*/}
           </div>
 
         </div>
@@ -122,17 +124,19 @@ export default class ConferenceAgenda extends React.Component {
 }
 
 const MainMeeting = ({data}) => {
+  let jsonObj = data && data.json && JSON.parse(data.json)
   return <div className='main-meeting-box'>
     <div className='main-meeting-box-title'>
       <div className='name'>
         {data.name}
       </div>
        <div className='address'>
-         {data.other}
+         {data.other ? data.other  : '未知楼层'}
        </div>
       <div className='jies'>
-        土地是以它的肥沃和收获而被估价的；才能也是土地，不过它生产的不是粮食，而是真理。
-        如果只能滋生瞑想和幻想的话，即使再大的才能也只是砂地或盐池，那上面连小草也长不出来的。 —— 别林斯基
+        {
+          jsonObj && jsonObj.description
+        }
       </div>
     </div>
     <div className='main-meeting-box-body'>
@@ -168,7 +172,10 @@ const MainMeeting = ({data}) => {
                 </div>
               </div>
 
-              <div className='item-document'>
+            {/*
+
+            //这个可以打开可以直接使用
+            <div className='item-document'>
                 {
                   item.file
                       ? <a href={item.file}>
@@ -176,7 +183,7 @@ const MainMeeting = ({data}) => {
                       </a>
                       : null
                 }
-              </div>
+              </div>*/}
 
             </div>
 

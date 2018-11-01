@@ -18,9 +18,9 @@ export function getReview (Id) {
 }
 
 export function getDate1() {
-  return http.get('http://api.thegitc.com/api/gitc/person-4/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=-weight')
+  return http.get('http://api.thegitc.com/api/gitc/person-15/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=-weight')
 }
 
 export function getDate2() {
-  return http.get('http://api.thegitc.com/api/gitc/person-6/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=-weight')
+  return http.get('http://api.thegitc.com/api/gitc/person-16/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=-weight')
 }
