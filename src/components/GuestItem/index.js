@@ -65,14 +65,17 @@ export default class extends Component {
                     </div>
                   </div>
                 </div>
-                <div className='detail--meetaddr--sdata'>
-                  <div className='meetaddr'>
-                    {data.meetaddr ? data.meetaddr : '暂无数据'}
-                  </div>
-                  <div>
-                    {data.sdata ? data.sdata : '暂无数据'}
-                  </div>
-                </div>
+             {/*   {
+                  stheme ?   <div className='detail--meetaddr--sdata'>
+                    <div className='meetaddr'>
+                      {data.meetaddr ? data.meetaddr : '暂无数据'}
+                    </div>
+                    <div>
+                      {data.sdata ? data.sdata : '暂无数据'}
+                    </div>
+                  </div> : null
+                }*/}
+
 
               </div>
 
