@@ -50,7 +50,7 @@ export default class extends Component {
       <div className='speech--body'>
         {
           (finalList || []).map((item, index) => (
-          <GuestItem stheme={stheme} key={index} speech={true} data={item} canPop={this.props.canPop} pos={ index % 5 === 4 ? 'left' : 'right'}/>
+          <GuestItem stheme={stheme} key={index} speech={true} data={item} canPop={this.props.canPop} pos={ index % 5 === 4 ||  index % 5 === 3 ? 'left' : 'right'}/>
           ))
         }
       </div>

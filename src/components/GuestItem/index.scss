@@ -24,119 +24,144 @@
   cursor: pointer;
   transition: width .4s linear;
   &:hover {
-    //width: 429px;
-    //position: absolute;
-    //background: url(../../assets/images2/bg_jiabinjieshao@1x.png) no-repeat center;
-    //background-size: cover;
-
     .guest--detail {
       display: block;
-      width: 230px;
-      min-height: 120px;
+      width: 400px;
+      min-height: 200px;
       background: url(../../assets/images2/bg_jiabinjieshao@1x.png) no-repeat;
-      background-size: 93% 100%;
-
+      background-size: 100% 100%;
+      padding: 20px;
       .guest--detail--top {
-        padding: 13px 0;
-        width: 230px;
-        //margin-bottom: 10px;
-      }
+        width: 380px;
+        .detail--name--company--position {
+          width: 100%;
+          height: 37px;
+          color: #FFFFFF;
+          display: flex;
+          align-items: baseline;
+          .name {
+            width: 70px;
+            font-size: 16px;
+          }
+          .company--position{
+            width: 100%;
+            display: flex;
+            font-size: 12px;
+            vertical-align: bottom;
+            .company {
+              margin-right: 10px;
+            }
+            .position{
+            }
+          }
+        }
+        .detail--meetaddr--sdata{
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+          height: 17px;
+          font-size: 11px;
+          .meetaddr{
+            margin-right: 50px;
+          }
+        }
 
+      }
       .guest--detail--bottom {
+        display: flex;
+        justify-content: center;
         font-size: 12px;
         color: #FFFFFF;
         text-align: justify;
-        line-height: 24px;
-
-        width: 210px;
-        height: 100px;
+        width: 100%;
+        min-height: 160px;
         overflow-y: scroll;
+        margin-bottom: 20px;
       }
+      .guest--detail--stheme{
+        display: flex;
+        width: 100%;
+        font-size: 13px;
+        align-items: baseline;
+        height: 40px;
+        .detail--stheme-name{
+          display: flex;
+          width: 80px;
+        }
 
-      .detail--com {
-        width: 210px;
-        height: 16px;
-
+        .detail--stheme{
+          display: flex;
+          width: 100%;
+        }
+      }
+      .detail--sintroduce--title{
+        display: flex;
+        width: 100%;
+        justify-content: center;
         font-size: 12px;
         color: #FFFFFF;
-        //text-align: justify;
-        //line-height: 14px;
-
-        display: block;
+        text-align: justify;
+        min-height: 200px;
+        overflow-y: scroll;
       }
-
-      .detail--name {
-        margin-bottom: 10px;
-        width: 210px;
-        //margin-right: 10px;
-        font-size: 20px;
-        height: 20px;
-        color: #FFFFFF;
-        //text-align: justify;
-        line-height: 20px;
-
-        display: block;
-      }
-
 
     }
   }
 
   .guest--detail {
     width: 0;
+    height: 0;
     padding: 0 10px;
-
     transition: all .4s linear;
-    //display: none;
-    //height: 0;
-    //background-size: cover;
     position: absolute;
-
-    //left: -200px;
     z-index: 100;
-    top: 0px;
-    //overflow: hidden;
-
+    top: 0;
     .guest--detail--top {
       padding: 13px 0;
-      //display: flex;
-      //width: 0;
-      //height: 0;
+      .detail--name--company--position {
+        width: 0;
+        color: #FFFFFF;
+        display: none;
+        .company--position{
+          width: 0;
+          height: 0;
+          color: #FFFFFF;
+          display: none;
+        }
+      }
+      .detail--meetaddr--sdata{
+        width: 0;
+        color: #FFFFFF;
+        display: none;
+      }
     }
-
-    .guest--detail--bottom {
+    .guest--detail--bottom{
       font-size: 12px;
       color: #FFFFFF;
       text-align: justify;
       line-height: 24px;
-
-      width: 0px;
-      height: 0px;
+      width: 0;
       overflow-y: scroll;
     }
-
-    .detail--com {
+    .guest--detail--stheme{
+      width: 0;
+      display: none;
+      .detail--stheme-name{
+        width: 0;
+        height: 0;
+        display: none;
+      }
+      .detail--stheme{
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+    .detail--sintroduce--title{
       width: 0;
       height: 0;
-      //font-size: 14px;
-      color: #FFFFFF;
-      //text-align: justify;
-      //line-height: 14px;
       display: none;
     }
-
-    .detail--name {
-      width: 0;
-      height: 0;
-      display: none;
-
-      margin-right: 5px;
-      font-size: 20px;
-      color: #FFFFFF;
-      //text-align: justify;
-      //line-height: 20px;
-    }
-
   }
 
   .guest--avatar {
@@ -223,20 +248,21 @@
     }
   }
 }
-.buju-name{
+
+.buju-name {
   margin-bottom: 15px;
-  font-size:16px ;
-  margin-top:-10px;
+  font-size: 16px;
+  margin-top: -10px;
 }
-.buju{
+
+.buju {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: iconfont;
 }
 
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .pic--guest--item {
     color: #fff;
     width: 192px;
@@ -311,13 +337,13 @@
       }
     }
   }
-  .buju-name{
+  .buju-name {
     margin-bottom: 15px;
-    font-size:14px ;
-    margin-top:-10px;
+    font-size: 14px;
+    margin-top: -10px;
   }
 
-  .buju{
+  .buju {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,8 +351,7 @@
   }
 }
 
-
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 414px) {
   .pic--guest--item {
     width: 103px;
     color: #fff;
@@ -401,13 +426,13 @@
       }
     }
   }
-  .buju-name{
+  .buju-name {
     margin-bottom: 15px;
-    font-size:14px ;
-    margin-top:-5px;
+    font-size: 14px;
+    margin-top: -5px;
   }
 
-  .buju{
+  .buju {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -415,14 +440,13 @@
     padding: 0 5px;
     text-align: center;
   }
-  .fon{
+  .fon {
     padding: 0 14px;
     text-align: center;
   }
 }
 
-
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 375px) {
   .pic--guest--item {
     width: 92px;
     color: #fff;
@@ -501,12 +525,12 @@
     }
   }
 
-  .buju-name{
+  .buju-name {
     margin-bottom: 15px;
-    font-size:13px ;
-    margin-top:-5px;
+    font-size: 13px;
+    margin-top: -5px;
   }
-  .buju{
+  .buju {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -514,8 +538,7 @@
   }
 }
 
-
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 360px) {
   .pic--guest--item {
     width: 89px;
     color: #fff;
@@ -594,12 +617,12 @@
     }
   }
 
-  .buju-name{
+  .buju-name {
     margin-bottom: 15px;
-    font-size:13px ;
-    margin-top:-5px;
+    font-size: 13px;
+    margin-top: -5px;
   }
-  .buju{
+  .buju {
     display: flex;
     flex-direction: column;
     align-items: center;
