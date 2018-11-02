@@ -12,6 +12,11 @@ export default class extends Component {
       clientWidth: ''
     }
   }
+
+
+  componentDidMount(){
+    this.getClientWidth()
+  }
   
   // 产看更多
   catMore = () => {
