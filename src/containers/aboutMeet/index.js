@@ -23,10 +23,10 @@ import {BackTop} from 'antd'
 
 import Footer from "../../components/Footer";
 
-
 import './aboutMeet.scss'
 import {signUrl} from "../../configs";
 import ConferenceAgenda from "../../components/ConferenceAgenda";
+import CooperativePartner from "../../components/CooperativePartner";
 
 export default class aboutMeet extends React.Component {
   constructor(props) {
@@ -205,6 +205,9 @@ export default class aboutMeet extends React.Component {
           <ExpertGroup stheme={true}  peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
           : null
         }
+
+        {/*合作伙伴*/}
+        <CooperativePartner/>
 
         {/* 往期回顾 */}
         <Review/>
