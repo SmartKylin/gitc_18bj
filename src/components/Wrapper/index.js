@@ -3,16 +3,32 @@ import React, {Component} from 'react'
 import Header from "../../containers/Head";
 
 export default class extends Component {
-    constructor (props) {
-        super(props)
+  constructor(props) {
+    super(props)
+    this.state = {
+      isHeader: true
     }
-    render () {
-        return (
-            <div>
-                <Header/>
-                {this.props.children}
-            </div>
+  }
 
-        )
+  componentDidMount() {
+    let pathname = window.location.pathname;
+    if(pathname === '/campaign'){
+      this.setState({
+        isHeader:false
+      })
     }
+  }
+
+  render() {
+    let {isHeader} = this.state
+    return (
+        <div>
+          {isHeader ? <Header/> :  null}
+
+          {this.props.children}
+
+        </div>
+
+    )
+  }
 }
