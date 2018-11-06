@@ -33,11 +33,14 @@ export default class CooperativePartner extends React.Component {
           data && data.length > 0 && data.map((item, key) => {
             return <div key={key} className='cooperative-partner-map'>
               <div className='cooperative-partner-title'>{item.other && item.other.name}</div>
-              {
-                item.data &&  item.data.map((i,j) => {
-                  return <ImageData key={j} data={i}/>
-                })
-              }
+              <div className='image-data-box-box'>
+                {
+                  item.data &&  item.data.map((i,j) => {
+                    return <ImageData key={j} data={i}/>
+                  })
+                }
+              </div>
+
             </div>
           })
         }
