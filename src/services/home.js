@@ -24,3 +24,7 @@ export function getDate1() {
 export function getDate2() {
   return http.get('http://api.thegitc.com/api/gitc/person-16/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=-weight')
 }
+
+export function getDate3() {
+  return http.get('http://api.thegitc.com/api/gitc/person-18/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=-weight')
+}
