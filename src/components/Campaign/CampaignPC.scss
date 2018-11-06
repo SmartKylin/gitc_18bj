@@ -1,0 +1,18 @@
+.CampaignPC{
+    .form_submit{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .ant-form.ant-form-horizontal{
+            width: 500px;
+            .btn{
+                display: flex;
+                margin-left: 200px;
+            }
+        }
+        .ant-col-3.ant-form-item-label{
+            text-align: left;
+        }
+    }
+}
