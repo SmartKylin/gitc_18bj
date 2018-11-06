@@ -4,15 +4,113 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .ant-form.ant-form-horizontal{
+        .center_form{
             width: 500px;
             .btn{
                 display: flex;
-                margin-left: 200px;
+                margin-left: 150px;
             }
         }
         .ant-col-3.ant-form-item-label{
             text-align: left;
         }
+        .ant-form-item-label label{
+            color: #fff;
+        }
+    }
+    .sctions{
+        width: 100%;
+        background: #060503;
+        color: #fff;
+        .title_sec{
+            margin: 0 auto;
+            width: 900px;
+            padding: 20px 0;
+            font-size: 14px;
+            .tit{
+                font-size: 16px;
+            }
+        }
+        .choose{
+            width: 900px;
+            margin: 0 auto;
+            color: #fff;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    width:150px;
+                    display: flex;
+                    margin-right: 30px;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    background: #17191f;
+                    padding: 7px;
+                    border: 1px solid #a17e51;
+                    &:nth-child(5n){
+                        margin-right: 0;
+                    }
+                    .pic{
+                        width: 140px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    p{
+                        margin-bottom: 5px;
+                        color: #fff;
+                    } 
+                    .btn{
+                        padding-top: 5px;
+                        cursor: pointer;
+                        text-align: center;
+                    }
+                    .details{
+                        font-size: 12px;
+                        .ant-checkbox-wrapper{
+                            color: #fff;
+                            font-size: 12px;
+                        }                      
+                        .ant-checkbox{
+                            // margin-right: 5px;
+                            cursor: pointer;
+                        }
+                        .ant-checkbox+span{
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.pcModal{
+    .ant-modal-close{
+        color: #fff;
+    }
+    .ant-modal-body{
+        background: #060503;
+        .specific{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            .company{
+                margin-top: 10px;
+            }
+            .detailCont{
+                text-align: justify;
+            }
+            .detailPic{
+                width: 300px;
+                img{
+                    width: 100%;
+                }
+            }
+        } 
+    }
+    .ant-modal-footer{
+        display: none;
     }
 }
