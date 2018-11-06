@@ -179,6 +179,17 @@ class CampaignPC extends React.Component{
     return <div className='CampaignPC'>
       <Header/>
       <div className='sctions'> 
+        <div className='title_sec'>
+          <p>
+          投票限制：一人只能头一次票；活动共有9个奖项和个人信息都是必填项，只有全部选择和填写后才能提交
+          </p>
+          <p className='tit'>投票规则文案</p>
+          <p className='tit'>为确保GITC2018年度评选投票公正公平性，专家投票时应遵守以下规定：</p>  
+          <p>1、投票时间：2018年11月10日至11月13日。</p>  
+          <p>2、投票方法：在候选名单中选择获奖选手，进行统一投票。</p>  
+          <p>3、投票限制：每位专家仅且只拥有一次投票机会，多次投票无效。</p>
+          <p>4、权重分配：专家投票权重占整体票数的60%；大众投票权重占整体票数的40%。</p>
+        </div>
         <Form onSubmit={this.handleSubmit}>
           <div className='choose'>
           {
