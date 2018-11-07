@@ -20,7 +20,7 @@ export default class LoopCheck extends React.Component{
                             <p className='btn' onClick={() => onDetail(val)}>查看详情</p>
                             <div className='details'>
                             <Checkbox value={val}>{val.pl_id == 117 || val.pl_id == 118 || val.pl_id == 119 ?
-                            <p style={{textAlign: 'center'}}>{val.name}<br/>{val.position}<br/>{val.company}</p> : val.name}</Checkbox>
+                            <p style={{textAlign: 'center'}}><span style={{fontSize:'15px'}}>{val.name}</span><br/>{val.position}<br/>{val.company}</p> : val.name}</Checkbox>
                             </div>
                         </li>)
                     }

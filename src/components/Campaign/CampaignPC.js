@@ -226,7 +226,7 @@ class CampaignPC extends React.Component{
             detailData && <div className='specific'>
               <div className='detailPic'><img src={detailData.pic}/></div>
               {/* <p className='name'>{detailData.name}</p> */}
-              <p className='company'>{detailData.name}</p>
+              <p className='company' style={{fontSize:'17px'}}>{detailData.name}</p>
               {detailData.pl_id == 117 || detailData.pl_id == 118 || detailData.pl_id == 119 ? 
               <p style={{textAlign: 'center', margin: '4px 0'}} >{detailData.position}<br/>{detailData.company}</p> : ''}
               <p className='detailCont'>{detailData.summary}</p>
