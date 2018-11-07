@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex-wrap: wrap;
       .cooperative-partner-title{
         font-size: 16px;
         color: #e9eaec;
@@ -21,11 +22,13 @@
       .image-data-box-box{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         .image-data-box{
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
           margin-bottom: 20px;
+          width: 120px;
           .image-data-box-item{
             width: 120px;
             height: 53px;
