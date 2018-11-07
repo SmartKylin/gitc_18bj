@@ -10,7 +10,7 @@ class CampaignPhoneForm extends React.Component {
     super(props)
     this.state = {
       visible: false,
-      detailsData:'',
+      detailsData: '',
       checkedValues: '',
     }
   }
@@ -38,6 +38,7 @@ class CampaignPhoneForm extends React.Component {
       visible: false,
     });
   }
+
   handleCancel = (e) => {
     console.log(e);
     this.setState({
@@ -45,30 +46,30 @@ class CampaignPhoneForm extends React.Component {
     });
   }
 
-  onChange = (checkedValues,id) => {
+  onChange = (checkedValues, id) => {
     console.log('checked = ', checkedValues);
 
-    if(id == 119 && checkedValues &&  checkedValues.length < 11){
+    if (id == 119 && checkedValues && checkedValues.length < 11) {
       this.setState({
         checkedValues
       })
       let {setData} = this.props
-      setData(checkedValues,id)
-    }else {
-      if(checkedValues && checkedValues.length < 6){
+      setData(checkedValues, id)
+    } else {
+      if (checkedValues && checkedValues.length < 6) {
         this.setState({
           checkedValues
         })
 
         let {setData} = this.props
-        setData(checkedValues,id)
+        setData(checkedValues, id)
 
-      }else {
+      } else {
 
-        if(id == 119){
-          alert('最多10个')
-        }else {
-          alert('最多5个')
+        if (id == 119) {
+          alert('GITC2018年度技术新锐力量奖候选人必须选10个')
+        } else {
+          alert('必须选5个')
         }
 
       }
@@ -78,29 +79,30 @@ class CampaignPhoneForm extends React.Component {
 
   render() {
     let {data} = this.props
-    const {detailsData,checkedValues} = this.state
-
-    console.log(checkedValues,'checkedValuescheckedValues');
-    const {getFieldDecorator} = this.props.form;
-
-
+    const {detailsData, checkedValues} = this.state
     return <div className='campaign-map'>
       <Form onSubmit={this.handleSubmit}>
-        <div className='campaign-map-name'>{data.name}</div>
-        <FormItem
-            label=" "
-
-        >
-          <CheckboxGroup value={checkedValues} style={{width: '100%'}} onChange={(v) => this.onChange(v,data.id)}>
+        <div className='campaign-map-name'><span>{data.name}</span><span>{`(${data.other})`}</span></div>
+        <FormItem label=" ">
+          <CheckboxGroup value={checkedValues} style={{width: '100%'}} onChange={(v) => this.onChange(v, data.id)}>
             <div className='campaign-map-box'>
               {
                 data && data.data.length > 0 && data.data.map((i, j) => {
                   return <div className='campaign-map-map' key={j}>
                     <div className='campaign-map-map-box'>
-                      <img src={i.pic} alt=""/>
+                      <img src={i.pic} alt="" onClick={() => this.showModal(i)}/>
                       <div className='xiangqing-box'>
-                        <div className='ab' onClick={() => this.showModal(i)}>查看详情</div>
-                        <Checkbox value={i}> {i.name}</Checkbox>
+                        {/*<div className='ab' onClick={() => this.showModal(i)}>查看详情</div>*/}
+                        <Checkbox value={i}>
+                          <span>{i.name}</span>
+                          <div style={{fontSize: '10px'}}>
+                            {(data.id == 117 || data.id == 118 || data.id == 119) ?
+                                <span style={{marginRight: '5px'}}>{i.company ? i.company : ''}</span> : null}
+
+                            {(data.id == 117 || data.id == 118 || data.id == 119) ?
+                                <span>{i.position ? i.position : ''}</span> : null}
+                          </div>
+                        </Checkbox>
                       </div>
                     </div>
                   </div>
@@ -114,15 +116,24 @@ class CampaignPhoneForm extends React.Component {
             onOk={this.handleOk}
             onCancel={this.handleCancel}
             footer={null}
-            style={{
-              top: 0,
-            }}
+            centered={true}
         >
           <div className='details-box'>
             <img src={detailsData.pic}/>
             <div className='details-box-name'>
               {detailsData.name}
             </div>
+            {
+              detailsData.company !== '公司' ? <div className='details-box-company'>
+                {detailsData.company}
+              </div> : null
+            }
+            {
+              detailsData.position !== '公司' ? <div className='details-box-position'>
+                {detailsData.position}
+              </div> : null
+            }
+
             <div className='details-box-summary'>
               {detailsData.summary}
             </div>

@@ -4,6 +4,7 @@ import './CampaignPhone.scss'
 import {Form, Input, Button} from 'antd';
 import header from './images/header.png'
 import CampaignPhoneForm from './CampaignPhoneForm'
+import {getDate5} from "../../services/home";
 
 const FormItem = Form.Item;
 
@@ -42,8 +43,8 @@ class CampaignPhone extends React.Component {
           ...values,
           vlist,
         }
+        getDate5(param).then(res => res.json()).then(v => alert(v.message))
 
-        console.log(param,'paramparamparam');
       }
     });
   }
@@ -135,14 +136,10 @@ class CampaignPhone extends React.Component {
 
       <div className='campaign-phone-selection-rules'>
         <div>
-          <div>
+          <div style={{fontSize:'14px'}}>
             评选投票的规则
           </div>
-          <div>
-            投票限制：一人只能头一次票；活动共有9个奖项和个人信息都是必填项，只有全部选择和填写后才能提交
-          </div>
         </div>
-
         <div>
           <div>
             为确保GITC2018年度评选投票公正公平性，专家投票时应遵守以下规定：
