@@ -93,7 +93,7 @@ class CampaignPhoneForm extends React.Component {
                       <img src={i.pic} alt="" onClick={() => this.showModal(i)}/>
                       <div className='xiangqing-box'>
                         {/*<div className='ab' onClick={() => this.showModal(i)}>查看详情</div>*/}
-                        <Checkbox value={i}>
+
                           <span>{i.name}</span>
                           <div style={{fontSize: '10px'}}>
                             {(data.id == 117 || data.id == 118 || data.id == 119) ?
@@ -102,7 +102,7 @@ class CampaignPhoneForm extends React.Component {
                             {(data.id == 117 || data.id == 118 || data.id == 119) ?
                                 <span>{i.position ? i.position : ''}</span> : null}
                           </div>
-                        </Checkbox>
+                        <Checkbox value={i} style={{marginTop:'5px'}}/>
                       </div>
                     </div>
                   </div>
