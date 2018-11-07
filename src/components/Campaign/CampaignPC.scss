@@ -81,9 +81,11 @@
                             font-size: 12px;
                             display: flex;
                             align-items: center;
+                            justify-content: space-between;
+                            flex-direction: column-reverse;
                         }                      
                         .ant-checkbox{
-                            // margin-right: 5px;
+                            margin-top: 5px;
                             cursor: pointer;
                         }
                         .ant-checkbox+span{

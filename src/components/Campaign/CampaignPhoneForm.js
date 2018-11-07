@@ -20,7 +20,6 @@ class CampaignPhoneForm extends React.Component {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
       }
     });
   }
@@ -33,21 +32,18 @@ class CampaignPhoneForm extends React.Component {
   }
 
   handleOk = (e) => {
-    console.log(e);
     this.setState({
       visible: false,
     });
   }
 
   handleCancel = (e) => {
-    console.log(e);
     this.setState({
       visible: false,
     });
   }
 
   onChange = (checkedValues, id) => {
-    console.log('checked = ', checkedValues);
 
     if (id == 119 && checkedValues && checkedValues.length < 11) {
       this.setState({
@@ -67,9 +63,9 @@ class CampaignPhoneForm extends React.Component {
       } else {
 
         if (id == 119) {
-          alert('GITC2018年度技术新锐力量奖候选人必须选10个')
+          alert('此奖项只能投十票')
         } else {
-          alert('必须选5个')
+          alert('此奖项只能投五票')
         }
 
       }

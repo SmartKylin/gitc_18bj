@@ -46,10 +46,10 @@ class CampaignPhone extends React.Component {
       objectArr9.length >= 5 ? values.voter && values.company && values.position && values.phone && 
       getDate5(param)
       .then(res => res.json())
-      .then(v => alert(v.message)) : alert('最具技术创新奖项至少选择5个') : alert('最具信赖产品奖项至少选择5个')  : 
-      alert('最具价值产品奖项至少选择5个') : alert('最佳服务提供奖项至少选择5个') : alert('最佳合作伙伴奖项至少选择5个') :
-       alert('最具影响力企业奖项至少选择5个') : alert('技术新锐力量奖至少选择10个')
-       :alert('技术杰出贡献奖项至少选择5个') :  alert('技术领军人物奖项至少选择5个')
+      .then(v => alert(v.message)) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
+      alert('最具价值产品奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳服务提供奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳合作伙伴奖项至少选择5项，请完成选择后再提交信息。') :
+       alert('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。') : alert('技术新锐力量奖项至少选择10项，请完成选择后再提交信息。')
+       :alert('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。') :  alert('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
     });
   }
 
