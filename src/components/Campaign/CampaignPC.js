@@ -3,7 +3,7 @@ import './CampaignPC.scss'
 import {Form, Input, Button, Checkbox, Modal} from 'antd'
 import LoopCheck from './loopCheck'
 import {getDate5} from '../../services/home'
-import HeadPic from './images/header.jpg'
+import HeadPic from './images/header.png'
 const FormItem = Form.Item;
 
 class CampaignPC extends React.Component{
@@ -227,6 +227,8 @@ class CampaignPC extends React.Component{
               <div className='detailPic'><img src={detailData.pic}/></div>
               {/* <p className='name'>{detailData.name}</p> */}
               <p className='company'>{detailData.name}</p>
+              {detailData.pl_id == 117 || detailData.pl_id == 118 || detailData.pl_id == 119 ? 
+              <p style={{textAlign: 'center', margin: '4px 0'}} >{detailData.position}<br/>{detailData.company}</p> : ''}
               <p className='detailCont'>{detailData.summary}</p>
             </div>
           }

@@ -33,8 +33,6 @@ class CampaignPhone extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
         let {objectArr1, objectArr2, objectArr3, objectArr4, objectArr5, objectArr6, objectArr7, objectArr8, objectArr9} =this.state
         let vlist = objectArr1.concat(objectArr2).concat(objectArr3).concat(objectArr4).concat(objectArr5).concat(objectArr6).concat(objectArr7).concat(objectArr8).concat(objectArr9)
 
@@ -43,9 +41,15 @@ class CampaignPhone extends React.Component {
           ...values,
           vlist,
         }
-        getDate5(param).then(res => res.json()).then(v => alert(v.message))
-
-      }
+        objectArr1.length >= 5 ?  objectArr2.length >= 5 ? objectArr3.length >= 10 ? objectArr4.length >= 5 ?
+      objectArr5.length >= 5 ? objectArr6.length >= 5 ? objectArr7.length >= 5 ? objectArr8.length >= 5 ?
+      objectArr9.length >= 5 ? values.voter && values.company && values.position && values.phone && 
+      getDate5(param)
+      .then(res => res.json())
+      .then(v => alert(v.message)) : alert('最具技术创新奖项至少选择5个') : alert('最具信赖产品奖项至少选择5个')  : 
+      alert('最具价值产品奖项至少选择5个') : alert('最佳服务提供奖项至少选择5个') : alert('最佳合作伙伴奖项至少选择5个') :
+       alert('最具影响力企业奖项至少选择5个') : alert('技术新锐力量奖至少选择10个')
+       :alert('技术杰出贡献奖项至少选择5个') :  alert('技术领军人物奖项至少选择5个')
     });
   }
 
@@ -113,7 +117,6 @@ class CampaignPhone extends React.Component {
       objectArr1, objectArr2, objectArr3, objectArr4, objectArr5, objectArr6, objectArr7, objectArr8, objectArr9,
     } = this.state
 
-    console.log('objectArr1', objectArr1, 'objectArr2', objectArr2, 'objectArr3', objectArr3, objectArr4, objectArr5, objectArr6, objectArr7, objectArr8, objectArr9);
     const {campaignData} = this.props
 
     const {getFieldDecorator} = this.props.form;
@@ -211,7 +214,7 @@ class CampaignPhone extends React.Component {
           </FormItem>
 
           <FormItem>
-            <Button type="primary" htmlType="submit">提交</Button>
+            <Button type="primary" htmlType="submit">投票</Button>
           </FormItem>
 
         </Form>
