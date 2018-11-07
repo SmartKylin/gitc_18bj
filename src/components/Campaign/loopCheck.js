@@ -9,7 +9,8 @@ export default class LoopCheck extends React.Component{
     render (){
         const {campaignDat, onDetail, onChangeCheck} = this.props
         return campaignDat && <div>
-            <p>{campaignDat.name}</p>
+            <p style={{color: '#e1c277',  fontSize: 16}}>{campaignDat.name} 
+            <span style={{color: '#399ad4', fontSize: 12, marginLeft: 3}}>({campaignDat.other})</span></p>
             <Checkbox.Group style={{ width: '100%' }} onChange={(v) => onChangeCheck(v, campaignDat)}>
                 <ul>
                     {/* <li span={8}><Checkbox value="A">A</Checkbox></li> */}
@@ -18,7 +19,8 @@ export default class LoopCheck extends React.Component{
                             <div className='pic'><img src={val.pic}/></div>
                             <p className='btn' onClick={() => onDetail(val)}>查看详情</p>
                             <div className='details'>
-                            <Checkbox value={val}>{val.name}</Checkbox>
+                            <Checkbox value={val}>{val.pl_id == 117 || val.pl_id == 118 || val.pl_id == 119 ?
+                            <p style={{textAlign: 'center'}}>{val.name}<br/>{val.position}<br/>{val.company}</p> : val.name}</Checkbox>
                             </div>
                         </li>)
                     }
@@ -28,3 +30,4 @@ export default class LoopCheck extends React.Component{
     }
 
 }
+

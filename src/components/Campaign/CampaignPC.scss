@@ -1,9 +1,17 @@
 .CampaignPC{
+    .header{
+        width: 100%;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
     .form_submit{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: #bfbfbf;
         .center_form{
             width: 500px;
             .btn{
@@ -15,18 +23,18 @@
             text-align: left;
         }
         .ant-form-item-label label{
-            color: #fff;
+            color: #bfbfbf;
         }
     }
     .sctions{
         width: 100%;
         background: #060503;
-        color: #fff;
+        color: #bfbfbf;
         .title_sec{
             margin: 0 auto;
             width: 900px;
             padding: 20px 0;
-            font-size: 14px;
+            font-size: 12px;
             .tit{
                 font-size: 16px;
             }
@@ -34,7 +42,6 @@
         .choose{
             width: 900px;
             margin: 0 auto;
-            color: #fff;
             ul{
                 display: flex;
                 flex-wrap: wrap;
@@ -59,7 +66,7 @@
                     }
                     p{
                         margin-bottom: 5px;
-                        color: #fff;
+                        color: #bfbfbf;
                     } 
                     .btn{
                         padding-top: 5px;
@@ -69,8 +76,10 @@
                     .details{
                         font-size: 12px;
                         .ant-checkbox-wrapper{
-                            color: #fff;
+                            color: #bfbfbf;
                             font-size: 12px;
+                            display: flex;
+                            align-items: center;
                         }                      
                         .ant-checkbox{
                             // margin-right: 5px;

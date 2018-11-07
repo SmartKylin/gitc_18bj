@@ -3,6 +3,7 @@ import './CampaignPC.scss'
 import {Form, Input, Button, Checkbox, Modal} from 'antd'
 import LoopCheck from './loopCheck'
 import {getDate5} from '../../services/home'
+import HeadPic from './images/header.jpg'
 const FormItem = Form.Item;
 
 class CampaignPC extends React.Component{
@@ -21,7 +22,7 @@ class CampaignPC extends React.Component{
       checkedData7: [],
       checkedData8: [],
       checkedData9: [],
-      totalChecked: []
+      isFlag: false
     }
   }
   handleSubmit = (e) => {
@@ -40,10 +41,22 @@ class CampaignPC extends React.Component{
         phone: values.phone,
         vlist: arr
       }
-      arr.length ? values.voter && values.company && values.position && values.phone
-      ? getDate5(params)
+      arr.length >= 50 && values.voter && values.company && values.position && values.phone && this.setState({isFlag: true})
+      // checkedData.length >= 5 ? checkedData2.length >= 5 ? checkedData3.length >= 10 ? 
+      // checkedData4.length >= 5 ? values.voter && values.company && values.position && values.phone
+      // ? getDate5(params)
+      // .then(res => res.json())
+      // .then(v => alert(v.message)) : '': alert('最具影响力企业奖项至少选择5个'): alert('技术新锐力量奖至少选择10个'): 
+      // alert('技术杰出贡献奖项至少选择5个'): alert('技术领军人物奖项至少选择5个')
+      checkedData.length >= 5 ?  checkedData2.length >= 5 ? checkedData3.length >= 10 ? checkedData4.length >= 5 ?
+      checkedData5.length >= 5 ? checkedData6.length >= 5 ? checkedData7.length >= 5 ? checkedData8.length >= 5 ?
+      checkedData9.length >= 5 ? values.voter && values.company && values.position && values.phone && 
+      getDate5(params)
       .then(res => res.json())
-      .then(v => alert(v.message)) : '' : alert('请按要求投票')
+      .then(v => {alert(v.message); this.setState({isFlag: false})}) : alert('最具技术创新奖项至少选择5个') : alert('最具信赖产品奖项至少选择5个')  : 
+      alert('最具价值产品奖项至少选择5个') : alert('最佳服务提供奖项至少选择5个') : alert('最佳合作伙伴奖项至少选择5个') :
+       alert('最具影响力企业奖项至少选择5个') : alert('技术新锐力量奖至少选择10个')
+       :alert('技术杰出贡献奖项至少选择5个') :  alert('技术领军人物奖项至少选择5个')
     });
   }
   onDetail = (val) => {
@@ -175,15 +188,12 @@ class CampaignPC extends React.Component{
 
   render(){
     const {campaignData,} = this.props
-    const {detailData, } = this.state
+    const {detailData, isFlag} = this.state
     return <div className='CampaignPC'>
       <Header/>
       <div className='sctions'> 
         <div className='title_sec'>
-          <p>
-          投票限制：一人只能头一次票；活动共有9个奖项和个人信息都是必填项，只有全部选择和填写后才能提交
-          </p>
-          <p className='tit'>投票规则文案</p>
+          <p className='tit'>投票规则</p>
           <p className='tit'>为确保GITC2018年度评选投票公正公平性，专家投票时应遵守以下规定：</p>  
           <p>1、投票时间：2018年11月10日至11月13日。</p>  
           <p>2、投票方法：在候选名单中选择获奖选手，进行统一投票。</p>  
@@ -199,7 +209,7 @@ class CampaignPC extends React.Component{
               )
           }
           </div>
-          <Vote handleSubmit={this.handleSubmit} {...this.props}/>
+          <Vote handleSubmit={this.handleSubmit} {...this.props} isFlag={isFlag}/>
         </Form>
       </div>
       <Modal
@@ -227,16 +237,17 @@ class CampaignPC extends React.Component{
 }
 
 const Header = () => {
-  return <div>
-        dddds
+  return <div className='header'>
+        <img src={HeadPic}/>
   </div>
 }
 const formItemLayout = {
   labelCol: { span: 3 },
   wrapperCol: { span: 12 },
+  // colon: false
 };
 const Vote = (props) => { 
-  const { form: {getFieldDecorator} } = props;
+  const { form: {getFieldDecorator},isFlag } = props;
   return <div className='form_submit'>
       <div className='center_form'>
         <FormItem {...formItemLayout} label='姓名'>
@@ -276,7 +287,7 @@ const Vote = (props) => {
             <Input/>)}
         </FormItem>
         <FormItem className='btn'>
-          <Button type="primary" htmlType="submit">
+          <Button loading={isFlag} type="primary" htmlType="submit">
             投票
           </Button>
         </FormItem>  
