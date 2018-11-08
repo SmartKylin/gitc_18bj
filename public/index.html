@@ -14,7 +14,7 @@
       var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
       var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
       var pathname = window.location.pathname;
-      if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) && pathname !=='/campaign' ){
+      if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) && (pathname !=='/campaign' && pathname !=='/success') ){
         window.location.href = 'http://wz2018.thegitc.com'
       }
     })()

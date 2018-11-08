@@ -12,7 +12,7 @@ export default class extends Component {
 
   componentDidMount() {
     let pathname = window.location.pathname;
-    if(pathname === '/campaign'){
+    if(pathname === '/campaign' || pathname === '/success'){
       this.setState({
         isHeader:false
       })
