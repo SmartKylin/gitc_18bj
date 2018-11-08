@@ -30,7 +30,7 @@
         width: 100%;
         background: #060503;
         color: #bfbfbf;
-        margin-top: -335px;
+        margin-top: -300px;
         .title_sec{
             margin: 0 auto;
             width: 900px;
@@ -38,6 +38,9 @@
             font-size: 12px;
             .tit{
                 font-size: 16px;
+            }
+            p:not(.tit){
+                margin-bottom: 5px;
             }
         }
         .choose{

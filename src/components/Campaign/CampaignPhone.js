@@ -2,7 +2,7 @@ import React from 'react'
 
 import './CampaignPhone.scss'
 import {Form, Input, Button} from 'antd';
-import header from './images/header.png'
+import header from './images/header.jpg'
 import CampaignPhoneForm from './CampaignPhoneForm'
 import {getDate5} from "../../services/home";
 
@@ -139,8 +139,8 @@ class CampaignPhone extends React.Component {
 
       <div className='campaign-phone-selection-rules'>
         <div>
-          <div style={{fontSize:'14px'}}>
-            评选投票的规则
+          <div style={{fontSize:'14px', marginBottom: 10}}>
+            投票规则
           </div>
         </div>
         <div>
