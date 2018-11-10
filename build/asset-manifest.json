@@ -1,9 +1,10 @@
 {
   "main.css": "static/css/main.44aa587c.css",
   "main.css.map": "static/css/main.44aa587c.css.map",
-  "main.js": "static/js/main.7fa2c001.js",
-  "main.js.map": "static/js/main.7fa2c001.js.map",
+  "main.js": "static/js/main.9d0d7563.js",
+  "main.js.map": "static/js/main.9d0d7563.js.map",
   "static/media/activity.jpg": "static/media/activity.0d238f26.jpg",
+  "static/media/allBg.jpg": "static/media/allBg.c7802e85.jpg",
   "static/media/bg.png": "static/media/bg.82fc62b5.png",
   "static/media/bg_dahuiyicheng.png": "static/media/bg_dahuiyicheng.50c29883.png",
   "static/media/bg_line.png": "static/media/bg_line.669533c0.png",
@@ -18,8 +19,10 @@
   "static/media/footer-logo.png": "static/media/footer-logo.85166ec1.png",
   "static/media/footer.png": "static/media/footer.82fc03eb.png",
   "static/media/headTIT.png": "static/media/headTIT.3d322f09.png",
+  "static/media/header.jpg": "static/media/header.2bd0ac5c.jpg",
   "static/media/header.png": "static/media/header.8e33b110.png",
   "static/media/hostMeet.jpg": "static/media/hostMeet.a883e777.jpg",
+  "static/media/moren.jpg": "static/media/moren.d6fedfe8.jpg",
   "static/media/person.png": "static/media/person.87b523ae.png",
   "static/media/person1.png": "static/media/person1.d2bd99cc.png",
   "static/media/prizaTable.png": "static/media/prizaTable.ad93aa45.png",
@@ -32,5 +35,6 @@
   "static/media/title6.png": "static/media/title6.ecc59480.png",
   "static/media/title8.jpg": "static/media/title8.5b971fd4.jpg",
   "static/media/y.png": "static/media/y.db70b9c9.png",
+  "static/media/合作伙伴.png": "static/media/合作伙伴.615c383a.png",
   "static/media/大会简介.png": "static/media/大会简介.7c897983.png"
 }
