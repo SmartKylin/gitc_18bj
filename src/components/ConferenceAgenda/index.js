@@ -146,7 +146,7 @@ const MainMeeting = ({data}) => {
 
 
           let objData = null
-          if(item.id === 1460) {
+          if(item.id === 1461) {
             objData = item && item.sintroduce && JSON.parse(item.sintroduce)
           }
 
