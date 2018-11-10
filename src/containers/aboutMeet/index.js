@@ -182,7 +182,7 @@ export default class aboutMeet extends React.Component {
         <OtherMeetings list={otherMeetings}/>
 
         {/*会议结构*/}
-        {/*<ConferenceAgenda/>*/}
+        <ConferenceAgenda/>
 
 
         {/*大会主席团*/}
