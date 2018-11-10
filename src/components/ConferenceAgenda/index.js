@@ -9,7 +9,7 @@ const dateAry = ['11月22日', '11月23日']
 
 const decorateAry = (ary) => {
   let arr = []
-  return arr.concat(ary[ary.length - 1], ary, ary[0])
+  return arr.concat(ary[ary.length - 1], ary)
 }
 
 export default class ConferenceAgenda extends React.Component {
@@ -72,7 +72,6 @@ export default class ConferenceAgenda extends React.Component {
   render() {
     let {bannerAry, topicGroup, whichDay} = this.state
 
-    console.log(topicGroup,'topicGrouptopicGroup');
 
     return <div className='conference-agenda-box-box'>
       <div className="conference-agenda-box-logo">
@@ -146,14 +145,12 @@ const MainMeeting = ({data}) => {
         data && data.data  && data.data.map((item,key) => {
 
 
-          let obj = []
+          let objData = null
           if(item.id === 1460) {
-            console.log(item.id,'item.iditem.id');
-            obj = item && item.sintroduce && JSON.parse(item.sintroduce)
-            console.log(obj,'obj');
+            objData = item && item.sintroduce && JSON.parse(item.sintroduce)
           }
 
-          return <div className='main-meeting-box-body-item' key={key}>
+          return objData ? <GetAward objData={objData}/> : <div className='main-meeting-box-body-item' key={key}>
 
             <div className='stime-stheme'>
               <div className='stime'>
@@ -200,6 +197,28 @@ const MainMeeting = ({data}) => {
           </div>
 
         })
+      }
+    </div>
+  </div>
+}
+
+const GetAward = ({objData}) => {
+  return <div className='main-award'>
+    <div className='main-time'>
+      {objData.time}
+    </div>
+    <div className='main-content'>
+      {
+        objData.awardArr.map(v => 
+          <div className='main-award-type'>
+            <div className='main-award-tit'>{v.award}</div>
+            <div className='main-award-cont'>
+              {
+                v.types.map(v => <p>{v}</p>)
+              }
+            </div>
+          </div>
+        )
       }
     </div>
   </div>

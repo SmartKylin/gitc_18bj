@@ -191,3 +191,33 @@
     }
   }
 }
+
+.main-award{
+  border-bottom: 2px solid #0d5086;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  .main-time{
+    width: 80px;
+  }
+  .main-content{
+    flex: 1;
+  }
+  .main-award-type{
+    display: flex;  
+    align-items: center;
+    &:not(:last-child){
+      border-bottom: 2px solid #0d5086;
+    }
+    .main-award-tit{
+      width: 331px;
+    }
+    .main-award-cont{
+      flex: 1;
+      p{
+        margin: 0;
+        line-height: 30px;
+      }
+    }
+  }
+}
