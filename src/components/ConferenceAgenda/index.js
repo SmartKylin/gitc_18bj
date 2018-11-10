@@ -17,7 +17,7 @@ export default class ConferenceAgenda extends React.Component {
     super(props)
     this.state = {
       whichDay: 0,
-      topicIndex: 1,
+      topicIndex: 0,
       bannerAry: [],
       topicGroup: {
         0: [],
@@ -44,7 +44,7 @@ export default class ConferenceAgenda extends React.Component {
     })
 
     this.setState({
-      bannerAry: this.state.topicGroup[this.state.whichDay][1]
+      bannerAry: this.state.topicGroup[this.state.whichDay][0]
     })
   }
 
@@ -53,10 +53,10 @@ export default class ConferenceAgenda extends React.Component {
   switchDay = async (index) => {
     await this.setState({
       whichDay: index,
-      topicIndex:1
+      topicIndex:0
     })
     await this.setState({
-      bannerAry: this.state.topicGroup[this.state.whichDay][1]
+      bannerAry: this.state.topicGroup[this.state.whichDay][0]
     })
   }
 
@@ -87,7 +87,7 @@ export default class ConferenceAgenda extends React.Component {
             dateAry.map((date, index) => (
                 <div
                     key={index}
-                    className={'agenda--date ' + (this.state.whichDay === index ? 'active' : '')}
+                    className={'agenda--date ' + (whichDay === index ? 'active' : '')}
                     onClick={() => this.switchDay(index)}
                 >{date}</div>
             ))
@@ -99,10 +99,10 @@ export default class ConferenceAgenda extends React.Component {
           {/*会场名称*/}
           <div className='topic--group'>
             {
-              this.state.topicGroup[this.state.whichDay].map((item, index) => (
-                  (index > 0 && index < (this.state.topicGroup[this.state.whichDay].length - 1)) ? <div key={index}className={'topic--box ' + (this.state.topicIndex === index ? 'active' : '')} onClick={() => this.changeFocus(index,item)}>
+              this.state.topicGroup[whichDay].map((item, index) => (
+                  <div key={index}className={'topic--box ' + (this.state.topicIndex === index ? 'active' : '')} onClick={() => this.changeFocus(index,item)}>
                     {item.name}
-                  </div> : null
+                  </div>
               ))
             }
           </div>
