@@ -26,6 +26,7 @@ class CampaignPC extends React.Component{
     }
   }
   handleSubmit = (e) => {
+    const confirm = window.confirm;
     const {checkedData, checkedData2, checkedData3, checkedData4, checkedData5, checkedData6, 
       checkedData7, checkedData8, checkedData9} = this.state
     let arr = checkedData.concat(checkedData2).concat(checkedData3)
@@ -53,7 +54,7 @@ class CampaignPC extends React.Component{
       checkedData9.length >= 5 ? values.voter && values.company && values.position && values.phone && 
       getDate5(params)
       .then(res => res.json())
-      .then(v => {alert(v.message); this.setState({isFlag: false})}) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
+      .then(v => {if(confirm(v.message)){window.location = '/success'} this.setState({isFlag: false})}) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
       alert('最具价值产品奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳服务提供奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳合作伙伴奖项至少选择5项，请完成选择后再提交信息。') :
        alert('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。') : alert('技术新锐力量奖项至少选择10项，请完成选择后再提交信息。')
        :alert('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。') :  alert('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
