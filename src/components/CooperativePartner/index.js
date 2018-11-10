@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-
+import hezuohuoban from './image/合作伙伴.png'
 import {getListImgs} from "../../services/getListNews";
 import Title from "../../components/MeetingTitle";
 
@@ -27,7 +27,7 @@ export default class CooperativePartner extends React.Component {
   render() {
     const {data} = this.state
     return <div  className='cooperative-partner-box-box'>
-      <Title title={'合作伙伴'} englishName={'PRESIDIUNM'}/>
+    {/*  <Title title={'合作伙伴'} englishName={'PRESIDIUNM'}/>
       <div className='cooperative-partner-box'>
         {
           data && data.length > 0 && data.map((item, key) => {
@@ -44,6 +44,9 @@ export default class CooperativePartner extends React.Component {
             </div>
           })
         }
+      </div>*/}
+      <div cooperative-partner-box-box-img>
+        <img src={hezuohuoban} alt=""/>
       </div>
     </div>
   }
