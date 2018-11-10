@@ -1,6 +1,6 @@
 import React from 'react'
 import {getDate1, getDate2} from "../../services/home";
-
+import moren from './images/moren.jpg'
 import './index.scss'
 import meetingStructureLogo from "../../assets/images2/bg_dahuiyicheng.png";
 import Title from "../MeetingTitle";
@@ -31,13 +31,13 @@ export default class ConferenceAgenda extends React.Component {
     await getDate1()
         .then(res => res && res.json())
         .then(data => {
-          topicGroup[0] = decorateAry(data.data)
+          topicGroup[0] = decorateAry(data.data).filter(item => item.name !== '不显示')
         })
 
     await getDate2()
         .then(res => res && res.json())
         .then(data => {
-          topicGroup[1] = decorateAry(data.data)
+          topicGroup[1] = decorateAry(data.data).filter(item => item.name !== '不显示')
         })
     await this.setState({
       topicGroup
@@ -71,6 +71,8 @@ export default class ConferenceAgenda extends React.Component {
 
   render() {
     let {bannerAry, topicGroup, whichDay} = this.state
+
+    console.log(topicGroup,'topicGrouptopicGroup');
 
     return <div className='conference-agenda-box-box'>
       <div className="conference-agenda-box-logo">
@@ -131,7 +133,7 @@ const MainMeeting = ({data}) => {
         {data.name}
       </div>
        <div className='address'>
-         {data.other ? data.other  : '未知楼层'}
+         {jsonObj && jsonObj.addr ? jsonObj.addr  : '未知楼层'}
        </div>
       <div className='jies'>
         {
@@ -142,6 +144,14 @@ const MainMeeting = ({data}) => {
     <div className='main-meeting-box-body'>
       {
         data && data.data  && data.data.map((item,key) => {
+
+
+          let obj = []
+          if(item.id === 1460) {
+            console.log(item.id,'item.iditem.id');
+            obj = item && item.sintroduce && JSON.parse(item.sintroduce)
+            console.log(obj,'obj');
+          }
 
           return <div className='main-meeting-box-body-item' key={key}>
 
@@ -157,7 +167,7 @@ const MainMeeting = ({data}) => {
             <div className='head-portrait-boy'>
               <div className='pic-name'>
                 <div className='pic'>
-                  <img src={item.pic} alt=""/>
+                  <img src={item.pic ? item.pic  : moren} alt=""/>
                 </div>
                 <div className='head-portrait-boy-name'>
                   {item.name}
