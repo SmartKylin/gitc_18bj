@@ -17,7 +17,7 @@ export default class ConferenceAgenda extends React.Component {
     super(props)
     this.state = {
       whichDay: 0,
-      topicIndex: 0,
+      topicIndex: 1,
       bannerAry: [],
       topicGroup: {
         0: [],
@@ -44,7 +44,7 @@ export default class ConferenceAgenda extends React.Component {
     })
 
     this.setState({
-      bannerAry: this.state.topicGroup[this.state.whichDay][0]
+      bannerAry: this.state.topicGroup[this.state.whichDay][1]
     })
   }
 
@@ -53,10 +53,10 @@ export default class ConferenceAgenda extends React.Component {
   switchDay = async (index) => {
     await this.setState({
       whichDay: index,
-      topicIndex:0
+      topicIndex:1
     })
     await this.setState({
-      bannerAry: this.state.topicGroup[this.state.whichDay][0]
+      bannerAry: this.state.topicGroup[this.state.whichDay][1]
     })
   }
 
@@ -99,7 +99,8 @@ export default class ConferenceAgenda extends React.Component {
           <div className='topic--group'>
             {
               this.state.topicGroup[whichDay].map((item, index) => (
-                  <div key={index}className={'topic--box ' + (this.state.topicIndex === index ? 'active' : '')} onClick={() => this.changeFocus(index,item)}>
+
+                  index > 0 && <div key={index}className={'topic--box ' + (this.state.topicIndex === index ? 'active' : '')} onClick={() => this.changeFocus(index,item)}>
                     {item.name}
                   </div>
               ))
