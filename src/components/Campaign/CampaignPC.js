@@ -3,7 +3,7 @@ import './CampaignPC.scss'
 import {Form, Input, Button, Checkbox, Modal} from 'antd'
 import LoopCheck from './loopCheck'
 import {getDate5} from '../../services/home'
-import HeadPic from './images/header.png'
+import HeadPic from './images/head.png'
 const FormItem = Form.Item;
 
 class CampaignPC extends React.Component{
@@ -54,7 +54,15 @@ class CampaignPC extends React.Component{
       checkedData9.length >= 5 ? values.voter && values.company && values.position && values.phone && 
       getDate5(params)
       .then(res => res.json())
-      .then(v => {if(confirm(v.message)){window.location = '/success'} this.setState({isFlag: false})}) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
+      .then(v => {
+        if(v.status){
+          if(confirm(v.message)){
+            window.location = '/success'
+          }
+        } else {
+          alert(v.message)
+        }
+        this.setState({isFlag: false})}) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
       alert('最具价值产品奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳服务提供奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳合作伙伴奖项至少选择5项，请完成选择后再提交信息。') :
        alert('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。') : alert('技术新锐力量奖项至少选择10项，请完成选择后再提交信息。')
        :alert('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。') :  alert('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
@@ -193,14 +201,14 @@ class CampaignPC extends React.Component{
     return <div className='CampaignPC'>
       <Header/>
       <div className='sctions'> 
-        <div className='title_sec'>
+        {/* <div className='title_sec'>
           <p className='tit'>投票规则</p>
           <p className='tit'>为确保GITC2018年度评选投票公正公平性，专家投票时应遵守以下规定：</p>  
           <p>1、投票时间：2018年11月10日至11月13日。</p>  
           <p>2、投票方法：在候选名单中选择获奖选手，进行统一投票。</p>  
           <p>3、投票限制：每位专家仅且只拥有一次投票机会，多次投票无效。</p>
           <p>4、权重分配：专家投票权重占整体票数的60%；大众投票权重占整体票数的40%。</p>
-        </div>
+        </div> */}
         <Form onSubmit={this.handleSubmit}>
           <div className='choose'>
           {
