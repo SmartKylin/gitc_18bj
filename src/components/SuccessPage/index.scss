@@ -17,14 +17,15 @@
         color: #e1c277;
         text-align: center;
         padding: 30px 25px;
-        font-size: 16px;
-        margin-top: -130px;
+        font-size: 20px;
+        margin-top: -299px;
     }
 }
 @media screen and (max-width: 800px){
     .success{
         height: 100vh;
         p{
+            font-size: 14px;
             margin-top: -60px;
         }
     }
