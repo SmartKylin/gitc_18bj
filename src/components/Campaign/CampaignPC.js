@@ -258,8 +258,8 @@ const Header = () => {
   </div>
 }
 const formItemLayout = {
-  labelCol: { span: 3 },
-  wrapperCol: { span: 12 },
+  labelCol: { span: 6 },
+  wrapperCol: { span: 18 },
   // colon: false
 };
 const Vote = (props) => { 

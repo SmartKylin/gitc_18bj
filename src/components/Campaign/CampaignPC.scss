@@ -17,9 +17,12 @@
         color: #bfbfbf;
         .center_form{
             width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             .btn{
                 display: flex;
-                margin-left: 150px;
+                margin-left: 227px;
             }
         }
         .ant-col-3.ant-form-item-label{
