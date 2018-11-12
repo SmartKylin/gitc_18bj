@@ -29,7 +29,7 @@ export function getDate2() {
 }
 //竞选获取数据
 export function getDate3() {
-  return http.get('http://api.thegitc.com/api/gitc/person-18/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=-weight')
+  return http.get('http://api.thegitc.com/api/gitc/person-18/all/list.json?token=1afb756d16740266efde290917ca1a8e&phone=18201440272&order_by=ename')
 }
 //竞选提交
 export function getDate5(data) {
