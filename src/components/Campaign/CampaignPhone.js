@@ -2,7 +2,7 @@ import React from 'react'
 
 import './CampaignPhone.scss'
 import {Form, Input, Button} from 'antd';
-import header from './images/header.jpg'
+import header from './images/head.png'
 import CampaignPhoneForm from './CampaignPhoneForm'
 import {getDate5} from "../../services/home";
 
@@ -47,7 +47,14 @@ class CampaignPhone extends React.Component {
       objectArr9.length >= 5 ? values.voter && values.company && values.position && values.phone && 
       getDate5(param)
       .then(res => res.json())
-      .then(v => {if(confirm(v.message)){window.location = '/success'}}) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
+      .then(v => {
+        if(v.status){
+          if(confirm(v.message)){
+            window.location = '/success'
+          }
+        } else {
+          alert(v.message)
+        } }) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
       alert('最具价值产品奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳服务提供奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳合作伙伴奖项至少选择5项，请完成选择后再提交信息。') :
        alert('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。') : alert('技术新锐力量奖项至少选择10项，请完成选择后再提交信息。')
        :alert('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。') :  alert('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
@@ -138,7 +145,7 @@ class CampaignPhone extends React.Component {
         <img src={header} alt=""/>
       </div>
 
-      <div className='campaign-phone-selection-rules'>
+      {/* <div className='campaign-phone-selection-rules'>
         <div>
           <div style={{fontSize:'14px', marginBottom: 10}}>
             投票规则
@@ -155,7 +162,7 @@ class CampaignPhone extends React.Component {
           <li>3、投票限制：每位专家仅且只拥有一次投票机会，多次投票无效</li>
           <li>4、权重分配：专家投票权重占整体票数的60%；大众投票权重占整体票数的40%。</li>
         </ul>
-      </div>
+      </div> */}
 
 
       {

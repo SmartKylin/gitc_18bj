@@ -1,6 +1,6 @@
 import React from 'react'
 import {Form, Modal, Checkbox} from "antd";
-
+import {awardType} from './imgSrc'
 const CheckboxGroup = Checkbox.Group;
 
 const FormItem = Form.Item;
@@ -78,7 +78,10 @@ class CampaignPhoneForm extends React.Component {
     const {detailsData, checkedValues} = this.state
     return <div className='campaign-map'>
       <Form onSubmit={this.handleSubmit}>
-        <div className='campaign-map-name'><span>{data.name}</span><span>{`(${data.other})`}</span></div>
+        <div className='campaign-map-name'>
+        {/* <span>{data.name}</span><span>{`(${data.other})`}</span> */}
+        <img src={awardType(data.id)}/>
+        </div>
         <FormItem label=" ">
           <CheckboxGroup value={checkedValues} style={{width: '100%'}} onChange={(v) => this.onChange(v, data.id)}>
             <div className='campaign-map-box'>
