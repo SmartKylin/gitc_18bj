@@ -35,7 +35,7 @@ const data = [
     },
     {
         id: 123,
-        src: Award7
+        src: Award9
     }, 
     {
         id: 124,
@@ -43,7 +43,7 @@ const data = [
     },
     {
         id: 125,
-        src: Award9
+        src: Award7
     }
 ]
 export const awardType = (id) => {
