@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-import hezuohuoban from './image/最新版本.png'
+import hezuohuoban from './image/最新版本1.png'
 import {getListImgs} from "../../services/getListNews";
 import Title from "../../components/MeetingTitle";
 
