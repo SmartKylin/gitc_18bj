@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, Modal, Checkbox} from "antd";
+import {Form, Modal, Checkbox, message} from "antd";
 import {awardType} from './imgSrc'
 const CheckboxGroup = Checkbox.Group;
 
@@ -44,7 +44,10 @@ class CampaignPhoneForm extends React.Component {
   }
 
   onChange = (checkedValues, id) => {
-
+    message.config({
+      top: 200,
+      duration: 1,
+    });
     if (id == 119 && checkedValues && checkedValues.length < 11) {
       this.setState({
         checkedValues
@@ -63,9 +66,9 @@ class CampaignPhoneForm extends React.Component {
       } else {
 
         if (id == 119) {
-          alert('此奖项只能投十票')
+          message.info('此奖项只能投十票')
         } else {
-          alert('此奖项只能投五票')
+          message.info('此奖项只能投五票')
         }
 
       }
@@ -81,6 +84,7 @@ class CampaignPhoneForm extends React.Component {
         <div className='campaign-map-name'>
         {/* <span>{data.name}</span><span>{`(${data.other})`}</span> */}
         <img src={awardType(data.id)}/>
+        <p  style={{color: '#bfbfbf', textAlign: 'center'}}>（以下名单按照拼音首字母排序）</p>
         </div>
         <FormItem label=" ">
           <CheckboxGroup value={checkedValues} style={{width: '100%'}} onChange={(v) => this.onChange(v, data.id)}>

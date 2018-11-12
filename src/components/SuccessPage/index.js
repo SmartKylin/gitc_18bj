@@ -29,7 +29,9 @@ export default class Campaign extends React.Component {
                     <img src={clientWidth > 800 ? HeadPc : HeadPhone}/> 
                 </div>
                 <p>
-                    感谢您的参与，投票结果将在GITC2018全球互联网技术大会现场公布，敬请期待！
+                    感谢您的参与，投票结果将在<br/>
+                    GITC2018全球互联网技术大会现场公布，<br/>
+                    敬请期待!
                 </p>
             </div>
         )

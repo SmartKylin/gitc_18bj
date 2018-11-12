@@ -9,9 +9,9 @@ export default class LoopCheck extends React.Component{
 
     render (){
         const {campaignDat, onDetail, onChangeCheck} = this.props
-        console.log(campaignDat, 'campaignDatcampaignDat')
         return campaignDat && <div>
             <img style={{width: '100%', marginBottom: 10}} src={awardType(campaignDat.id)}/>
+            <p  style={{color: '#bfbfbf', textAlign: 'center'}}>（以下名单按照拼音首字母排序）</p>
             {/* <p style={{color: '#e1c277',  fontSize: 16}}>{campaignDat.name}
             <span style={{color: '#399ad4', fontSize: 12, marginLeft: 3}}>({campaignDat.other})</span></p> */}
             <Checkbox.Group style={{ width: '100%' }} onChange={(v) => onChangeCheck(v, campaignDat)}>

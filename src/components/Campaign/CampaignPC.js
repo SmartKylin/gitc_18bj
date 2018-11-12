@@ -1,6 +1,6 @@
 import React from 'react'
 import './CampaignPC.scss'
-import {Form, Input, Button, Checkbox, Modal} from 'antd'
+import {Form, Input, Button, Checkbox, Modal, message} from 'antd'
 import LoopCheck from './loopCheck'
 import {getDate5} from '../../services/home'
 import HeadPic from './images/head.png'
@@ -26,7 +26,10 @@ class CampaignPC extends React.Component{
     }
   }
   handleSubmit = (e) => {
-    const confirm = window.confirm;
+    message.config({
+      top: 200,
+      duration: 1,
+    });
     const {checkedData, checkedData2, checkedData3, checkedData4, checkedData5, checkedData6, 
       checkedData7, checkedData8, checkedData9} = this.state
     let arr = checkedData.concat(checkedData2).concat(checkedData3)
@@ -47,8 +50,8 @@ class CampaignPC extends React.Component{
       // checkedData4.length >= 5 ? values.voter && values.company && values.position && values.phone
       // ? getDate5(params)
       // .then(res => res.json())
-      // .then(v => alert(v.message)) : '': alert('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。'): alert('技术新锐力量奖至少选择10个'): 
-      // alert('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。'): alert('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
+      // .then(v => message.info(v.message)) : '': message.info('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。'): message.info('技术新锐力量奖至少选择10个'): 
+      // message.info('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。'): message.info('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
       checkedData.length >= 5 ?  checkedData2.length >= 5 ? checkedData3.length >= 10 ? checkedData4.length >= 5 ?
       checkedData5.length >= 5 ? checkedData6.length >= 5 ? checkedData7.length >= 5 ? checkedData8.length >= 5 ?
       checkedData9.length >= 5 ? values.voter && values.company && values.position && values.phone && 
@@ -56,16 +59,14 @@ class CampaignPC extends React.Component{
       .then(res => res.json())
       .then(v => {
         if(v.status){
-          if(confirm(v.message)){
-            window.location = '/success'
-          }
+          window.location = '/success'
         } else {
-          alert(v.message)
+          message.info(v.message)
         }
-        this.setState({isFlag: false})}) : alert('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : alert('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
-      alert('最具价值产品奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳服务提供奖项至少选择5项，请完成选择后再提交信息。') : alert('最佳合作伙伴奖项至少选择5项，请完成选择后再提交信息。') :
-       alert('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。') : alert('技术新锐力量奖项至少选择10项，请完成选择后再提交信息。')
-       :alert('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。') :  alert('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
+        this.setState({isFlag: false})}) : message.info('最具技术创新奖项至少选择5项，请完成选择后再提交信息。') : message.info('最具信赖产品奖项至少选择5项，请完成选择后再提交信息。')  : 
+      message.info('最具价值产品奖项至少选择5项，请完成选择后再提交信息。') : message.info('最佳服务提供奖项至少选择5项，请完成选择后再提交信息。') : message.info('最佳合作伙伴奖项至少选择5项，请完成选择后再提交信息。') :
+       message.info('最具影响力企业奖项至少选择5项，请完成选择后再提交信息。') : message.info('技术新锐力量奖项至少选择10项，请完成选择后再提交信息。')
+       :message.info('技术杰出贡献奖项至少选择5项，请完成选择后再提交信息。') :  message.info('技术领军人物奖项至少选择5项，请完成选择后再提交信息。')
     });
   }
   onDetail = (val) => {
@@ -75,9 +76,13 @@ class CampaignPC extends React.Component{
     })
   }
   onChangeCheck = (v, total) => {
+    message.config({
+      top: 200,
+      duration: 1,
+    });
     if(total.id == 117) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData: v,
@@ -90,7 +95,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 118) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData2: v,
@@ -103,7 +108,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 119) {
       if(v.length > 10){
-        alert('此奖项只能投十票');
+        message.info('此奖项只能投十票');
         v.pop()
         this.setState({
           checkedData3: v,
@@ -116,7 +121,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 120) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData4: v,
@@ -129,7 +134,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 121) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData5: v,
@@ -142,7 +147,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 122) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData6: v,
@@ -155,7 +160,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 123) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData7: v,
@@ -168,7 +173,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 124) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData8: v,
@@ -181,7 +186,7 @@ class CampaignPC extends React.Component{
       }
     } else if(total.id == 125) {
       if(v.length > 5){
-        alert('此奖项只能投五票');
+        message.info('此奖项只能投五票');
         v.pop()
         this.setState({
           checkedData9: v,
