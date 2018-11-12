@@ -9,7 +9,7 @@ export default class LoopCheck extends React.Component{
 
     render (){
         const {campaignDat, onDetail, onChangeCheck} = this.props
-        return campaignDat && <div>
+        return campaignDat && <div className={'choose_content choose_content'+campaignDat.id}>
             <img style={{width: '100%', marginBottom: 10}} src={awardType(campaignDat.id)}/>
             <p  style={{color: '#bfbfbf', textAlign: 'center'}}>（以下名单按照拼音首字母排序）</p>
             {/* <p style={{color: '#e1c277',  fontSize: 16}}>{campaignDat.name}

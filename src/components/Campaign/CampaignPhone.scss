@@ -70,6 +70,8 @@
             justify-content: center;
             font-size: 15px;
             color: #bfbfbf;
+            position: relative;
+            margin-bottom: 10px;
             .ab{
               margin-bottom: 3px;
             }
@@ -78,6 +80,9 @@
               color: #FFF;
               font-size: 10px;
               align-items: center;
+              position: absolute;
+              bottom: -10px;
+
             }
             .ant-checkbox-wrapper + span, .ant-checkbox + span{
               line-height: 15px;
