@@ -3,7 +3,7 @@ import './CampaignPC.scss'
 import {Form, Input, Button, Checkbox, Modal, message} from 'antd'
 import LoopCheck from './loopCheck'
 import {getDate5} from '../../services/home'
-import HeadPic from './images/head.png'
+import HeadPic from './images/head.jpg'
 const FormItem = Form.Item;
 
 class CampaignPC extends React.Component{

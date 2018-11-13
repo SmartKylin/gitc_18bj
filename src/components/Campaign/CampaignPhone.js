@@ -2,7 +2,7 @@ import React from 'react'
 
 import './CampaignPhone.scss'
 import {Form, Input, Button, message} from 'antd';
-import header from './images/head.png'
+import header from './images/head.jpg'
 import CampaignPhoneForm from './CampaignPhoneForm'
 import {getDate5} from "../../services/home";
 
