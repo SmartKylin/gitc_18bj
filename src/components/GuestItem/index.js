@@ -65,16 +65,20 @@ export default class extends Component {
                     </div>
                   </div>
                 </div>
-             {/*   {
+               {
                   stheme ?   <div className='detail--meetaddr--sdata'>
                     <div className='meetaddr'>
+                      <i className='iconfont icon-positioning' type="environment" />
+                      {data.meet ? data.meet : '暂无数据'}&nbsp;&nbsp;
                       {data.meetaddr ? data.meetaddr : '暂无数据'}
                     </div>
                     <div>
-                      {data.sdata ? data.sdata : '暂无数据'}
+                      <i className='iconfont icon-shijian'/>
+                      {data.sdata ? data.sdata : '暂无数据'}&nbsp;&nbsp;
+                      {data.stime ? data.stime : '暂无数据'}
                     </div>
                   </div> : null
-                }*/}
+                }
 
 
               </div>

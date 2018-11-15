@@ -58,11 +58,14 @@
         .detail--meetaddr--sdata{
           display: flex;
           justify-content: flex-end;
-          width: 100%;
+          width: 400px;
           height: 17px;
           font-size: 11px;
+          i{
+            margin-right: 3px;
+          }
           .meetaddr{
-            margin-right: 50px;
+            margin-right: 35px;
           }
         }
 
@@ -132,6 +135,9 @@
         width: 0;
         color: #FFFFFF;
         display: none;
+        i{
+          margin-right: 3px;
+        }
       }
     }
     .guest--detail--bottom{
