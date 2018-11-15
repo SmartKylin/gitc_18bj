@@ -27,7 +27,7 @@ export default class CooperativePartner extends React.Component {
   render() {
     const {data} = this.state
     return <div  className='cooperative-partner-box-box'>
-    {/*  <Title title={'合作伙伴'} englishName={'PRESIDIUNM'}/>
+      <Title title={'合作伙伴'} englishName={'PRESIDIUNM'}/>
       <div className='cooperative-partner-box'>
         {
           data && data.length > 0 && data.map((item, key) => {
@@ -44,18 +44,18 @@ export default class CooperativePartner extends React.Component {
             </div>
           })
         }
-      </div>*/}
-      <div cooperative-partner-box-box-img>
-        <img src={hezuohuoban} alt=""/>
       </div>
+     {/* <div cooperative-partner-box-box-img>
+        <img src={hezuohuoban} alt=""/>
+      </div>*/}
     </div>
   }
 }
 
 const ImageData = ({data}) => {
   return <div className='image-data-box'>
-      <div className='image-data-box-item'>
+      <a className='image-data-box-item' target='_blank' href={data.url ?data.url :'#' }>
         <img src={data.img} alt=""/>
-      </div>
+      </a>
   </div>
 }

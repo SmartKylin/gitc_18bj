@@ -1,4 +1,4 @@
-/*.cooperative-partner-box-box{
+.cooperative-partner-box-box{
   width: 970px;
   display: flex;
   flex-direction: column;
@@ -28,12 +28,10 @@
           justify-content: center;
           flex-wrap: wrap;
           margin-bottom: 20px;
-          width: 120px;
+          width: 160px;
           .image-data-box-item{
-            width: 120px;
-            height: 53px;
-            border-radius: 6px;
-            margin:0 10px;
+            width: 134px;
+            height: 51px;
             img{
               display: block;
               width: 100%;
@@ -45,8 +43,9 @@
 
     }
   }
-}*/
+}
 
+/*
 .cooperative-partner-box-box{
   width: 100%;
   display: flex;
@@ -60,3 +59,4 @@
     }
   }
 }
+*/
