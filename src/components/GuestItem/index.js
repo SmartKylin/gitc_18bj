@@ -69,13 +69,13 @@ export default class extends Component {
                   stheme ?   <div className='detail--meetaddr--sdata'>
                     <div className='meetaddr'>
                       <i className='iconfont icon-positioning' type="environment" />
-                      {data.meet ? data.meet : '暂无数据'}&nbsp;&nbsp;
-                      {data.meetaddr ? data.meetaddr : '暂无数据'}
+                      {data.meet ? data.meet : '暂无'}&nbsp;&nbsp;
+                      {data.meetaddr ? data.meetaddr : '暂无'}
                     </div>
                     <div>
                       <i className='iconfont icon-shijian'/>
-                      {data.sdata ? data.sdata : '暂无数据'}&nbsp;&nbsp;
-                      {data.stime ? data.stime : '暂无数据'}
+                      {data.sdata ? data.sdata : '暂无'}&nbsp;&nbsp;
+                      {data.stime ? data.stime : '暂无'}
                     </div>
                   </div> : null
                 }
