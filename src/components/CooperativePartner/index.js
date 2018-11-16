@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-import hezuohuoban from './image/最新版本1.png'
+import hezuohuoban from './image/最后版本2.png'
 import {getListImgs} from "../../services/getListNews";
 import Title from "../../components/MeetingTitle";
 
@@ -14,7 +14,8 @@ export default class CooperativePartner extends React.Component {
 
   componentDidMount() {
 
-    let promiseArr = [105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115].map(item => {
+    //109, 110, 111, 112, 113, 114, 115
+    let promiseArr = [105, 106, 107, 108,109].map(item => {
       return getListImgs(item).then(res => res.json())
     })
 
@@ -31,6 +32,7 @@ export default class CooperativePartner extends React.Component {
       <div className='cooperative-partner-box'>
         {
           data && data.length > 0 && data.map((item, key) => {
+
             return <div key={key} className='cooperative-partner-map'>
               <div className='cooperative-partner-title'>{item.other && item.other.name}</div>
               <div className='image-data-box-box'>
@@ -45,9 +47,9 @@ export default class CooperativePartner extends React.Component {
           })
         }
       </div>
-     {/* <div cooperative-partner-box-box-img>
+      <div cooperative-partner-box-box-img>
         <img src={hezuohuoban} alt=""/>
-      </div>*/}
+      </div>
     </div>
   }
 }
