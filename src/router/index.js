@@ -10,6 +10,7 @@ import AboutMeet from '../containers/aboutMeet'
 import AnnualElection from '../components/AnnualElection'
 import Campaign from '../components/Campaign'
 import SuccessPage from '../components/SuccessPage'
+import news from '../components/news'
 let history = createBrowserHistory();
 
 const RouterMap = class extends Component {
@@ -24,6 +25,8 @@ const RouterMap = class extends Component {
                     <Route path="/annual" component={AnnualElection}></Route>
                     <Route path='/campaign' component={Campaign}/>
                     <Route path='/success' component={SuccessPage}/>
+                    {/*盛况回顾*/}
+                    <Route path='/news' component={news}/>
                 </Wrapper>
             </Router>
         )
