@@ -35,3 +35,9 @@ export function getDate3() {
 export function getDate5(data) {
   return http.post('http://api.thegitc.com/award/gitc/review', data)
 }
+//直播地址
+export function getLiveUrl() {
+  return http.get(
+      'http://api.thegitc.com/api/video/101/list.json?token=9d349496a7dab8f131c620a806e9ec6d'
+  );
+}

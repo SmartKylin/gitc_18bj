@@ -27,6 +27,7 @@ import './aboutMeet.scss'
 import {signUrl} from "../../configs";
 import ConferenceAgenda from "../../components/ConferenceAgenda";
 import CooperativePartner from "../../components/CooperativePartner";
+import IiveUrl from "../../components/liveUrl";
 
 export default class aboutMeet extends React.Component {
   constructor(props) {
@@ -104,35 +105,35 @@ export default class aboutMeet extends React.Component {
 
     //presidentGroup
     getPeopleList(88)
-    .then(res => res && res.json())
-    .then(data => {
-      const presidentGroup = exist.get(data, 'data')
-       //console.log(presidentGroup, '大会主席团');
-      this.setState({
-        presidentGroup,
-      })
-    })
+        .then(res => res && res.json())
+        .then(data => {
+          const presidentGroup = exist.get(data, 'data')
+          //console.log(presidentGroup, '大会主席团');
+          this.setState({
+            presidentGroup,
+          })
+        })
 
     getPeopleList(89)
-    .then(res => res && res.json())
-    .then(data => {
-      const expertGroup = exist.get(data, 'data')
-      //console.log(expertGroup,'专家顾问团')
-      this.setState({
-        expertGroup,
-      })
-    })
+        .then(res => res && res.json())
+        .then(data => {
+          const expertGroup = exist.get(data, 'data')
+          //console.log(expertGroup,'专家顾问团')
+          this.setState({
+            expertGroup,
+          })
+        })
 
     // speechers
     getPeopleList(90)
-    .then(res => res && res.json())
-    .then(data => {
-      const speechers = exist.get(data, 'data')
-      //console.log(speechers,'演讲嘉宾')
-      this.setState({
-        speechers,
-      })
-    })
+        .then(res => res && res.json())
+        .then(data => {
+          const speechers = exist.get(data, 'data')
+          //console.log(speechers,'演讲嘉宾')
+          this.setState({
+            speechers,
+          })
+        })
   }
 
   render() {
@@ -145,89 +146,91 @@ export default class aboutMeet extends React.Component {
       speechers
     } = this.state
     return (
-    <div className='main'>
+        <div className='main'>
 
-      {/*大会简介*/}
-      <div className="main-bg-wrapper">
-        <div className="banner-wrapper">
-          {
-            bannerImg && bannerImg.map((val, ind) => (
-            <a href={signUrl} target="_blank"><img key={ind} alt='' src={val.img} className='banner'/></a>))
-          }
-        </div>
-
-        <div className="meeting-intro-block">
-          <img className={'intro-logo'} src={introLogo} alt=""/>
-          <div>
-            <img src={introImg} alt=""/>
-            <div className='describe'>
-              {aboutData && aboutData.content}
+          {/*大会简介*/}
+          <div className="main-bg-wrapper">
+            <div className="banner-wrapper">
+              {
+                bannerImg && bannerImg.map((val, ind) => (
+                    <a href={signUrl} target="_blank"><img key={ind} alt='' src={val.img} className='banner'/></a>))
+              }
             </div>
+
+            <div className="meeting-intro-block">
+              <img className={'intro-logo'} src={introLogo} alt=""/>
+              <div>
+                <img src={introImg} alt=""/>
+                <div className='describe'>
+                  {aboutData && aboutData.content}
+                </div>
+              </div>
+            </div>
+
+
+            {/*大会亮点*/}
+
+            <HighLights list={highLights}/>
+
+            {/*大会结构*/}
+            {/*主会场*/}
+            <MainMeeting
+                data={mainMeeting}
+            />
+            {/* <SpecialMeetings list={specialMeetings}/> */}
+            {/*<SpecialMeetings list={otherMeetings}/>*/}
+
+            <OtherMeetings list={otherMeetings}/>
+
+            {/*会议结构*/}
+            <ConferenceAgenda/>
+
+
+            {/*大会主席团*/}
+            {
+              presidentGroup && presidentGroup.length ?
+                  <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'} canPop={true}/>
+                  : null
+            }
+
+            {/*专家顾问团*/}
+            {
+              expertGroup && expertGroup.length ?
+                  <ExpertGroup peopleList={expertGroup} title={'专家顾问团'} subTitle={'PRESIDIUNM'}/>
+                  : null
+            }
+
+            {/*演讲嘉宾*/}
+            {
+              speechers && speechers.length ?
+                  <ExpertGroup stheme={true} peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
+                  : null
+            }
+
+            {/*合作伙伴*/}
+            <CooperativePartner/>
+
+            {/* 往期回顾 */}
+            <Review/>
+
+
+            {/*动态数字*/}
+            <RollingData/>
+
+            {/*合作伙伴*/}
+            {/*<Cooperative/>*/}
+
+            <Map/>
+
+            <Footer/>
+
+            <BackTop>
+              <div className="ant-back-top-inner"/>
+            </BackTop>
+            {/*大会直播*/}
+            <IiveUrl/>
           </div>
         </div>
-
-
-        {/*大会亮点*/}
-
-        <HighLights list={highLights}/>
-
-        {/*大会结构*/}
-        {/*主会场*/}
-        <MainMeeting
-        data={mainMeeting}
-        />
-        {/* <SpecialMeetings list={specialMeetings}/> */}
-        {/*<SpecialMeetings list={otherMeetings}/>*/}
-
-        <OtherMeetings list={otherMeetings}/>
-
-        {/*会议结构*/}
-        <ConferenceAgenda/>
-
-
-        {/*大会主席团*/}
-        {
-          presidentGroup && presidentGroup.length ?
-          <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'} canPop={true}/>
-          : null
-        }
-
-        {/*专家顾问团*/}
-        {
-          expertGroup && expertGroup.length ?
-          <ExpertGroup peopleList={expertGroup} title={'专家顾问团'} subTitle={'PRESIDIUNM'}/>
-          : null
-        }
-
-        {/*演讲嘉宾*/}
-        {
-          speechers && speechers.length ?
-          <ExpertGroup stheme={true}  peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
-          : null
-        }
-
-        {/*合作伙伴*/}
-        <CooperativePartner/>
-
-        {/* 往期回顾 */}
-        <Review/>
-
-
-        {/*动态数字*/}
-        <RollingData/>
-
-        {/*合作伙伴*/}
-        {/*<Cooperative/>*/}
-
-        <Map/>
-
-        <Footer/>
-
-        <BackTop>
-          <div className="ant-back-top-inner"/>
-        </BackTop>
-      </div>
-    </div>
     )
   }
 }
