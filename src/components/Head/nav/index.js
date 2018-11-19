@@ -73,7 +73,7 @@ class Nav extends Component {
               headerData.map(item => (
                   item.title == '年度竞选' ? <li><Link to={item.url || ''}><a>{item.title}</a></Link></li> :
                       item.title == '首页' || item.title == '大会会刊' || item.title == '关于主办方' || item.title == '加入我们' ?
-                          <li><a href={item.url || ''}>{item.title}</a></li> :
+                          <li><a target='_blank' href={item.url || ''}>{item.title}</a></li> :
                           <li><Link to={item.url || ''}><a>{item.title}</a></Link></li>
               ))
             }
