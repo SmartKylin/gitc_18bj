@@ -4,8 +4,15 @@ import moren from './images/moren.jpg'
 import './index.scss'
 import meetingStructureLogo from "../../assets/images2/bg_dahuiyicheng.png";
 import Title from "../MeetingTitle";
-
+import KongPic from './images/kong.png'
+import LiPic from './images/li.png'
+import ShengPic from './images/sheng.png'
+import SuPic from './images/su.png'
+import YuPic from './images/yu.png'
+import qrImg from './images/pc_qr_code.png'
+import canclePic from './images/cancle.png'
 const dateAry = ['11月22日', '11月23日']
+
 
 const decorateAry = (ary) => {
   let arr = []
@@ -23,6 +30,7 @@ export default class ConferenceAgenda extends React.Component {
         0: [],
         1: []
       },
+      flag: false,
     }
   }
 
@@ -65,6 +73,11 @@ export default class ConferenceAgenda extends React.Component {
     await this.setState({
       topicIndex: index,
       bannerAry:item,
+    })
+  }
+  onLoadAllPPT = () => {
+    this.setState({
+      flag: true
     })
   }
 
@@ -110,17 +123,23 @@ export default class ConferenceAgenda extends React.Component {
           <div className='conference-agenda-box-body-right'>
             <MainMeeting data={bannerAry}/>
            {/*
-           //这个还需要写一下,弹出一个二维码就可以,可以根据2017年北京站,GitHub地址react-pc
+           //这个还需要写一下,弹出一个二维码就可以,可以根据2017年北京站,GitHub地址react-pc*/}
            <div className='piliangxiazai-box'>
-              <div className='xiazai'>
+              <div className='xiazai' onClick={this.onLoadAllPPT}>
                 批量下载PPT
               </div>
-            </div>*/}
+            </div>
           </div>
 
         </div>
 
       </div>
+      {
+        this.state.flag ? <div className="banner-pop">
+        <img src={qrImg} alt=""/>
+        <img className='canclePic' src={canclePic} onClick={() => this.setState({flag: false})}/>
+      </div> : ''
+      }
     </div>
   }
 }
@@ -168,7 +187,7 @@ const MainMeeting = ({data}) => {
                   <img src={item.pic ? item.pic  : moren} alt=""/>
                 </div>
                 <div className='head-portrait-boy-name'>
-                  {item.name}
+                  <p>{item.name}</p>
                 </div>
               </div>
               <div className='company-position'>
@@ -180,18 +199,17 @@ const MainMeeting = ({data}) => {
                 </div>
               </div>
 
-            {/*
+            
 
-            //这个可以打开可以直接使用
             <div className='item-document'>
                 {
                   item.file
-                      ? <a href={item.file}>
+                      ? <a href={item.file} target="_blank">
                         ppt
                       </a>
                       : null
                 }
-              </div>*/}
+              </div>
 
             </div>
 
@@ -202,7 +220,41 @@ const MainMeeting = ({data}) => {
     </div>
   </div>
 }
-
+const peopleData = [
+  {
+    name: '孔令欣',
+    pic: KongPic,
+    file: '',
+    company: '贝壳金服',
+    position: 'CEO'
+  },{
+    name: '盛国军',
+    file: 'https://pan.baidu.com/s/1lpZhiKyYElx-8tmrPmMdTA',
+    pic: ShengPic,
+    company: '海尔电器集团',
+    position: 'CTO'
+  }, {
+    name: '苏万松',
+    file: 'https://pan.baidu.com/s/1KjWGYh5wwsK40m5FsPmMOg',
+    pic: SuPic,
+    company: '尚德机构',
+    position: '技术副总裁&首席架构师'
+  }
+]
+const productData = {
+  name: '于游',
+  file: 'https://pan.baidu.com/s/1qnQdYmL90rAFU9KOrFijKA',
+  pic: YuPic,
+  company: '育学园',
+  position: 'CTO'
+}
+const companyData = {
+  name: '李玉峰',
+  file: 'https://pan.baidu.com/s/1IpLj_9TUMvPSmEiSvS-YgA',
+  pic: LiPic,
+  company: 'LuckinCoffee（瑞幸咖啡）',
+  position: 'CTO'
+}
 const GetAward = ({objData}) => {
   return <div className='main-award'>
     <div className='main-time'>
@@ -211,17 +263,54 @@ const GetAward = ({objData}) => {
     <div className='main-content'>
       {
         objData.awardArr.map(v => 
-          <div className='main-award-type'>
-            <div className='main-award-tit'>{v.award}</div>
-            <div className='main-award-cont'>
+            v.award == '2018年度互联网技术人物类奖项揭晓' ? 
+            <div className='totalAward main-award-type'>
+              <div className='main-award-tit'>{v.award}<br/>获奖人物代表主题演讲</div>
+              <div className='main-award-cont'>
               {
-                v.types.map(v => <p>{v}</p>)
+                peopleData.map(item => 
+                  <MainMeet item={item}/>
+                )
               }
+            </div></div> : <div className='singleAward main-award-type'>
+            <div className='main-award-tit'>{v.award}<br/>获奖{v.award == "2018年度互联网技术产品类奖项揭晓" ?  
+            '产品'  : '企业'}代表主题演讲</div>
+            <MainMeet item={v.award == "2018年度互联网技术产品类奖项揭晓" ? productData : companyData}/>
             </div>
-          </div>
         )
       }
     </div>
+  </div>
+}
+
+const MainMeet = (val) => {
+  const {item} = val
+return  <div className='head-portrait-boy'>
+      <div className='pic-name'>
+        <div className='pic'>
+          <img src={item.pic ? item.pic  : moren} alt=""/>
+        </div>
+        <div className='head-portrait-boy-name'>
+          <p>{item.name}</p>
+        </div>
+      </div>
+      <div className='company-position'>
+        <div className='company'>
+          {item.company}
+        </div>
+        <div className='position'>
+          {item.position}
+        </div>
+      </div>
+      <div className='item-document'>
+        {
+          item.file
+              ? <a href={item.file} target="_blank">
+                ppt
+              </a>
+              : null
+        }
+      </div>
   </div>
 }
 
