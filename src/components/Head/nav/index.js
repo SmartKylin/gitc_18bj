@@ -16,11 +16,11 @@ import canclePic from './image/cancle.png'
 const headerData = [
   {title: '首页', url: 'http://www.thegitc.com/home.html'},
   {title: 'GITC北京站', url: '/'},
+  {title: '盛况回顾', url: '/news'},
   {title: '大会嘉宾', url: '/'},
   {title: '年度竞选', url: 'annual'},
   {title: '大会会刊', url: 'http://www.thegitc.com/static/pdf/bj2018.pdf'},
   {title: '资料下载', url: '/'},
-  // {title: '酒店信息', url: '/'},
   {title: '关于主办方', url: 'http://www.kylinclub.org/'},
   {title: '加入我们', url: 'http://www.thegitc.com/contact.html'}
 ];
@@ -94,7 +94,7 @@ class Nav extends Component {
             <img className='canclePic' src={canclePic} onClick={() => this.setState({isShow: false})}/>
             </div> : ''
           }
-        </div>
+        </div>  
     )
   }
 }
