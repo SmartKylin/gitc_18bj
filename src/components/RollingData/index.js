@@ -3,16 +3,16 @@ import CountUp from 'react-countup';
 import './index.scss'
 
 const data1 = [
-  {end: 820, name: '演讲嘉宾', english: 'Speakers'},
-  {end: 3230, name: '参会企业', english: 'Companies'},
-  {end: 72516, name: '与会者', english: 'Participants'},
-  {end: 300661364, name: '线上传播人次', english: 'Communications'},
+  {end: 942, name: '演讲嘉宾', english: 'Speakers'},
+  {end: 4230, name: '参会企业', english: 'Companies'},
+  {end: 94023, name: '与会者', english: 'Participants'},
+  {end: 400661364, name: '线上传播人次', english: 'Communications'},
 ]
 const data2 = [
-  {end: 73, name: '会场', english: 'Summit Forums '},
-  {end: 319, name: '合作伙伴', english: 'Sponsors'},
-  {end: 487, name: '合作媒体', english: 'Medias'},
-  {end: 72994, name: '展览场馆', english: 'Venue Area'},
+  {end: 87, name: '会场', english: 'Summit Forums '},
+  {end: 361, name: '合作伙伴', english: 'Sponsors'},
+  {end: 601, name: '合作媒体', english: 'Medias'},
+  {end: 92994, name: '展览场馆', english: 'Venue Area'},
 ]
 export default class RollingData extends React.Component {
   
@@ -48,7 +48,7 @@ export default class RollingData extends React.Component {
         {
           data1.map((v, ind) => {
             return <div className="rollingData_box_item" key={ind}>
-              <CountUp key={count} duration={10} suffix="+" start={0} end={v.end} separator="," className="countUp"/>
+              <CountUp key={count} duration={10} suffix="" start={0} end={v.end} separator="," className="countUp"/>
               <div>{v.english}</div>
               <div>{v.name}</div>
             </div>
@@ -59,7 +59,7 @@ export default class RollingData extends React.Component {
         {
           data2.map((v, ind) => {
             return <div className="rollingData_box_item" key={ind}>
-              <CountUp key={count} duration={10} suffix={v.name === '展览场馆' ? '㎡' : v.name === '会场' ? '' : '+'} start={0}
+              <CountUp key={count} duration={10} suffix={v.name === '展览场馆' ? '㎡' : v.name === '会场' ? '' : ''} start={0}
                        end={v.end} separator="," className="countUp"/>
               <div>{v.english}</div>
               <div>{v.name}</div>
