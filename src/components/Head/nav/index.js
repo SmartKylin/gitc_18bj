@@ -10,15 +10,17 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import qrImg from './image/pc_qr_code.png'
+import canclePic from './image/cancle.png'
 
 const headerData = [
   {title: '首页', url: 'http://www.thegitc.com/home.html'},
   {title: 'GITC北京站', url: '/'},
+  {title: '盛况回顾', url: '/news'},
   {title: '大会嘉宾', url: '/'},
   {title: '年度竞选', url: 'annual'},
   {title: '大会会刊', url: 'http://www.thegitc.com/static/pdf/bj2018.pdf'},
   {title: '资料下载', url: '/'},
-  {title: '酒店信息', url: '/'},
   {title: '关于主办方', url: 'http://www.kylinclub.org/'},
   {title: '加入我们', url: 'http://www.thegitc.com/contact.html'}
 ];
@@ -27,7 +29,8 @@ class Nav extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      flag: false
+      flag: false,
+      isShow: false
     }
   }
 
@@ -63,6 +66,11 @@ class Nav extends Component {
       flag: false
     })
   }
+  onLoadAllPPT = () => {
+    this.setState({
+      isShow: true
+    })
+  }
 
   render() {
     return (
@@ -74,12 +82,19 @@ class Nav extends Component {
                   item.title == '年度竞选' ? <li><Link to={item.url || ''}><a>{item.title}</a></Link></li> :
                       item.title == '首页' || item.title == '大会会刊' || item.title == '关于主办方' || item.title == '加入我们' ?
                           <li><a target='_blank' href={item.url || ''}>{item.title}</a></li> :
-                          <li><Link to={item.url || ''}><a>{item.title}</a></Link></li>
+                          item.title == '资料下载' ? <li onClick={this.onLoadAllPPT}><Link to={item.url || ''}><a>{item.title}</a></Link></li> 
+                          : <li><Link to={item.url || ''}><a>{item.title}</a></Link></li>
               ))
             }
             <li className='buttonBg'><a href={signUrl} target="_blank" className='signup'>立即报名</a></li>
           </ul>
-        </div>
+          {
+            this.state.isShow ? <div className="banner-pop">
+            <img src={qrImg} alt=""/>
+            <img className='canclePic' src={canclePic} onClick={() => this.setState({isShow: false})}/>
+            </div> : ''
+          }
+        </div>  
     )
   }
 }

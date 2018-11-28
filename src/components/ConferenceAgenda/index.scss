@@ -102,6 +102,7 @@
             }
           }
           .main-meeting-box-body{
+            height: auto;
             .main-meeting-box-body-item{
               display: flex;
               height: 66px;
@@ -117,10 +118,14 @@
                   width: 80px;
                 }
                 .stheme{
-
+                  padding: 0 5px;
+                  flex: 1;
                 }
               }
               .head-portrait-boy{
+                p{
+                  margin: 0;
+                }
                 display: flex;
                 align-items: center;
                 .pic-name{
@@ -201,7 +206,61 @@
     width: 80px;
   }
   .main-content{
+    color: #fff;
     flex: 1;
+    .head-portrait-boy{
+      margin: 10px 0;
+      p{
+        margin: 0;
+      }
+      display: flex;
+      align-items: center;
+      .pic-name{
+        display: flex;
+        align-items: center;
+        width: 110px;
+        .pic{
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+          margin-right: 10px;
+          .head-portrait-boy-name{
+
+          }
+        }
+        .singleAward{
+          display: flex;
+        }
+      }
+      .company-position{
+        width: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        .company{
+
+        }
+        .position{
+
+        }
+      }
+      .item-document{
+        display: flex;
+        align-items: center;
+        a::after{
+          position: relative;
+          top: 3px;
+          left: 3px;
+          content: url("../../assets/images2/icon-xiazai.jpg");
+        }
+      }
+    }
   }
   .main-award-type{
     display: flex;  
@@ -211,6 +270,7 @@
     }
     .main-award-tit{
       width: 331px;
+      display: flex;
     }
     .main-award-cont{
       flex: 1;
@@ -219,5 +279,21 @@
         line-height: 30px;
       }
     }
+  }
+}
+.banner-pop {
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  top: 50%;
+  z-index: 888;
+
+  .canclePic {
+    width: 24px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 889;
+    right: 10px;
+    top: 8px;
   }
 }

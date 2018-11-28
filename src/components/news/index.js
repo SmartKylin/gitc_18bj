@@ -5,7 +5,7 @@ let bannerImg = require('./images/summary_01.png')
 
 const generateImgAry = () => {
   let ary = []
-  for (var i = 1; i < 8; i ++) {
+  for (var i = 1; i < 9; i ++) {
     ary.push(require(`./images/summary_0${i + 1}.png`));
   }
   return ary
