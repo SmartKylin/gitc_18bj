@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import './index.scss'
 import defaultAvatar from './images/default-avatar.jpg'
+import timePic from './images/time.png'
+import positionPic from './images/position.png'
 import avatarWrapper from '../../assets/images2/bg_touxiang.png'
 
 const detailGetLeft = (pos) => {
@@ -68,12 +70,14 @@ export default class extends Component {
                {
                   stheme ?   <div className='detail--meetaddr--sdata'>
                     <div className='meetaddr'>
-                      <i className='iconfont icon-positioning' type="environment" />
+                      <img className='position' src={positionPic}/>
+                      {/* <i className='iconfont icon-positioning' type="environment" /> */}
                       {data.meet ? data.meet : '暂无'}&nbsp;&nbsp;
                       {data.meetaddr ? data.meetaddr : '暂无'}
                     </div>
                     <div>
-                      <i className='iconfont icon-shijian'/>
+                      {/* <i className='iconfont icon-shijian'/> */}
+                      <img className='time' src={timePic}/>
                       {data.sdata ? data.sdata : '暂无'}&nbsp;&nbsp;
                       {data.stime ? data.stime : '暂无'}
                     </div>

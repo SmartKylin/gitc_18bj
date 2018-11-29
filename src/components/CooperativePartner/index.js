@@ -28,8 +28,7 @@ export default class CooperativePartner extends React.Component {
   render() {
     const {data} = this.state
     return <div  className='cooperative-partner-box-box'>
-    {/* PRESIDIUNM */}
-      <Title title={'合作伙伴'} englishName={''}/>
+      <Title title={'合作伙伴'} englishName={'SPONSORS'}/>
       <div className='cooperative-partner-box'>
         {
           data && data.length > 0 && data.map((item, key) => {

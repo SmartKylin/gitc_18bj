@@ -189,21 +189,21 @@ export default class aboutMeet extends React.Component {
             {/*大会主席团*/}
             {
               presidentGroup && presidentGroup.length ?
-                  <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'EXPERT'} canPop={true}/>
+                  <ExpertGroup peopleList={presidentGroup} title={'大会主席团'} subTitle={'PRESIDIUM'} canPop={true}/>
                   : null
             }
 
             {/*专家顾问团*/}
             {
               expertGroup && expertGroup.length ?
-                  <ExpertGroup peopleList={expertGroup} title={'专家顾问团'} subTitle={'PRESIDIUNM'}/>
+                  <ExpertGroup peopleList={expertGroup} title={'专家顾问团'} subTitle={'EXPERT ADVISOR'}/>
                   : null
             }
 
             {/*演讲嘉宾*/}
             {
               speechers && speechers.length ?
-                  <ExpertGroup stheme={true} peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEECHER'}/>
+                  <ExpertGroup stheme={true} peopleList={speechers} title={'演讲嘉宾'} subTitle={'SPEAKERS'}/>
                   : null
             }
 
